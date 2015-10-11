@@ -1,0 +1,9 @@
+[2015-10-10 10:23:44][26454][9739][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2) at /var/www/html/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+    [query] => mysql_connect()
+    [context] => /var/www/html/engine/modules/database/Database.class.php line 72
+)
+]
