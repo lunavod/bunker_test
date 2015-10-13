@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-10-11 20:17:53
+<?php /* Smarty version Smarty-3.1.8, created on 2015-10-13 20:05:38
          compiled from "/var/www/html/templates/skin/reboot/topic_part_footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1605741390561a99c1438bb6-86283003%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1645708524561d39e296a941-34297012%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3437f0184a8f795d6bfc1ac4b65cfb40ec792c2b' => 
     array (
       0 => '/var/www/html/templates/skin/reboot/topic_part_footer.tpl',
-      1 => 1443531693,
+      1 => 1444665005,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1605741390561a99c1438bb6-86283003',
+  'nocache_hash' => '1645708524561d39e296a941-34297012',
   'function' => 
   array (
   ),
@@ -30,9 +30,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_561a99c1616151_41453314',
+  'unifunc' => 'content_561d39e29d9ca8_96991662',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_561a99c1616151_41453314')) {function content_561a99c1616151_41453314($_smarty_tpl) {?><?php if (!is_callable('smarty_function_router')) include '/var/www/html/engine/modules/viewer/plugs/function.router.php';
+<?php if ($_valid && !is_callable('content_561d39e29d9ca8_96991662')) {function content_561d39e29d9ca8_96991662($_smarty_tpl) {?><?php if (!is_callable('smarty_function_router')) include '/var/www/html/engine/modules/viewer/plugs/function.router.php';
 if (!is_callable('smarty_function_hook')) include '/var/www/html/engine/modules/viewer/plugs/function.hook.php';
 ?>	<?php $_smarty_tpl->tpl_vars["oBlog"] = new Smarty_variable($_smarty_tpl->tpl_vars['oTopic']->value->getBlog(), null, 0);?>
 	<?php $_smarty_tpl->tpl_vars["oUser"] = new Smarty_variable($_smarty_tpl->tpl_vars['oTopic']->value->getUser(), null, 0);?>

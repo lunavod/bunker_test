@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-10-11 20:17:02
+<?php /* Smarty version Smarty-3.1.8, created on 2015-10-13 20:05:11
          compiled from "/var/www/html/templates/skin/reboot/statistics_performance.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:99801194561a998e4f1643-47717392%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1451000595561d39c7c9f200-04387621%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '28dd9da6bafbf66e5dcb58a46c620f59dd33ebce' => 
     array (
       0 => '/var/www/html/templates/skin/reboot/statistics_performance.tpl',
-      1 => 1443531693,
+      1 => 1444665005,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '99801194561a998e4f1643-47717392',
+  'nocache_hash' => '1451000595561d39c7c9f200-04387621',
   'function' => 
   array (
   ),
@@ -24,9 +24,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_561a998e54ab67_59410829',
+  'unifunc' => 'content_561d39c7caf695_93548978',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_561a998e54ab67_59410829')) {function content_561a998e54ab67_59410829($_smarty_tpl) {?><?php if (!is_callable('smarty_function_hook')) include '/var/www/html/engine/modules/viewer/plugs/function.hook.php';
+<?php if ($_valid && !is_callable('content_561d39c7caf695_93548978')) {function content_561d39c7caf695_93548978($_smarty_tpl) {?><?php if (!is_callable('smarty_function_hook')) include '/var/www/html/engine/modules/viewer/plugs/function.hook.php';
 ?><?php if ($_smarty_tpl->tpl_vars['bIsShowStatsPerformance']->value&&$_smarty_tpl->tpl_vars['oUserCurrent']->value&&$_smarty_tpl->tpl_vars['oUserCurrent']->value->isAdministrator()){?>
 	<div class="stat-performance">
 		<?php echo smarty_function_hook(array('run'=>'statistics_performance_begin'),$_smarty_tpl);?>

@@ -7,3 +7,436 @@ Array
     [context] => /var/www/html/engine/modules/database/Database.class.php line 72
 )
 ]
+[2015-10-12 18:52:03][28909][1371][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:03][28909][1371][ERROR][SQL Error: Table 'test.prefix_adminban' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminban' doesn't exist
+    [query] => SELECT
+                u.*,
+                IF(ua.user_id IS NULL,0,1) as user_is_administrator,
+                ab.banline, ab.banunlim, ab.bancomment, ab.banactive,
+                INET_ATON('::1') as ipn
+            FROM
+                prefix_user as u
+            LEFT JOIN prefix_user_administrator AS ua ON u.user_id=ua.user_id
+            LEFT JOIN prefix_adminban AS ab ON u.user_id=ab.user_id
+            WHERE
+                u.user_id = '1' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228
+)
+]
+[2015-10-12 18:52:07][28908][9015][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:07][28908][9015][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_reserved_urls' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:07][28908][9015][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_items_per_page' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:07][28908][9015][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_votes_per_page' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:07][28908][9015][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_edit_footer' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:07][28908][9015][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_vote_value' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:07][28908][9015][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_check_password' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:10][28908][6166][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:10][28908][6166][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_reserved_urls' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:10][28908][6166][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_items_per_page' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:10][28908][6166][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_votes_per_page' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:10][28908][6166][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_edit_footer' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:10][28908][6166][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_vote_value' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:10][28908][6166][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_check_password' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:10][28908][6166][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 28<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_key AS `key`, adminset_val AS `val` FROM prefix_adminset WHERE adminset_key LIKE 'config.all.%' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 28
+)
+]
+[2015-10-12 18:52:13][28908][1002][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:13][28908][1002][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_reserved_urls' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:13][28908][1002][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_items_per_page' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:13][28908][1002][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_votes_per_page' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:13][28908][1002][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_edit_footer' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:13][28908][1002][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_vote_value' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:13][28908][1002][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_check_password' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:13][28908][1002][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 28<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_key AS `key`, adminset_val AS `val` FROM prefix_adminset WHERE adminset_key LIKE 'config.all.%' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 28
+)
+]
+[2015-10-12 18:52:13][28908][1002][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 42<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key ='config.all.view.skin' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 42
+)
+]
+[2015-10-12 18:52:30][28907][2572][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:30][28907][2572][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_reserved_urls' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:30][28907][2572][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_items_per_page' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:30][28907][2572][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_votes_per_page' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:30][28907][2572][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_edit_footer' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:30][28907][2572][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_vote_value' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:52:30][28907][2572][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_check_password' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:07][28983][3146][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:07][28983][3146][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_reserved_urls' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:07][28983][3146][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_items_per_page' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:07][28983][3146][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_votes_per_page' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:07][28983][3146][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_edit_footer' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:07][28983][3146][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_vote_value' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:07][28983][3146][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_check_password' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:12][28909][9036][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:12][28909][9036][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_reserved_urls' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:12][28909][9036][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_items_per_page' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:12][28909][9036][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_votes_per_page' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:12][28909][9036][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_edit_footer' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:12][28909][9036][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_vote_value' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-10-12 18:54:12][28909][9036][ERROR][SQL Error: Table 'test.prefix_adminset' doesn't exist at /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'test.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_check_password' 
+    [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]

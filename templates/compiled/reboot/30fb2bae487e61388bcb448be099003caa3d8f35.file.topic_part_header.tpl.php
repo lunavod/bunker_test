@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-10-11 20:17:53
+<?php /* Smarty version Smarty-3.1.8, created on 2015-10-13 20:05:38
          compiled from "/var/www/html/templates/skin/reboot/topic_part_header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1051673239561a99c113e605-44660632%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1317760644561d39e28de005-45676317%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '30fb2bae487e61388bcb448be099003caa3d8f35' => 
     array (
       0 => '/var/www/html/templates/skin/reboot/topic_part_header.tpl',
-      1 => 1443531693,
+      1 => 1444665005,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1051673239561a99c113e605-44660632',
+  'nocache_hash' => '1317760644561d39e28de005-45676317',
   'function' => 
   array (
   ),
@@ -30,9 +30,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_561a99c1420e28_56525546',
+  'unifunc' => 'content_561d39e2965940_00396846',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_561a99c1420e28_56525546')) {function content_561a99c1420e28_56525546($_smarty_tpl) {?><?php if (!is_callable('smarty_function_router')) include '/var/www/html/engine/modules/viewer/plugs/function.router.php';
+<?php if ($_valid && !is_callable('content_561d39e2965940_00396846')) {function content_561d39e2965940_00396846($_smarty_tpl) {?><?php if (!is_callable('smarty_function_router')) include '/var/www/html/engine/modules/viewer/plugs/function.router.php';
 if (!is_callable('smarty_function_hook')) include '/var/www/html/engine/modules/viewer/plugs/function.hook.php';
 if (!is_callable('smarty_function_date_format')) include '/var/www/html/engine/modules/viewer/plugs/function.date_format.php';
 if (!is_callable('smarty_function_cfg')) include '/var/www/html/engine/modules/viewer/plugs/function.cfg.php';

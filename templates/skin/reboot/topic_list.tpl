@@ -3,7 +3,6 @@
 
 	{foreach from=$aTopics item=oTopic}
 		{if $LS->Topic_IsAllowTopicType($oTopic->getType())}
-                        {$oTopic->getBlogId()}
 			{assign var="sTopicTemplateName" value="topic_`$oTopic->getType()`.tpl"}
 			{include file=$sTopicTemplateName bTopicList=true}
 		{/if}

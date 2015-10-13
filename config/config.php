@@ -18,7 +18,7 @@
 /**
  * Настройки HTML вида
  */
-$config['view']['skin']        = 'reboot';                                                              // шаблон(скин)
+$config['view']['skin']        = 'synio';                                                              // шаблон(скин)
 $config['view']['name']        = 'Your Site';                   // название сайта
 $config['view']['description'] = 'Description your site'; // seo description
 $config['view']['keywords']    = 'site, google, internet';      // seo keywords
@@ -120,7 +120,7 @@ $config['sys']['mail']['include_talk']     = true;                   // Вклю
  * Настройки кеширования
  */
 // Устанавливаем настройки кеширования
-$config['sys']['cache']['use']    = false;               // использовать кеширование или нет
+$config['sys']['cache']['use']    = true;               // использовать кеширование или нет
 $config['sys']['cache']['type']   = 'file';             // тип кеширования: file, xcache и memory. memory использует мемкеш, xcache - использует XCache
 $config['sys']['cache']['dir']    = '___path.root.server___/tmp/';       // каталог для файлового кеша, также используется для временных картинок. По умолчанию подставляем каталог для хранения сессий
 $config['sys']['cache']['prefix'] = 'livestreet_cache'; // префикс кеширования, чтоб можно было на одной машине держать несколько сайтов с общим кешевым хранилищем
@@ -215,7 +215,7 @@ $config['module']['user']['captcha_use_registration'] = true;  // проверя
 // Модуль Comment
 $config['module']['comment']['per_page'] = 20;          // Число комментариев на одну страницу(это касается только полного списка комментариев прямого эфира)
 $config['module']['comment']['bad']      = -5;          // Рейтинг комментария, начиная с которого он будет скрыт
-$config['module']['comment']['max_tree'] = 70;           // Максимальная вложенность комментов при отображении
+$config['module']['comment']['max_tree'] = 7;           // Максимальная вложенность комментов при отображении
 $config['module']['comment']['use_nested'] = false; 	// Использовать или нет nested set при выборке комментов, увеличивает производительность при большом числе комментариев + позволяет делать постраничное разбиение комментов
 $config['module']['comment']['nested_per_page'] = 0; 	// Число комментов на одну страницу в топике, актуально только при use_nested = true
 $config['module']['comment']['nested_page_reverse'] = true; 	// Определяет порядок вывода страниц. true - последние комментарии на первой странице, false - последние комментарии на последней странице
@@ -546,7 +546,7 @@ $config['head']['default']['css'] = array(
 /**
  * Параметры компрессии css-файлов
  */
-$config['compress']['css']['merge'] = false;       // указывает на необходимость слияния файлов по указанным блокам.
+$config['compress']['css']['merge'] = true;       // указывает на необходимость слияния файлов по указанным блокам.
 $config['compress']['css']['use']   = false;       // указывает на необходимость компрессии файлов. Компрессия используется только в активированном режиме слияния файлов.
 $config['compress']['css']['case_properties']     = 1;
 $config['compress']['css']['merge_selectors']     = 0;

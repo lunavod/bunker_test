@@ -1,5 +1,6 @@
 {assign var="oUser" value=$oComment->getUser()}
 {assign var="oVote" value=$oComment->getVote()}
+{assign var="oId" value=$oComment->getTarget()}
 
 
 <section id="comment_id_{$oComment->getId()}" class="comment
@@ -13,7 +14,8 @@
 															comment-self
 														{elseif $sDateReadLast <= $oComment->getDate()} 
 															comment-new
-														{/if}">
+														{/if}
+														">
 	{if !$oComment->getDelete() or $bOneComment or ($oUserCurrent and $oUserCurrent->isAdministrator())}
 		<a name="comment{$oComment->getId()}"></a>
 		

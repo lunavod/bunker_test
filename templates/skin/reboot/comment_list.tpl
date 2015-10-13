@@ -10,6 +10,7 @@
 			<a href="{$oBlog->getUrlFull()}" class="blog-name">{$oBlog->getTitle()|escape:'html'}</a> &rarr;
 			<a href="{$oTopic->getUrl()}">{$oTopic->getTitle()|escape:'html'}</a>
 			<a href="{$oTopic->getUrl()}#comments">({$oTopic->getCountComment()})</a>
+			{$oComment->getTarget()}
 		</div>
 		
 		
@@ -43,7 +44,7 @@
 					
 			<div class="comment-content text">						
 				{if $oComment->isBad()}
-					{$oComment->getText()}						
+					{$oComment->getText()}
 				{else}
 					{$oComment->getText()}
 				{/if}		
