@@ -2,7 +2,6 @@
 {assign var="oVote" value=$oComment->getVote()}
 {assign var="oId" value=$oComment->getTarget()}
 
-
 <section id="comment_id_{$oComment->getId()}" class="comment
 														{if $oComment->isBad()}
 															comment-bad
@@ -10,19 +9,19 @@
 
 														{if $oComment->getDelete()}
 															comment-deleted
-														{elseif $oUserCurrent and $oComment->getUserId() == $oUserCurrent->getId()} 
+														{elseif $oUserCurrent and $oComment->getUserId() == $oUserCurrent->getId()}
 															comment-self
-														{elseif $sDateReadLast <= $oComment->getDate()} 
+														{elseif $sDateReadLast <= $oComment->getDate()}
 															comment-new
 														{/if}
 														">
 	{if !$oComment->getDelete() or $bOneComment or ($oUserCurrent and $oUserCurrent->isAdministrator())}
 		<a name="comment{$oComment->getId()}"></a>
-		
-		
+
+
 		<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" alt="avatar" class="comment-avatar" /></a>
-		
-		
+
+
 		<ul class="comment-info">
 			<li class="comment-author">
 				{if $iAuthorId == $oUser->getId()}<span class="comment-topic-author" title="{if $sAuthorNotice}{$sAuthorNotice}{/if}">{$aLang.comment_target_author}</span>{/if}
@@ -33,15 +32,15 @@
 					<time datetime="{date_format date=$oComment->getDate() format='c'}">{date_format date=$oComment->getDate() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}</time>
 				</a>
 			</li>
-			
+
 			{if $oComment->getPid()}
 				<li class="goto-comment-parent"><a href="#" onclick="ls.comments.goToParentComment({$oComment->getId()},{$oComment->getPid()}); return false;" title="{$aLang.comment_goto_parent}">↑</a></li>
 			{/if}
 			<li class="goto-comment-child"><a href="#" title="{$aLang.comment_goto_child}">↓</a></li>
-			
-			
-			
-			
+
+
+
+
 			{if $oUserCurrent and !$bNoCommentFavourites}
 				<li class="comment-favourite">
 					<div onclick="return ls.favourite.toggle({$oComment->getId()},this,'comment');" class="favourite {if $oComment->getIsFavourite()}active{/if}"><i class="favourite-icon fa fa-heart"></i></div>
@@ -49,39 +48,39 @@
 				</li>
 			{/if}
 		</ul>
-		
-		
+
+
 		<div id="comment_content_id_{$oComment->getId()}" class="comment-content text">
 			{$oComment->getText()}
 		</div>
-			
-			
+
+
 		{if $oUserCurrent}
 			<ul class="comment-actions">
 				{if !$oComment->getDelete() and !$bAllowNewComment}
 					<li><a href="#" onclick="ls.comments.toggleCommentForm({$oComment->getId()}); return false;" class="reply-link link-dotted">{$aLang.comment_answer}</a></li>
 				{/if}
-					
+
 				{if !$oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}
 					<li><a href="#" class="comment-delete link-dotted" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_delete}</a></li>
 				{/if}
-				
-				{if $oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}   										
+
+				{if $oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}
 					<li><a href="#" class="comment-repair link-dotted" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_repair}</a></li>
 				{/if}
-				
+
 				{hook run='comment_action' comment=$oComment}
-				{if $oComment->getTargetType() != 'talk'}						
-				<li style="margin-right: 0px;" id="vote_area_comment_{$oComment->getId()}" class="comment-vote vote 
+				{if $oComment->getTargetType() != 'talk'}
+				<li style="margin-right: 0px;" id="vote_area_comment_{$oComment->getId()}" class="comment-vote vote
 																		{if $oComment->getRating() > 0}
 																			vote-count-positive
 																		{elseif $oComment->getRating() < 0}
 																			vote-count-negative
-																		{/if}    
-																		
-																		{if $oVote} 
-																			voted 
-																			
+																		{/if}
+
+																		{if $oVote}
+																			voted
+
 																			{if $oVote->getDirection() > 0}
 																				voted-up
 																			{else}
@@ -95,7 +94,7 @@
 			{/if}
 			</ul>
 		{/if}
-	{else}				
+	{else}
 		{$aLang.comment_was_delete}
-	{/if}	
+	{/if}
 </section>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-10-13 20:06:11
+<?php /* Smarty version Smarty-3.1.8, created on 2015-10-13 20:54:50
          compiled from "/var/www/html/templates/skin/reboot/topic_list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:211793851561d3a033ac3f3-13486737%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '78808e0ac702050d93ba7de36c36f56a7ef46b8d' => 
     array (
       0 => '/var/www/html/templates/skin/reboot/topic_list.tpl',
-      1 => 1444665005,
+      1 => 1444758371,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_561d3a033c1117_59669163',
   'variables' => 
   array (
     'aTopics' => 0,
@@ -25,8 +27,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'aLang' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_561d3a033c1117_59669163',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_561d3a033c1117_59669163')) {function content_561d3a033c1117_59669163($_smarty_tpl) {?><?php if (!is_callable('smarty_function_add_block')) include '/var/www/html/engine/modules/viewer/plugs/function.add_block.php';
 ?><?php if (count($_smarty_tpl->tpl_vars['aTopics']->value)>0){?>
@@ -39,8 +39,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['oTopic']->key => $_smarty_tpl->tpl_va
 $_smarty_tpl->tpl_vars['oTopic']->_loop = true;
 ?>
 		<?php if ($_smarty_tpl->tpl_vars['LS']->value->Topic_IsAllowTopicType($_smarty_tpl->tpl_vars['oTopic']->value->getType())){?>
-                        <?php echo $_smarty_tpl->tpl_vars['oTopic']->value->getBlogId();?>
-
 			<?php $_smarty_tpl->tpl_vars["sTopicTemplateName"] = new Smarty_variable("topic_".($_smarty_tpl->tpl_vars['oTopic']->value->getType()).".tpl", null, 0);?>
 			<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['sTopicTemplateName']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('bTopicList'=>true), 0);?>
 

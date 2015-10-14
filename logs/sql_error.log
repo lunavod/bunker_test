@@ -440,3 +440,39 @@ Array
     [context] => /var/www/html/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
 )
 ]
+[2015-10-13 20:54:29][16386][7171][ERROR][SQL Error: Access denied for user 'root'@'localhost' (using password: NO) at /var/www/html/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 1045
+    [message] => Access denied for user 'root'@'localhost' (using password: NO)
+    [query] => mysql_connect()
+    [context] => /var/www/html/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-10-13 20:54:29][16386][7992][ERROR][SQL Error: Access denied for user 'root'@'localhost' (using password: NO) at /var/www/html/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 1045
+    [message] => Access denied for user 'root'@'localhost' (using password: NO)
+    [query] => mysql_connect()
+    [context] => /var/www/html/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-10-13 20:54:30][16386][3443][ERROR][SQL Error: Access denied for user 'root'@'localhost' (using password: NO) at /var/www/html/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 1045
+    [message] => Access denied for user 'root'@'localhost' (using password: NO)
+    [query] => mysql_connect()
+    [context] => /var/www/html/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-10-13 20:54:30][16386][6932][ERROR][SQL Error: Access denied for user 'root'@'localhost' (using password: NO) at /var/www/html/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 1045
+    [message] => Access denied for user 'root'@'localhost' (using password: NO)
+    [query] => mysql_connect()
+    [context] => /var/www/html/engine/modules/database/Database.class.php line 72
+)
+]
