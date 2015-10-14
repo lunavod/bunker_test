@@ -105,6 +105,7 @@ class PluginEditcomment_ActionAjax extends PluginEditcomment_Inherit_ActionAjax
 
     protected function EventEdit()
     {
+        $ip=$_SERVER['REMOTE_ADDR'];
         /**
 		 * Устанавливаем формат Ajax ответа
 		 */
@@ -209,6 +210,8 @@ class PluginEditcomment_ActionAjax extends PluginEditcomment_Inherit_ActionAjax
             else
                 $this->Message_AddErrorSingle($this->Lang_Get('error'));
         }
+        $sLogText = $this->oUserCurrent->getLogin()." редактировал коммент ".$oComment->getId()." ".$ip;
+        $this->Logger_Notice($sLogText);
         $this->Viewer_AssignAjax('bCanEditMore', $this->ACL_UserCanEditComment($this->oUserCurrent, $oComment, PHP_INT_MAX) === true);
     }
 }

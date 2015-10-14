@@ -15,7 +15,7 @@ class PluginApi_ActionApi extends ActionPlugin {
     protected function RegisterEvent() {
         $this->AddEvent('index','EventIndex');
         $this->AddEvent('comments','EventComments');
-        $this->AddEvent('gen','genKey');
+        $this->AddEvent('gen','fLogger');
     }
 
     protected function EventIndex() {
@@ -53,6 +53,10 @@ class PluginApi_ActionApi extends ActionPlugin {
         $key = $this->oUserCurrent->getLogin() . $this->oUserCurrent->getId() + $this->oUserCurrent->getRating() . $this->oUserCurrent->getPassword() . strval(rand(1, 100000));
         $key_md5 = md5($key);
         $result = keySet($this->oUserCurrent, $key_md5);
+    }
+    protected function fLogger(){
+        $this->Logger_Notice("Test");
+        $this->Viewer_Assign('aBooks', $this->Logger_GetFileName());
     }
     /**
      * Завершение работы экшена
