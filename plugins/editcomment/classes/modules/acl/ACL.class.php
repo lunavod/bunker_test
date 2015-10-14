@@ -34,7 +34,7 @@ class PluginEditcomment_ModuleACL extends PluginEditcomment_Inherit_ModuleACL
 
     function UserCanEditComment($oUser,$oComment,$iCheckMask=0)
     {
-        $oBlog = $oComment->getTarget()->getBlog()->Blog_GetBlogUserByBlogIdAndUserId($oComment->getTarget()->getBlog()->getId(),$oUser->getId());
+
         if (!$iCheckMask)
             return true;
         
@@ -47,9 +47,13 @@ class PluginEditcomment_ModuleACL extends PluginEditcomment_Inherit_ModuleACL
         $aUsers=Config::Get('plugin.editcomment.comment_editors');
         if (is_array($aUsers) && in_array($oUser->getId(),$aUsers))
             return true;
-
-        if ($oBlog->getIsModerator() or $oBlog->getIsAdministrator())
-            return true;
+        if ($oComment->getTargetType() != 'talk') {
+            if($oComment->getTarget()->getBlog()->getType() != 'personal') {
+                $oBlog = $oComment->getTarget()->getBlog()->Blog_GetBlogUserByBlogIdAndUserId($oComment->getTarget()->getBlog()->getId(), $oUser->getId());
+                if ($oBlog->getIsModerator() or $oBlog->getIsAdministrator())
+                    return true;
+            }
+        }
 
         if ($oUser->getUserIsAdministrator())
             return true;
