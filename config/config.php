@@ -18,8 +18,8 @@
 /**
  * Настройки HTML вида
  */
-$config['view']['skin']        = 'synio';                                                              // шаблон(скин)
-$config['view']['name']        = 'Your Site';                   // название сайта
+$config['view']['skin']        = 'reboot';                                                              // шаблон(скин)
+$config['view']['name']        = 'Bunker Developing Site';                   // название сайта
 $config['view']['description'] = 'Description your site'; // seo description
 $config['view']['keywords']    = 'site, google, internet';      // seo keywords
 $config['view']['tinymce']         = false;  // использовать или нет визуальный редактор TinyMCE
