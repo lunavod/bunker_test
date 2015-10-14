@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="384fd233-3d96-497b-99c0-6a37065a615c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/editcomment/classes/modules/acl/ACL.class.php" afterPath="$PROJECT_DIR$/plugins/editcomment/classes/modules/acl/ACL.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/jevix.php" afterPath="$PROJECT_DIR$/config/jevix.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="html.iws" />
@@ -97,21 +97,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sql_error.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logs/sql_error.log">
+      <file leaf-file-name="ACL.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/editcomment/classes/modules/acl/ACL.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-20.0">
+              <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ACL.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plugins/editcomment/classes/modules/acl/ACL.class.php">
+      <file leaf-file-name="jevix.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/jevix.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.569044">
-              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.123222746">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -152,6 +152,7 @@
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/templates/skin/reboot/comment.tpl" />
         <option value="$PROJECT_DIR$/plugins/editcomment/classes/modules/acl/ACL.class.php" />
+        <option value="$PROJECT_DIR$/config/jevix.php" />
       </list>
     </option>
   </component>
@@ -459,7 +460,13 @@
       <option name="project" value="LOCAL" />
       <updated>1444827035623</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Фикс крупного бага в редактировании комментариев.">
+      <created>1444832795491</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1444832795491</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -503,20 +510,14 @@
     <MESSAGE value="Добавлена возможность администраторам и модераторам блога редактировать в нем комменты, пофикшен конфиг." />
     <MESSAGE value="Добавлено логгирование редактирования комментов." />
     <MESSAGE value="Поставлен шаблон по умолчанию reboot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Поставлен шаблон по умолчанию reboot" />
+    <MESSAGE value="Фикс крупного бага в редактировании комментариев." />
+    <option name="LAST_COMMIT_MESSAGE" value="Фикс крупного бага в редактировании комментариев." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plugins/api/PluginApi.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/api/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -885,8 +886,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/editcomment/classes/modules/acl/ACL.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.569044">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        <state vertical-scroll-proportion="-20.0">
+          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/jevix.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.123222746">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
           <folding />
         </state>
       </provider>
