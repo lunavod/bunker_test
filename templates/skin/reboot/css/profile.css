@@ -11,8 +11,8 @@
 
 .profile .vote 									{ position: absolute; top: 0; right: 140px; }
 .profile .vote .vote-count 						{ padding-left: 25px; display: block; }
-.profile .vote .vote-up 						{ position: absolute; top: 22px; left: 0; display: none; }
-.profile .vote .vote-down 						{ position: absolute; top: 35px; left: 0; display: none; }
+.profile .vote .vote-up 						{ color: green; position: absolute; top: 22px; left: 0; font-size: 14px; line-height: 14px; }
+.profile .vote .vote-down 						{ color: red; position: absolute; top: 35px; left: 0; font-size: 14px; line-height: 14px;}
 .profile .vote:hover .vote-up,
 .profile .vote:hover .vote-down,
 .profile .vote.voted .vote-up,

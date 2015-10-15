@@ -21,6 +21,7 @@
 <script src="{cfg name="path.static.skin"}/js/clock.js">
 {hook run='body_end'}
 <script>
+
 var allNew = document.querySelectorAll('.spoiler-title');
 console.log(allNew)
 idx=0

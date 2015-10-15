@@ -546,7 +546,7 @@ $config['head']['default']['css'] = array(
 /**
  * Параметры компрессии css-файлов
  */
-$config['compress']['css']['merge'] = true;       // указывает на необходимость слияния файлов по указанным блокам.
+$config['compress']['css']['merge'] = false;       // указывает на необходимость слияния файлов по указанным блокам.
 $config['compress']['css']['use']   = false;       // указывает на необходимость компрессии файлов. Компрессия используется только в активированном режиме слияния файлов.
 $config['compress']['css']['case_properties']     = 1;
 $config['compress']['css']['merge_selectors']     = 0;

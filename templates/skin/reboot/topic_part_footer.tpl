@@ -78,7 +78,17 @@
 					{if $oTopic->getCountCommentNew()}<span>+{$oTopic->getCountCommentNew()}</span>{/if}
 				</li>
 			{/if}
-			
+			{if $oTopic->getTextShort()!=$oTopic->getText()}
+				<li class="cut">
+				<a href="{$oTopic->getUrl()}#cut" title="{$aLang.topic_read_more}">
+					{if $oTopic->getCutText()}
+						{$oTopic->getCutText()}
+					{else}
+						{$aLang.topic_read_more}
+					{/if}
+				</a>
+					</li>
+			{/if}
 			{hook run='topic_show_info' topic=$oTopic}
 		</ul>
 

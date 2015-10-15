@@ -8,7 +8,7 @@
 <head>
 <script src="http://93.171.159.12/plugins/talkbell/templates/skin/default/js/soundmanager2.js';">
 <script>
-function spoiler_click(event){
+var spoiler_click = function(event){
     var event = event || window.event;
     if(event.button!=0)return;
     var target=event.target||event.srcElement;
@@ -17,7 +17,7 @@ function spoiler_click(event){
         target = target.parentNode||target.parentElement;
         if(!target || target==document.body)return;
     }
-   
+
     var parent = target.parentNode||target.parentElement;
     if(!parent || parent.lastElementChild == target)return true;
     var b = parent.querySelector(".spoiler-body");
@@ -33,7 +33,7 @@ function spoiler_click(event){
     event.preventDefault ? event.preventDefault() : (event.returnValue=false);
     return false;
 }
- 
+
 window.addEventListener("DOMContentLoaded", function(){
     document.body.addEventListener("click", spoiler_click);
 });

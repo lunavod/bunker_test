@@ -6,8 +6,8 @@ return array(
 		'cfgAllowTags' => array(
 			// вызов метода с параметрами
 			array(
-				array('ls', 'bdo','cut','a', 'img', 'i', 'b', 'u', 's', 'video', 'em',  'strong', 'nobr', 'li', 'ol', 'ul', 'sup', 'abbr', 'sub', 'acronym', 'h4', 'h5', 'h6', 'br', 'hr', 'pre', 'code', 'object', 'param', 'embed', 'blockquote', 'iframe','table','th','tr','td'),
-			),			
+				array('span', 'ls','cut','a', 'img', 'i', 'b', 'u', 's', 'video', 'em',  'strong', 'nobr', 'li', 'ol', 'ul', 'sup', 'abbr', 'sub', 'acronym', 'h4', 'h5', 'h6', 'br', 'hr', 'pre', 'code', 'object', 'param', 'embed', 'blockquote', 'iframe','table','th','tr','td'),
+			),
 		),
 		// Коротие теги типа
 		'cfgSetTagShort' => array(
@@ -28,6 +28,10 @@ return array(
 				'img',
 				array('src', 'alt' => '#text', 'title', 'align' => array('right', 'left', 'center', 'middle'), 'width' => '#int', 'height' => '#int', 'hspace' => '#int', 'vspace' => '#int', 'class'=> array('image-center'))
 			),
+			array(
+				'span',
+				array('class' => array('spoiler-gray', 'spoiler-title', 'spoiler-body', 'spoiler-close', 'spoiler-title spoiler-close', 'spoiler', 'left', 'right', 'center'))
+			),
 			// следующий вызов метода
 			array(
 				'a',
@@ -39,12 +43,8 @@ return array(
 				array('name')
 			),
 			array(
-				'bdo',
-				array('dir')
-			),
-			array(
 				'object',
-				array('width' => '#int', 'height' => '#int', 'data' => array('#domain'=>array('youtube.com','rutube.ru','vimeo.com')), 'type' => '#text')
+				array('width' => '#int', 'height' => '#int', 'data' => array('#domain'=>array('youtube.com','rutube.ru','vimeo.com')),  'type' => '#text')
 			),
 			array(
 				'param',
@@ -52,7 +52,7 @@ return array(
 			),
 			array(
 				'embed',
-				array('src' => array('#domain'=>array('youtube.com','rutube.ru','vimeo.com')), 'type' => '#text','allowscriptaccess' => '#text', 'allowfullscreen' => '#text','width' => '#int', 'height' => '#int', 'flashvars'=> '#text', 'wmode'=> '#text')
+				array('src' => array('#domain'=>array('youtube.com','rutube.ru','vimeo.com', 'embed.pleer.com')), 'type' => '#text','allowscriptaccess' => '#text', 'allowfullscreen' => '#text','width' => '#int', 'height' => '#int', 'flashvars'=> '#text', 'wmode'=> '#text')
 			),
 			array(
 				'acronym',
@@ -89,7 +89,7 @@ return array(
 						'value'=>array('sameDomain'),
 					),
 					'movie' => array(
-						'value'=>array('#domain'=>array('youtube.com','rutube.ru','vimeo.com')),
+						'value'=>array('#domain'=>array('youtube.com','rutube.ru','vimeo.com', 'embed.pleer.com')),
 					),
 					'align' => array(
 						'value'=>array('bottom','middle','top','left','right'),
@@ -145,7 +145,7 @@ return array(
 			array(
 				'img',
 				'src'
-			),			
+			),
 		),
 		// Теги которые необходимо вырезать из текста вместе с контентом
 		'cfgSetTagCutWithContent' => array(
@@ -232,7 +232,7 @@ return array(
 				array('http','https','ftp')
 			)
 		),
-		'cfgSetTagNoTypography' => array(			
+		'cfgSetTagNoTypography' => array(
 			array(
 				array('code','video','object')
 			),
@@ -250,7 +250,7 @@ return array(
 			),
 		),
 	),
-	
+
 	// настройки для обработки текста в результатах поиска
 	'search' => array(
 		// Разрешённые теги
@@ -258,14 +258,14 @@ return array(
 			// вызов метода с параметрами
 			array(
 				array('span'),
-			),			
+			),
 		),
 		// Разрешённые параметры тегов
 		'cfgAllowTagParams' => array(
 			array(
 				'span',
 				array('class' => '#text')
-			),			
+			),
 		),
 	),
 );
