@@ -267,7 +267,7 @@ ls.comments = (function ($) {
 
 	// Прокрутка к комментарию
 	this.scrollToComment = function(idComment) {
-		$.scrollTo('#comment_id_'+idComment, 250, {offset: -250});
+		$.scrollTo('#comment_id_'+idComment, 350, {offset: -250});
 						
 		if (this.iCurrentViewComment) {
 			$('#comment_id_'+this.iCurrentViewComment).removeClass(this.options.classes.comment_current);
