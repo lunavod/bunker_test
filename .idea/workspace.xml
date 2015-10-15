@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="384fd233-3d96-497b-99c0-6a37065a615c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/cache/reboot/37c533b6013502c959f85a08104ab729.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/css/base.css" afterPath="$PROJECT_DIR$/templates/skin/reboot/css/base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/css/comments.css" afterPath="$PROJECT_DIR$/templates/skin/reboot/css/comments.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/footer.tpl" afterPath="$PROJECT_DIR$/templates/skin/reboot/footer.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/css/grid.css" afterPath="$PROJECT_DIR$/templates/skin/reboot/css/grid.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/header.tpl" afterPath="$PROJECT_DIR$/templates/skin/reboot/header.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/jevix.php" afterPath="$PROJECT_DIR$/config/jevix.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/css/profile.css" afterPath="$PROJECT_DIR$/templates/skin/reboot/css/profile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/actions/ActionProfile/profile_top.tpl" afterPath="$PROJECT_DIR$/templates/skin/reboot/actions/ActionProfile/profile_top.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/css/topic.css" afterPath="$PROJECT_DIR$/templates/skin/reboot/css/topic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/topic_part_footer.tpl" afterPath="$PROJECT_DIR$/templates/skin/reboot/topic_part_footer.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/topic_photoset.tpl" afterPath="$PROJECT_DIR$/templates/skin/reboot/topic_photoset.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/topic_topic.tpl" afterPath="$PROJECT_DIR$/templates/skin/reboot/topic_topic.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="html.iws" />
@@ -37,11 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="jevix.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jevix.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/jevix.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3064771">
+            <state vertical-scroll-proportion="-3.88">
               <caret line="245" column="41" selection-start-line="245" selection-start-column="41" selection-end-line="245" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.0384617">
+              <caret line="217" column="44" selection-start-line="217" selection-start-column="44" selection-end-line="217" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -71,7 +71,17 @@
         <entry file="file://$PROJECT_DIR$/templates/skin/reboot/css/grid.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="10" column="119" selection-start-line="10" selection-start-column="119" selection-end-line="10" selection-end-column="119" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comments.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/skin/reboot/css/comments.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0658858">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,26 +102,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.0">
               <caret line="8" column="138" selection-start-line="8" selection-start-column="138" selection-end-line="8" selection-end-column="138" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/skin/reboot/css/profile.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.profile_created.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/skin/reboot/menu.profile_created.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -172,13 +162,14 @@
         <option value="$PROJECT_DIR$/templates/skin/reboot/css/topic.css" />
         <option value="$PROJECT_DIR$/templates/skin/reboot/topic_topic.tpl" />
         <option value="$PROJECT_DIR$/templates/skin/reboot/topic_photoset.tpl" />
-        <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/templates/skin/reboot/css/profile.css" />
         <option value="$PROJECT_DIR$/templates/skin/reboot/actions/ActionProfile/profile_top.tpl" />
         <option value="$PROJECT_DIR$/templates/skin/reboot/footer.tpl" />
         <option value="$PROJECT_DIR$/templates/skin/reboot/header.tpl" />
-        <option value="$PROJECT_DIR$/templates/skin/reboot/css/grid.css" />
         <option value="$PROJECT_DIR$/config/jevix.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/templates/skin/reboot/css/grid.css" />
+        <option value="$PROJECT_DIR$/templates/skin/reboot/css/comments.css" />
       </list>
     </option>
   </component>
@@ -648,7 +639,13 @@
       <option name="project" value="LOCAL" />
       <updated>1444892167053</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="фикс jevix">
+      <created>1444924417345</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1444924417345</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -695,20 +692,14 @@
     <MESSAGE value="Фикс крупного бага в редактировании комментариев." />
     <MESSAGE value="Убраны лишние ленты, добавлена ссылка на форум" />
     <MESSAGE value="some fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="some fixes" />
+    <MESSAGE value="фикс jevix" />
+    <option name="LAST_COMMIT_MESSAGE" value="фикс jevix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/skin/reboot/actions/ActionBlog/blog.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375">
-          <caret line="62" column="151" selection-start-line="62" selection-start-column="119" selection-end-line="62" selection-end-column="151" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/sql_error.log">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -866,9 +857,9 @@
         <state vertical-scroll-proportion="-20.0">
           <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
           <folding>
-            <marker date="1444912097792" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1444912097792" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1444912097792" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1444925300472" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1444925300472" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1444925300472" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1024,14 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
-          <caret line="548" column="43" selection-start-line="548" selection-start-column="43" selection-end-line="548" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/skin/reboot/css/profile.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1096,18 +1079,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/skin/reboot/css/grid.css">
+    <entry file="file://$PROJECT_DIR$/config/jevix.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.88">
+          <caret line="245" column="41" selection-start-line="245" selection-start-column="41" selection-end-line="245" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/jevix.php">
+    <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3064771">
-          <caret line="245" column="41" selection-start-line="245" selection-start-column="41" selection-end-line="245" selection-end-column="41" />
+        <state vertical-scroll-proportion="-4.0384617">
+          <caret line="217" column="44" selection-start-line="217" selection-start-column="44" selection-end-line="217" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/skin/reboot/css/grid.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="119" selection-start-line="10" selection-start-column="119" selection-end-line="10" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/skin/reboot/css/comments.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0658858">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
