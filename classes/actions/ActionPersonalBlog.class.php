@@ -77,7 +77,7 @@ class ActionPersonalBlog extends Action {
 		if (in_array(getRequestStr('period'),array(1,7,30,'all'))) {
 			$sPeriod=getRequestStr('period');
 		}
-		$sShowType=$this->sCurrentEvent;
+		$sShowType='newall';
 		if (!in_array($sShowType,array('discussed','top'))) {
 			$sPeriod='all';
 		}

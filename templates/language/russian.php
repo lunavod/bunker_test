@@ -24,6 +24,7 @@ return array(
 	/**
 	 * Блоги
 	 */
+	'freepony' => 'Форум freepony.ru',
 	'blogs' => 'Блоги',
 	'blogs_search_title_hint' => 'Поиск по названию',
 	'blogs_search_empty' => 'Поиск не дал результатов',

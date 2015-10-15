@@ -76,11 +76,11 @@ class ActionIndex extends Action {
 	 *
 	 */
 	protected function RegisterEvent() {
-		$this->AddEventPreg('/^(page([1-9]\d{0,5}))?$/i','EventIndex');
-		$this->AddEventPreg('/^new$/i','/^(page([1-9]\d{0,5}))?$/i','EventNew');
+		$this->AddEventPreg('/^(page([1-9]\d{0,5}))?$/i','EventNewAll');
+		$this->AddEventPreg('/^new$/i','/^(page([1-9]\d{0,5}))?$/i','EventNewAll');
 		$this->AddEventPreg('/^newall$/i','/^(page([1-9]\d{0,5}))?$/i','EventNewAll');
-		$this->AddEventPreg('/^discussed$/i','/^(page([1-9]\d{0,5}))?$/i','EventDiscussed');
-		$this->AddEventPreg('/^top$/i','/^(page([1-9]\d{0,5}))?$/i','EventTop');
+		$this->AddEventPreg('/^discussed$/i','/^(page([1-9]\d{0,5}))?$/i','EventNewAll');
+		$this->AddEventPreg('/^top$/i','/^(page([1-9]\d{0,5}))?$/i','EventNewAll');
 	}
 
 

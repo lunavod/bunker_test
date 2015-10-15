@@ -4,6 +4,7 @@
 		<li {if $sMenuHeadItemSelect=='blogs'}class="active"{/if}><a href="{router page='blogs'}">{$aLang.blogs}</a></li>
 		<li {if $sMenuHeadItemSelect=='people'}class="active"{/if}><a href="{router page='people'}">{$aLang.people}</a></li>
 		<li {if $sMenuHeadItemSelect=='stream'}class="active"{/if}><a href="{router page='stream'}">{$aLang.stream_menu}</a></li>
+		<li><a href="http://freepony.ru/">{$aLang.freepony}</a></li>
 
 		{hook run='main_menu_item'}
 		<li class="quote" style="float: left;">
