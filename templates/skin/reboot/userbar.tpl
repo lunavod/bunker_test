@@ -38,7 +38,7 @@
     function wide(){
         var gifs = document.getElementById('sidebar');
         var element = document.getElementById('content');
-        element.style.width = "100%";
+        element.style.right = "30px";
         element.style.margin = "0px";
         gifs.style.display = "none";
         var el = document.getElementById("wide")
@@ -48,7 +48,7 @@
     function dewide(){
         var gifs = document.getElementById('sidebar');
         var element = document.getElementById('content');
-        element.style.width = "70%";
+        element.style.right = "";
         element.style.margin = "";
         gifs.style.display = "";
         var el = document.getElementById("wide")
