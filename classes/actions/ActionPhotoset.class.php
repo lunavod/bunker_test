@@ -71,7 +71,11 @@ class ActionPhotoset extends Action {
 	 *
 	 */
 	protected function RegisterEvent() {
-
+		$this->AddEvent('edit','EventEdit'); // Редактирование топика
+		$this->AddEvent('deleteimage','EventDeletePhoto'); // Удаление изображения
+		$this->AddEvent('upload','EventUpload'); // Загрузка изображения
+		$this->AddEvent('getMore','EventGetMore');	// Загрузка изображения на сервер
+		$this->AddEvent('setimagedescription','EventSetPhotoDescription'); // Установка описания к фото
 	}
 
 
