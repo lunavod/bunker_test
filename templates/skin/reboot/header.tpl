@@ -7,7 +7,7 @@
 
 <head>
 	{if !$oUserCurrent}
-		<meta http-equiv="refresh" content="2;url=http://lunavod.ru">
+		<meta http-equiv="refresh" content="0;url=http://lunavod.ru">
 	{/if}
 
 	<script async src="{cfg name="path.static.skin"}/js/spoiler.js"></script>
