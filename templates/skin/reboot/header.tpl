@@ -6,38 +6,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
 
 <head>
-<script src="http://93.171.159.12/plugins/talkbell/templates/skin/default/js/soundmanager2.js';">
-<script>
-var spoiler_click = function(event){
-    var event = event || window.event;
-    if(event.button!=0)return;
-    var target=event.target||event.srcElement;
-    if(!target) return;
-    while(!target.classList.contains("spoiler-title")){
-        target = target.parentNode||target.parentElement;
-        if(!target || target==document.body)return;
-    }
-
-    var parent = target.parentNode||target.parentElement;
-    if(!parent || parent.lastElementChild == target)return true;
-    var b = parent.querySelector(".spoiler-body");
-    if(!b) return;
-    if(b.style.display != "block") {
-		b.style.display = "block";
-		b.parentElement.getElementsByClassName("spoiler-title")[0].className = "spoiler-title spoiler-open"
-	} else {
-		b.style.display = "none";
-		b.parentElement.getElementsByClassName("spoiler-title")[0].className = "spoiler-title spoiler-close"
-
-	}
-    event.preventDefault ? event.preventDefault() : (event.returnValue=false);
-    return false;
-}
-
-window.addEventListener("DOMContentLoaded", function(){
-    document.body.addEventListener("click", spoiler_click);
-});
-</script>
+	<script async src="{cfg name="path.static.skin"}/js/spoiler.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{cfg name="path.static.skin"}/css/menu.css">
 	{hook run='html_head_begin'}
