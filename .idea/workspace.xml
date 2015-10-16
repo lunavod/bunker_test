@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="384fd233-3d96-497b-99c0-6a37065a615c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/header.tpl" afterPath="$PROJECT_DIR$/templates/skin/reboot/header.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/plugins.dat" afterPath="$PROJECT_DIR$/plugins/plugins.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="html.iws" />
@@ -39,8 +38,8 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5942948">
-              <caret line="158" column="3" selection-start-line="158" selection-start-column="3" selection-end-line="158" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.8082409">
+              <caret line="167" column="50" selection-start-line="167" selection-start-column="50" selection-end-line="167" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -634,7 +633,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445009901149</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Убрал заглушку, включил закрытый режим работы.">
+      <created>1445011156295</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1445011156295</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -691,7 +696,8 @@
     <MESSAGE value="Добавлена страничка-хаб ссылок на эпизоды." />
     <MESSAGE value="Отключил заглушку на странице логина." />
     <MESSAGE value="Добавил игнор, удалил лишние файлы." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил игнор, удалил лишние файлы." />
+    <MESSAGE value="Убрал заглушку, включил закрытый режим работы." />
+    <option name="LAST_COMMIT_MESSAGE" value="Убрал заглушку, включил закрытый режим работы." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1090,8 +1096,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5942948">
-          <caret line="158" column="3" selection-start-line="158" selection-start-column="3" selection-end-line="158" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.8082409">
+          <caret line="167" column="50" selection-start-line="167" selection-start-column="50" selection-end-line="167" selection-end-column="50" />
           <folding />
         </state>
       </provider>
