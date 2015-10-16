@@ -9,7 +9,7 @@
 		{hook run='main_menu_item'}
 		<li class="quote" style="float: left;">
 		<a href="#" style="padding-top: 3px; padding-bottom" 0px;>
-<img src="http://fc08.deviantart.net/fs70/f/2013/042/3/8/filly_luna_desktop_pony_sit_by_starlyk-d5un8rg.gif" height=47>
+<img src="{cfg name="path.static.skin"}/images/woona.gif">
 </a>
 </li>	
 	<li class="quote" style="float: left;">

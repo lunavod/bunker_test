@@ -7,7 +7,7 @@
 
 <head>
 	<script async src="{cfg name="path.static.skin"}/js/spoiler.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{cfg name="path.static.skin"}/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="{cfg name="path.static.skin"}/css/menu.css">
 	{hook run='html_head_begin'}
 	
@@ -121,6 +121,8 @@
 
 
 <body class="{$body_classes} width-{cfg name='view.grid.type'}">
+<img src="{cfg name="path.static.skin"}/images/woona-big.png" class="woona">
+<script src="{cfg name="path.static.skin"}/js/woona.js"></script>
 	{hook run='body_begin'}
 	<nav id="userbar" class="clearfix">
 	{hook run='userbar_nav'}

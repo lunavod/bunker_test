@@ -818,7 +818,7 @@ class ActionBlog extends Action {
 			$sPeriod=getRequestStr('period');
 		}
 		$sBlogUrl=$this->sCurrentEvent;
-		$sShowType=in_array($this->GetParamEventMatch(0,0),array('bad','new','newall','discussed','top')) ? $this->GetParamEventMatch(0,0) : 'good';
+		$sShowType='newall';
 		if (!in_array($sShowType,array('discussed','top'))) {
 			$sPeriod='all';
 		}

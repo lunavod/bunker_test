@@ -137,11 +137,9 @@
 .item-list li 				{ min-height: 51px; padding: 3px 7px 3px 3px; border-bottom: 1px solid #eee; position: relative; zoom: 1; }
 .item-list li p 			{ padding-top: 2px; font-size: 11px; }
 .item-list li a 			{ text-decoration: none; }
-.item-list li .avatar 		{ position: absolute; top: 10px; left: 0; margin-right: 10px; }
+.item-list li .avatar 		{ position: absolute; left: 0; margin-right: 10px; }
 .item-list li .author 		{ font-weight: bold; color: #333; }
 .item-list li .blog-name 	{ font-weight: bold; }
-
-
 
 /* Хелперы
 ---------------------------------------------------- */
@@ -187,3 +185,11 @@
 .user, .ls-user 	{ font-weight: bold; color: #333; }
 .ls-user:before 	{ content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 3px; background: url(../images/icons.png) -168px 0 no-repeat; vertical-align: middle; }
 .user.inactive 		{ color: #aaa; }
+
+.js-block-blogs-content .item-list li {
+	min-height: 51px;
+	padding: 3px 7px 3px 60px;
+	border-bottom: 1px solid #eee;
+	position: relative;
+	zoom: 1;
+}
