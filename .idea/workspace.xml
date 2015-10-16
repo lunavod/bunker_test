@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="384fd233-3d96-497b-99c0-6a37065a615c" name="Default" comment="фикс отображения блогов, добавил Вуну. Поправил css, отвечающий за блок &quot;блоги&quot;. Перенес Вуну">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/episodes/classes/actions/ActionEpisodes.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/episodes/classes/blocks/BlockEpisodes.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/episodes/classes/modules/episodes/Episodes.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/episodes/classes/modules/episodes/mapper/Episodes.mapper.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/episodes/classes/hooks/HookEpisodes.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/episodes/PluginEpisodes.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/episodes/classes/modules/episodes/entity/Somepage.entity.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/episodes/config/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/episodes/deinstall.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/episodes/templates/language/english.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/episodes/install.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/episodes/plugin.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/episodes/templates/language/russian.php" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/templates/cache/admin_new/6c1af152419e391592ddf516b5a8b4b7.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/templates/cache/reboot/b6bb8ff7ca7b4a41d7b1e2a05d779c12.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/actions/ActionPhotoset.class.php" afterPath="$PROJECT_DIR$/classes/actions/ActionPhotoset.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/menu.create.tpl" afterPath="$PROJECT_DIR$/templates/skin/reboot/menu.create.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/css/modals.css" afterPath="$PROJECT_DIR$/templates/skin/reboot/css/modals.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/window_write.tpl" afterPath="$PROJECT_DIR$/templates/skin/reboot/window_write.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="html.iws" />
@@ -628,7 +637,13 @@
       <option name="project" value="LOCAL" />
       <updated>1444999188478</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Убрал фотосет, поправил все файлы, где он использовался.">
+      <created>1445000338926</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1445000338926</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -681,7 +696,8 @@
     <MESSAGE value="фикс спойлеров, перенос всего сними связанного в отдельный js файл." />
     <MESSAGE value="фикс отображения блогов, добавил Вуну. Поправил css, отвечающий за блок &quot;блоги&quot;. Перенес Вуну и font awesome на внутренний хостинг." />
     <MESSAGE value="фикс отображения блогов, добавил Вуну. Поправил css, отвечающий за блок &quot;блоги&quot;. Перенес Вуну" />
-    <option name="LAST_COMMIT_MESSAGE" value="фикс отображения блогов, добавил Вуну. Поправил css, отвечающий за блок &quot;блоги&quot;. Перенес Вуну" />
+    <MESSAGE value="Убрал фотосет, поправил все файлы, где он использовался." />
+    <option name="LAST_COMMIT_MESSAGE" value="Убрал фотосет, поправил все файлы, где он использовался." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
