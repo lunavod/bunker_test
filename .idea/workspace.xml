@@ -1,44 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="384fd233-3d96-497b-99c0-6a37065a615c" name="Default" comment="Отключил заглушку на странице логина.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/classes/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/config/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/classes/actions/ActionAjax.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/classes/modules/comment/entity/Comment.entity.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/classes/hooks/HookIgnore.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/PluginIgnore.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/classes/modules/topic/Topic.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/classes/modules/topic/mapper/Topic.mapper.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/classes/modules/user/User.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/activate.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/config/config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/templates/language/english.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/plugin.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/templates/skin/default/profile_ignore.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/ignore/templates/language/russian.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/index.html.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/master" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/talkbell_v03_ls1x.zip" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/classes/actions/ActionEpisodes.class.php" afterPath="$PROJECT_DIR$/plugins/episodes/classes/actions/ActionEpisodes.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/classes/blocks/BlockEpisodes.class.php" afterPath="$PROJECT_DIR$/plugins/episodes/classes/blocks/BlockEpisodes.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/classes/modules/episodes/Episodes.class.php" afterPath="$PROJECT_DIR$/plugins/episodes/classes/modules/episodes/Episodes.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/classes/modules/episodes/mapper/Episodes.mapper.class.php" afterPath="$PROJECT_DIR$/plugins/episodes/classes/modules/episodes/mapper/Episodes.mapper.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/classes/hooks/HookEpisodes.class.php" afterPath="$PROJECT_DIR$/plugins/episodes/classes/hooks/HookEpisodes.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/PluginEpisodes.class.php" afterPath="$PROJECT_DIR$/plugins/episodes/PluginEpisodes.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/classes/modules/episodes/entity/Somepage.entity.class.php" afterPath="$PROJECT_DIR$/plugins/episodes/classes/modules/episodes/entity/Somepage.entity.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/config/config.php" afterPath="$PROJECT_DIR$/plugins/episodes/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/deinstall.sql" afterPath="$PROJECT_DIR$/plugins/episodes/deinstall.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/templates/language/english.php" afterPath="$PROJECT_DIR$/plugins/episodes/templates/language/english.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/templates/skin/default/actions/ActionEpisodes/index.tpl" afterPath="$PROJECT_DIR$/plugins/episodes/templates/skin/default/actions/ActionEpisodes/index.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/install.sql" afterPath="$PROJECT_DIR$/plugins/episodes/install.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/plugin.xml" afterPath="$PROJECT_DIR$/plugins/episodes/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/plugins.dat" afterPath="$PROJECT_DIR$/plugins/plugins.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/episodes/templates/language/russian.php" afterPath="$PROJECT_DIR$/plugins/episodes/templates/language/russian.php" />
+    <list default="true" id="384fd233-3d96-497b-99c0-6a37065a615c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/skin/reboot/header.tpl" afterPath="$PROJECT_DIR$/templates/skin/reboot/header.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="html.iws" />
@@ -64,8 +29,18 @@
       <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/skin/reboot/header.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.7">
-              <caret line="29" column="70" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
+            <state vertical-scroll-proportion="-3.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5942948">
+              <caret line="158" column="3" selection-start-line="158" selection-start-column="3" selection-end-line="158" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -91,10 +66,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HookIgnore.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HookIgnore.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/ignore/classes/hooks/HookIgnore.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.569044">
+            <state vertical-scroll-proportion="-15.625">
               <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
               <folding />
             </state>
@@ -183,7 +158,6 @@
         <option value="$PROJECT_DIR$/templates/skin/reboot/actions/ActionProfile/profile_top.tpl" />
         <option value="$PROJECT_DIR$/templates/skin/reboot/footer.tpl" />
         <option value="$PROJECT_DIR$/config/jevix.php" />
-        <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/templates/skin/reboot/css/grid.css" />
         <option value="$PROJECT_DIR$/templates/skin/reboot/css/comments.css" />
         <option value="$PROJECT_DIR$/engine/lib/internal/template/js/comments.js" />
@@ -205,8 +179,9 @@
         <option value="$PROJECT_DIR$/templates/skin/reboot/window_write.tpl" />
         <option value="$PROJECT_DIR$/templates/skin/reboot/menu.create.tpl" />
         <option value="$PROJECT_DIR$/templates/skin/reboot/css/modals.css" />
-        <option value="$PROJECT_DIR$/templates/skin/reboot/header.tpl" />
         <option value="$PROJECT_DIR$/plugins/ignore/classes/hooks/HookIgnore.class.php" />
+        <option value="$PROJECT_DIR$/templates/skin/reboot/header.tpl" />
+        <option value="$PROJECT_DIR$/config/config.php" />
       </list>
     </option>
   </component>
@@ -374,25 +349,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -671,7 +628,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445007131193</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Добавил игнор, удалил лишние файлы.">
+      <created>1445009901149</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1445009901149</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -727,7 +690,8 @@
     <MESSAGE value="Убрал фотосет, поправил все файлы, где он использовался." />
     <MESSAGE value="Добавлена страничка-хаб ссылок на эпизоды." />
     <MESSAGE value="Отключил заглушку на странице логина." />
-    <option name="LAST_COMMIT_MESSAGE" value="Отключил заглушку на странице логина." />
+    <MESSAGE value="Добавил игнор, удалил лишние файлы." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил игнор, удалил лишние файлы." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -802,14 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="245" column="41" selection-start-line="245" selection-start-column="41" selection-end-line="245" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="217" column="44" selection-start-line="217" selection-start-column="44" selection-end-line="217" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -1076,14 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/skin/reboot/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.7">
-          <caret line="29" column="70" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/ignore/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1126,8 +1074,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/ignore/classes/hooks/HookIgnore.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.569044">
+        <state vertical-scroll-proportion="-15.625">
           <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/skin/reboot/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5942948">
+          <caret line="158" column="3" selection-start-line="158" selection-start-column="3" selection-end-line="158" selection-end-column="3" />
           <folding />
         </state>
       </provider>
