@@ -19,10 +19,6 @@
 				<a href="{router page='link'}add" class="write-item-image"></a>
 				<a href="{router page='link'}add" class="write-item-link">{$aLang.block_create_topic_link}</a>
 			</li>
-			<li class="write-item-type-photoset">
-				<a href="{router page='photoset'}add" class="write-item-image"></a>
-				<a href="{router page='photoset'}add" class="write-item-link">{$aLang.block_create_topic_photoset}</a>
-			</li>
 			<li class="write-item-type-blog">
 				<a href="{router page='blog'}add" class="write-item-image"></a>
 				<a href="{router page='blog'}add" class="write-item-link">{$aLang.block_create_blog}</a>
