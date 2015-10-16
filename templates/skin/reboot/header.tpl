@@ -6,9 +6,10 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
 
 <head>
+	{if $sAction!='login'}
 	{if !$oUserCurrent}
 		<meta http-equiv="refresh" content="0;url=http://lunavod.ru">
-	{/if}
+	{/if}{/if}
 
 	<script async src="{cfg name="path.static.skin"}/js/spoiler.js"></script>
 <link rel="stylesheet" href="{cfg name="path.static.skin"}/font-awesome/css/font-awesome.min.css">
