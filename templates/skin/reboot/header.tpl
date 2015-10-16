@@ -6,6 +6,10 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
 
 <head>
+	{if !$oUserCurrent}
+		<meta http-equiv="refresh" content="2;url=http://lunavod.ru">
+	{/if}
+
 	<script async src="{cfg name="path.static.skin"}/js/spoiler.js"></script>
 <link rel="stylesheet" href="{cfg name="path.static.skin"}/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="{cfg name="path.static.skin"}/css/menu.css">
