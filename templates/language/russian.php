@@ -88,7 +88,7 @@ return array(
 	/**
 	 * Меню блогов
 	 */
-	'blog_menu_all' => 'Все',
+	'blog_menu_all' => 'Все посты',
 	'blog_menu_all_good' => 'Интересные',
 	'blog_menu_all_discussed' => 'Обсуждаемые',
 	'blog_menu_all_top' => 'TOP',
@@ -862,7 +862,7 @@ return array(
 	'userfeed_subscribes_already_subscribed' => 'Вы уже подписаны на топики этого пользователя',
 	'userfeed_subscribes_updated' => 'Настройки ленты сохранены',
 	'userfeed_get_more' => 'Получить ещё топики',
-	'userfeed_title' => 'Лента',
+	'userfeed_title' => 'Избранные блоги',
 	'userfeed_settings_note_follow_blogs' => 'Выберите блоги которые вы хотели бы читать',
 	'userfeed_settings_note_follow_user' => 'Добавьте людей, топики которых вы хотели бы читать',
 	'userfeed_settings_note_follow_friend' => 'Выберите друзей, топики которых вы хотели бы читать',

@@ -22,7 +22,7 @@
 </a>
 </li>
 <li style="float: left;">
-		<a href="#"> <p id="nextepisode">Время, оставшееся до новой серии</p>
+		<a href="{cfg name='path.root.web'}/episodes"> <p id="nextepisode">Время, оставшееся до новой серии</p>
 </a>
 		</li>
 	</ul>
