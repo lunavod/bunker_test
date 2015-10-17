@@ -418,11 +418,10 @@ $config['block']['rule_index_blog'] = array(
 			'index', 'blog' => array('{topics}','{topic}','{blog}')
 		),
 	'blocks'  => array(
-			'right' => array('stream'=>array('priority'=>100),'tags'=>array('priority'=>50),'blogs'=>array('params'=>array(),'priority'=>1))
+			'right' => array('blocks/block.bquote.tpl'=>array('priority'=>50), 'stream'=>array('priority'=>100),'tags'=>array('priority'=>60),'blogs'=>array('params'=>array(),'priority'=>1))
 		),
 	'clear' => false,
 );
-
 $config['block']['rule_topic_type'] = array(
 	'action'  => array(
 		'link'     => array('add','edit'),
@@ -570,7 +569,6 @@ date_default_timezone_set('Europe/Moscow'); // See http://php.net/manual/en/time
  * Настройки типографа текста Jevix
  */
 $config['jevix']=require(dirname(__FILE__).'/jevix.php');
-
 
 return $config;
 ?>

@@ -12,7 +12,7 @@ $quote = array(
 );
 
 srand ((double) microtime() * 1000000);
-  $randnum = rand(1,7);
+$randnum = rand(1,7);
 
 echo"$quote[$randnum]";
 {/php}
