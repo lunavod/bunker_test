@@ -8,8 +8,8 @@
         <a href="#" onclick="ignoreUser({$oUserProfile->getId()}, 'comments',this); return false;">{if $bIgnoredComments}{$aLang.plugin.ignore.disignore_user_comments}{else}{$aLang.plugin.ignore.ignore_user_comments}{/if}</a><br/>
     {/if}
     <a href="#" onclick="ignoreTalkUser('{$oUserProfile->getLogin()}', {$oUserProfile->getId()},this); return false;">{if $bIgnoredTalks}{$aLang.plugin.ignore.disignore_user_talks}{else}{$aLang.plugin.ignore.ignore_user_talks}{/if}</a><br/>
-    
-{/if}    
+
+{/if}
 
 <script>
     var bIgnoreState = {$bIgnoredTalks};

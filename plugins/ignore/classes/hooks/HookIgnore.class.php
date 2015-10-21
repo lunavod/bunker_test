@@ -12,7 +12,7 @@ class PluginIgnore_HookIgnore extends Hook
      */
     public function RegisterHook()
     {
-        $this->AddHook('template_profile_whois_item', 'ProfileView', __CLASS__);
+        $this->AddHook('template_profile_sidebar_show', 'ProfileView', __CLASS__);
         $this->AddHook('profile_whois_show', 'AddJsLang', __CLASS__);
     }
 

@@ -52,7 +52,8 @@
 					<a href="#" onclick="ls.user.followToggle(this, {$oUserProfile->getId()}); return false;" class="{if $oUserProfile->isFollow()}followed{/if}">
 						{if $oUserProfile->isFollow()}{$aLang.profile_user_unfollow}{else}{$aLang.profile_user_follow}{/if}
 					</a>
-				</li>						
+				</li>
+				{hook run='profile_sidebar_show' oUserProfile=$oUserProfile}
 			</ul>
 		</div>
 	</section>
