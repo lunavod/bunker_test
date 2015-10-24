@@ -1245,7 +1245,7 @@ class ModuleUser extends Module {
 	 * @return bool
 	 */
 	public function CheckLogin($sLogin) {
-    	if(preg_match("/^[1-9a-zа-яё\_\-]{".Config::Get('module.user.login.min_size').','.Config::Get('module.user.login.max_size')."}$/iu",$sLogin)){
+    	if(preg_match("/^[0-9a-zа-яё\_\-]{".Config::Get('module.user.login.min_size').','.Config::Get('module.user.login.max_size')."}$/iu",$sLogin)){
     		return true;
     	}
     	return false;
