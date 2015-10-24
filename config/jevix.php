@@ -52,7 +52,7 @@ return array(
 			),
 			array(
 				'embed',
-				array('src' => array('#domain'=>array('youtube.com','rutube.ru','vimeo.com', 'embed.pleer.com')), 'type' => '#text','allowscriptaccess' => '#text', 'allowfullscreen' => '#text','width' => '#int', 'height' => '#int', 'flashvars'=> '#text', 'wmode'=> '#text')
+				array('src' => array('#domain'=>array('youtube.com','rutube.ru','vimeo.com', 'embed.pleer.com', "dl.dropbox.com")), 'type' => '#text','allowscriptaccess' => '#text', 'allowfullscreen' => '#text','width' => '#int', 'height' => '#int', 'flashvars'=> '#text', 'wmode'=> '#text')
 			),
 			array(
 				'acronym',

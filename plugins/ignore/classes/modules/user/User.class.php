@@ -34,7 +34,7 @@ class PluginIgnore_ModuleUser extends PluginIgnore_Inherit_ModuleUser
 
     /**
      * Unignore user
-     * 
+     *
      * @param string $sUserId
      * @param string $sUserIgnoreId
      * @param string $sType
@@ -49,7 +49,7 @@ class PluginIgnore_ModuleUser extends PluginIgnore_Inherit_ModuleUser
 
     /**
      * Is user ignore user
-     * 
+     *
      * @param type $sUserId
      * @param type $sUserIgnoredId
      * @param type $sType
@@ -63,7 +63,7 @@ class PluginIgnore_ModuleUser extends PluginIgnore_Inherit_ModuleUser
 
     /**
      * Get ignored user ids by user
-     * 
+     *
      * @param string $sUserId
      * @param string $sType
      * @return array
@@ -116,6 +116,115 @@ class PluginIgnore_ModuleUser extends PluginIgnore_Inherit_ModuleUser
         }
         $this->oMapper->ClearIgnoranceUser($sUserId);
         return true;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function IgnoreBlogByUser($sUserId, $sUserIgnoreId, $sType)
+    {
+        $this->Cache_Delete("user_ignore_{$sUserId}");
+        $this->Cache_Clean(Zend_Cache::CLEANING_MODE_MATCHING_TAG, array('topic_update', "topic_update_user_{$sUserIgnoreId}"));
+        if ($this->oMapper->IgnoreBlogByUser($sUserId, $sUserIgnoreId, $sType) === false) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Unignore user
+     *
+     * @param string $sUserId
+     * @param string $sUserIgnoreId
+     * @param string $sType
+     * @return boolean
+     */
+    public function UnIgnoreBlogByUser($sUserId, $sUserIgnoreId, $sType)
+    {
+        $this->Cache_Delete("user_ignore_{$sUserId}");
+        $this->Cache_Clean(Zend_Cache::CLEANING_MODE_MATCHING_TAG, array('topic_update', "topic_update_user_{$sUserIgnoreId}"));
+        return $this->oMapper->UnBlogUserByUser($sUserId, $sUserIgnoreId, $sType);
+    }
+
+    /**
+     * Is user ignore user
+     *
+     * @param type $sUserId
+     * @param type $sUserIgnoredId
+     * @param type $sType
+     * @return boolean
+     */
+    public function IsBlogIgnoredByUser($sUserId, $sUserIgnoredId, $sType)
+    {
+        $aIgnored = $this->GetIgnoredBlogsByUser($sUserId, $sType);
+        return in_array($sUserIgnoredId, $aIgnored);
+    }
+
+    /**
+     * Get ignored user ids by user
+     *
+     * @param string $sUserId
+     * @param string $sType
+     * @return array
+     */
+    public function GetIgnoredBlogsByUser($sUserId, $sType = null)
+    {
+        if (false === ($data = $this->Cache_Get("user_ignore_{$sUserId}"))) {
+            if ($data = $this->oMapper->GetIgnoredBlogsByUser($sUserId, $sType)) {
+                $this->Cache_Set($data, "user_ignore_{$sUserId}", array('users_ignorance'), 60 * 60 * 24 * 1);
+            }
+        }
+        if (!is_null($sType)) {
+            $aResult = array();
+            foreach ($data as $id => $aTypes) {
+                if (array_search($sType, $aTypes) !== false) {
+                    array_push($aResult, $id);
+                }
+            }
+            $data = $aResult;
+        }
+        return $data;
     }
 
 }

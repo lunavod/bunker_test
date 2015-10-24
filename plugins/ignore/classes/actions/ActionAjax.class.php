@@ -15,6 +15,7 @@ class PluginIgnore_ActionAjax extends PluginIgnore_Inherit_ActionAjax
         parent::RegisterEvent();
 
         $this->AddEventPreg('/^ignore$/i', 'EventIgnoreUser');
+        $this->AddEvent('ignore-blog', 'EventIgnoreBlog');
         $this->AddEventPreg('/^forbid-ignore$/i', 'EventForbidIgnoreUser');
     }
 
@@ -120,6 +121,39 @@ class PluginIgnore_ActionAjax extends PluginIgnore_Inherit_ActionAjax
             $this->Message_AddErrorSingle($this->Lang_Get('system_error'), $this->Lang_Get('error'));
             return;
         }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    protected function EventIgnoreBlog()
+    {
+        User_IgnoreBlogByUser('0', '1', 'blogs');
+        $this->Viewer_AssignAjax('sText', GetIgnoredBlogsByUser('0'));
     }
 
 }

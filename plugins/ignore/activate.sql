@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS `prefix_user_ignore` (
   `user_id` int(11) unsigned NOT NULL,
   `user_ignored_id` int(11) unsigned NOT NULL,
-  `ignore_type` enum('topics','comments') NOT NULL DEFAULT 'topics',
+  `ignore_type` enum('topics','comments', 'blogs') NOT NULL DEFAULT 'topics',
   UNIQUE KEY `ignorance` (`user_id`,`user_ignored_id`,`ignore_type`),
   KEY `user_ignored_id_2` (`user_ignored_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -16,6 +16,7 @@ class PluginApi_ActionApi extends ActionPlugin {
         $this->AddEvent('index','EventIndex');
         $this->AddEvent('comments','EventComments');
         $this->AddEvent('gen','fLogger');
+        $this->AddEvent('test','EventIgnoreBlog');
     }
 
     protected function EventIndex() {
@@ -57,6 +58,11 @@ class PluginApi_ActionApi extends ActionPlugin {
     protected function fLogger(){
         $this->Logger_Notice("Test");
         $this->Viewer_Assign('aBooks', $this->Logger_GetFileName());
+    }
+    protected function EventIgnoreBlog()
+    {
+        PluginIgnore_ModuleUser_User_IgnoreBlogByUser('0', '1', 'blogs');
+        $this->Viewer_Assign('aBooks', GetIgnoredBlogsByUser('0'));
     }
     /**
      * Завершение работы экшена

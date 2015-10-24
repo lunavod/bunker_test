@@ -125,4 +125,85 @@ class PluginIgnore_ModuleUser_MapperUser extends PluginIgnore_Inherit_ModuleUser
         return $this->oDb->query($sql, $sUserId);
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function IgnoreBlogByUser($sUserId, $sBlogIgnoreId, $sType)
+    {
+        $sql = "INSERT INTO
+                    " . Config::Get('db.table.user_ignore') . "
+                (
+                user_id,
+                user_ignored_id,
+                ignore_type
+                )
+		VALUES(?d, ?d, ?)
+                ";
+        return $this->oDb->query($sql, $sUserId, $sBlogIgnoreId, $sType);
+    }
+
+    /**
+     * Unignore user
+     *
+     * @param string $sUserId
+     * @param string $sUserIgnoreId
+     * @param string $sType
+     * @return boolean
+     */
+    public function UnIgnoreBlogByUser($sUserId, $sBlogIgnoreId, $sType)
+    {
+        $sql = "DELETE FROM
+                    " . Config::Get('db.table.user_ignore') . "
+                WHERE
+                    user_id = ?d
+                AND
+                    user_ignored_id = ?d
+                AND
+                    ignore_type = ?
+                ";
+        return $this->oDb->query($sql, $sUserId, $sBlogIgnoreId, $sType);
+    }
+
+    /**
+     * Get ignored user ids by user
+     *
+     * @param string $sUserId
+     * @return array
+     */
+    public function GetIgnoredBlogsByUser($sUserId, $sType)
+    {
+        $sql = "SELECT
+                    user_ignored_id,
+                    ignore_type
+                FROM
+                    " . Config::Get('db.table.user_ignore') . "
+                WHERE
+                    user_id = ?d
+                ";
+        $aResult = array();
+        if ($aRows = $this->oDb->select($sql, $sUserId)) {
+            foreach ($aRows as $aRow) {
+                $aResult[$aRow['user_ignored_id']][] = $aRow['ignore_type'];
+            }
+        }
+        return $aResult;
+    }
+
 }
