@@ -40,7 +40,7 @@
 .comment.comment-self				{ background: rgba(220, 221, 239, 0.64); }
 .comment.comment-new 				{ background: rgb(243, 243, 216); }
 .comment.comment-current 			{ background: #DBF5E1; }
-.comment.comment-bad 				{ opacity: 0.3; filter: alpha(opacity=30); }
+.comment.comment-bad 				{ }
 .comment.comment-bad:hover 			{ opacity: 1; filter: alpha(opacity=100); }
 
 .ls-user-role-not-admin .comment.comment-deleted 	{ padding: 10px 15px; min-height: 0; background: #f7f7f7; color: #888; }
