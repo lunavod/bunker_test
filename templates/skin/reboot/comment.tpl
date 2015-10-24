@@ -52,7 +52,7 @@
 
 		<div id="comment_content_id_{$oComment->getId()}" class="comment-content text">
 			{if $oComment->isBad()}
-				<span onclick="children[0].parentNode.parentNode.innerHTML='{$oComment->getText()}'"><a href="#" onclick="return false">Комментарий скрыт. Кликните, что бы раскрыть.</a></span>
+				<span onclick="children[0].style.display = 'block'; children[1].style.display='none' "><span style="display: none;">{$oComment->getText()}</span><a href="#" onclick="return false">Комментарий скрыт. Кликните, что бы раскрыть.</a></span>
 			{/if}
 		</div>
 
