@@ -50,8 +50,10 @@ class PluginEditcomment_ModuleACL extends PluginEditcomment_Inherit_ModuleACL
         if ($oComment->getTargetType() != 'talk') {
             if($oComment->getTarget()->getBlog()->getType() != 'personal') {
                 $oBlog = $oComment->getTarget()->getBlog()->Blog_GetBlogUserByBlogIdAndUserId($oComment->getTarget()->getBlog()->getId(), $oUser->getId());
-                if ($oBlog->getIsModerator() or $oBlog->getIsAdministrator())
-                    return true;
+                if ($oBlog) {
+                    if ($oBlog->getIsModerator() or $oBlog->getIsAdministrator())
+                        return true;
+                }
             }
         }
 
