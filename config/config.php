@@ -463,9 +463,6 @@ $config['block']['userfeedBlogs'] = array(
 $config['block']['userfeedUsers'] = array(
 	'action'  => array('feed'),
 	'blocks'  => array(
-                    'right' => array(
-                        'userfeedUsers'=> array()
-                    )
                 )
 );
 $config['block']['rule_blog_info'] = array(

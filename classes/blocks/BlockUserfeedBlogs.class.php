@@ -25,7 +25,7 @@ class BlockUserfeedBlogs extends Block {
 	/**
 	 * Запуск обработки
 	 */
-	public function Exec() {
+public function Exec() {
 		/**
 		 * Пользователь авторизован?
 		 */
@@ -38,9 +38,8 @@ class BlockUserfeedBlogs extends Block {
 			/**
 			 * Получаем список ID блогов, которые создал пользователь
 			 */
-			$aBlogsOwnerId=$this->Blog_GetBlogsByOwnerId($oUserCurrent->getId(),true);
-			$aBlogsId=array_merge($aBlogsId,$aBlogsOwnerId);
-
+			$aBlogsAll=$this->Blog_GetBlogs($oUserCurrent->getId(),true);
+			$aBlogsId=array_merge($aBlogsId,$aBlogsAll);
 			$aBlogs=$this->Blog_GetBlogsAdditionalData($aBlogsId,array('owner'=>array()),array('blog_title'=>'asc'));
 			/**
 			 * Выводим в шаблон

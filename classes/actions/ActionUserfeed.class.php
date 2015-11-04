@@ -52,7 +52,6 @@ class ActionUserfeed extends Action {
 	protected function RegisterEvent() {
 		$this->AddEvent('index', 'EventIndex');
 		$this->AddEvent('subscribe', 'EventSubscribe');
-		$this->AddEvent('subscribeByLogin', 'EventSubscribeByLogin');
 		$this->AddEvent('unsubscribe', 'EventUnSubscribe');
 		$this->AddEvent('get_more', 'EventGetMore');
 	}
@@ -148,20 +147,6 @@ class ActionUserfeed extends Action {
 					return;
 				}
 				break;
-			case 'users':
-				$iType = ModuleUserfeed::SUBSCRIBE_TYPE_USER;
-				/**
-				 * Проверяем существование пользователя
-				 */
-				if (!$this->User_GetUserById(getRequestStr('id'))) {
-					$this->Message_AddError($this->Lang_Get('system_error'),$this->Lang_Get('error'));
-					return;
-				}
-				if ($this->oUserCurrent->getId() == getRequestStr('id')) {
-					$this->Message_AddError($this->Lang_Get('userfeed_error_subscribe_to_yourself'),$this->Lang_Get('error'));
-					return;
-				}
-				break;
 			default:
 				$this->Message_AddError($this->Lang_Get('system_error'),$this->Lang_Get('error'));
 				return;
@@ -176,48 +161,6 @@ class ActionUserfeed extends Action {
 	 * Подписка на пользвователя по логину
 	 *
 	 */
-	protected function EventSubscribeByLogin() {
-		/**
-		 * Устанавливаем формат Ajax ответа
-		 */
-		$this->Viewer_SetResponseAjax('json');
-		/**
-		 * Передан ли логин
-		 */
-		if (!getRequest('login') or !is_string(getRequest('login'))) {
-			$this->Message_AddError($this->Lang_Get('system_error'),$this->Lang_Get('error'));
-			return;
-		}
-		/**
-		 * Проверяем существование прользователя
-		 */
-		$oUser = $this->User_getUserByLogin(getRequestStr('login'));
-		if (!$oUser) {
-			$this->Message_AddError($this->Lang_Get('user_not_found',array('login'=>htmlspecialchars(getRequestStr('login')))),$this->Lang_Get('error'));
-			return;
-		}
-		/**
-		 * Не даем подписаться на самого себя
-		 */
-		if ($this->oUserCurrent->getId() == $oUser->getId()) {
-			$this->Message_AddError($this->Lang_Get('userfeed_error_subscribe_to_yourself'),$this->Lang_Get('error'));
-			return;
-		}
-		/**
-		 * Подписываем
-		 */
-		$this->Userfeed_subscribeUser($this->oUserCurrent->getId(), ModuleUserfeed::SUBSCRIBE_TYPE_USER, $oUser->getId());
-		/**
-		 * Загружаем данные ajax ответ
-		 */
-		$this->Viewer_AssignAjax('uid', $oUser->getId());
-		$this->Viewer_AssignAjax('user_login', $oUser->getLogin());
-		$this->Viewer_AssignAjax('user_web_path', $oUser->getUserWebPath());
-		$this->Viewer_AssignAjax('user_avatar_48', $oUser->getProfileAvatarPath(48));
-		$this->Viewer_AssignAjax('lang_error_msg', $this->Lang_Get('userfeed_subscribes_already_subscribed'));
-		$this->Viewer_AssignAjax('lang_error_title', $this->Lang_Get('error'));
-		$this->Message_AddNotice($this->Lang_Get('userfeed_subscribes_updated'), $this->Lang_Get('attention'));
-	}
 	/**
 	 * Отписка от блога или пользователя
 	 *

@@ -12,7 +12,7 @@
 	{/if}{/if}
 
 	<script async src="{cfg name="path.static.skin"}/js/spoiler.js"></script>
-<link rel="stylesheet" href="{cfg name="path.static.skin"}/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{cfg name="path.static.skin"}/css/menu.css">
 	{hook run='html_head_begin'}
 	

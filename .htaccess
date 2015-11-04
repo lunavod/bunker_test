@@ -1,10 +1,10 @@
 AddDefaultCharset UTF-8
 Options -Indexes
-RewriteEngine On
 #RewriteBase /
+RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ ./index.php
+RewriteRule ^(.*)$ /index.php
 # Alternative rule
 #RewriteRule ^(.*)$ /index.php
 
