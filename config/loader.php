@@ -170,7 +170,7 @@ if($aPluginsList=@file($sPluginsListFile)) {
 		if($aIncludeFiles and count($aIncludeFiles)) {
 			foreach ($aIncludeFiles as $sPath) {
 				require_once($sPath);
-			}		
+			}
 		}
 	}
 }

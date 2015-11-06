@@ -456,7 +456,7 @@ $config['block']['userfeedBlogs'] = array(
 	'action'  => array('feed'),
 	'blocks'  => array(
                     'right' => array(
-                        'userfeedBlogs'=> array()
+                        'userfeedBlogs'=> array('priority'=>600), 'blocks/block.bquote.tpl'=>array('priority'=>50), 'stream'=>array('priority'=>100),'tags'=>array('priority'=>60),'blogs'=>array('params'=>array(),'priority'=>1)
                     )
                 )
 );

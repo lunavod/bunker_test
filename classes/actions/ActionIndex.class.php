@@ -76,7 +76,7 @@ class ActionIndex extends Action {
 	 *
 	 */
 	protected function RegisterEvent() {
-		$this->AddEventPreg('/^(page([1-9]\d{0,5}))?$/i','EventNewAll');
+		$this->AddEventPreg('/^(page([1-9]\d{0,5}))?$/i','EventIndex');
 		$this->AddEventPreg('/^new$/i','/^(page([1-9]\d{0,5}))?$/i','EventNewAll');
 		$this->AddEventPreg('/^newall$/i','/^(page([1-9]\d{0,5}))?$/i','EventNewAll');
 		$this->AddEventPreg('/^discussed$/i','/^(page([1-9]\d{0,5}))?$/i','EventNewAll');
@@ -268,43 +268,11 @@ class ActionIndex extends Action {
 	 *
 	 */
 	protected function EventIndex() {
-		$this->Viewer_SetHtmlRssAlternate(Router::GetPath('rss').'index/',Config::Get('view.name'));
-		/**
-		 * Меню
-		 */
-		$this->sMenuSubItemSelect='good';
-		/**
-		 * Передан ли номер страницы
-		 */
-		$iPage=$this->GetEventMatch(2) ? $this->GetEventMatch(2) : 1;
-		/**
-		 * Устанавливаем основной URL для поисковиков
-		 */
-		if ($iPage==1) {
-			$this->Viewer_SetHtmlCanonical(Config::Get('path.root.web').'/');
+		if ($this->User_getUserCurrent()){
+			return Router::Action('feed');
+		} else {
+			return Router::Action('index', 'newall');
 		}
-		/**
-		 * Получаем список топиков
-		 */
-		$aResult=$this->Topic_GetTopicsGood($iPage,Config::Get('module.topic.per_page'));
-		$aTopics=$aResult['collection'];
-		/**
-		 * Вызов хуков
-		 */
-		$this->Hook_Run('topics_list_show',array('aTopics'=>$aTopics));
-		/**
-		 * Формируем постраничность
-		 */
-		$aPaging=$this->Viewer_MakePaging($aResult['count'],$iPage,Config::Get('module.topic.per_page'),Config::Get('pagination.pages.count'),Router::GetPath('index'));
-		/**
-		 * Загружаем переменные в шаблон
-		 */
-		$this->Viewer_Assign('aTopics',$aTopics);
-		$this->Viewer_Assign('aPaging',$aPaging);
-		/**
-		 * Устанавливаем шаблон вывода
-		 */
-		$this->SetTemplateAction('index');
 	}
 	/**
 	 * При завершении экшена загружаем переменные в шаблон
