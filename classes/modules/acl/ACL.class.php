@@ -308,6 +308,10 @@ class ModuleACL extends Module {
 		if ($oTopic->getBlog()->getOwnerId()==$oUser->getId()) {
 			return true;
 		}
+
+                if ($oUser->isGlobalModerator() && $oTopic->getBlog()->getType() == "open" ) {
+			return true;
+		}
 		/**
 		 * Если модер или админ блога
 		 */
@@ -341,6 +345,9 @@ class ModuleACL extends Module {
 		if ($oTopic->getUserId()==$oUser->getId() or $oUser->isAdministrator()) {
 			return true;
 		}
+		if ($oUser->isGlobalModerator() and $oTopic->getBlod()->getType == "open" ) {
+                        return true;
+                }
 		/**
 		 * Если автор(смотритель) блога
 		 */
@@ -399,7 +406,7 @@ class ModuleACL extends Module {
 	 * @return bool
 	 */
 	public function CanDeleteComment($oUser) {
-		if (!$oUser || !$oUser->isAdministrator()) {
+		if (!$oUser || !$oUser->isAdministrator() or !$oUser->isGlobalModerator()) {
 			return false;
 		}
 		return true;

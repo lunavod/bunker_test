@@ -77,7 +77,7 @@ class ModuleUserfeed_MapperUserfeed extends Mapper {
 		}
 		return $aResult;
 	}
-	/**
+/**
 	 * Получить ленту топиков по подписке
 	 *
 	 * @param array $aUserSubscribes Список подписок пользователя
@@ -95,11 +95,16 @@ class ModuleUserfeed_MapperUserfeed extends Mapper {
 							WHERE 
 								t.topic_publish = 1 
 								AND t.blog_id=b.blog_id 
-								AND b.blog_type!='close' 
 								{ AND t.topic_id < ?d }
-								AND ( 1=0 { OR t.blog_id IN (?a) } { OR t.user_id IN (?a) } ) 								
+
+							AND ( false 
+								{ OR t.blog_id IN (?a) } 
+								{ OR (t.user_id IN (?a) AND b.blog_type='personal') }
+							)
+ 								
                             ORDER BY t.topic_id DESC	
                             { LIMIT 0, ?d }";
+
 
 		$aTopics=$aTopics=$this->oDb->selectCol($sql,
 												$iFromId ? $iFromId : DBSIMPLE_SKIP,
@@ -107,6 +112,7 @@ class ModuleUserfeed_MapperUserfeed extends Mapper {
 												count($aUserSubscribes['users']) ? $aUserSubscribes['users'] : DBSIMPLE_SKIP,
 												$iCount ? $iCount : DBSIMPLE_SKIP
 		);
+
 		return $aTopics;
 	}
 }

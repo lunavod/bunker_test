@@ -65,7 +65,7 @@
 					<li><a href="#" onclick="ls.comments.toggleCommentForm({$oComment->getId()}); return false;" class="reply-link link-dotted">{$aLang.comment_answer}</a></li>
 				{/if}
 
-				{if !$oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}
+				{if !$oComment->getDelete() and $oUserCurrent and ($oUserCurrent->isAdministrator() or ($oUserCurrent->isGlobalModerator() and $oComment->getTarget()->getBlog()->getType()=="open"))}
 					<li><a href="#" class="comment-delete link-dotted" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_delete}</a></li>
 				{/if}
 

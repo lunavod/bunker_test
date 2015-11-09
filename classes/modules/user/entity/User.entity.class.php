@@ -105,6 +105,12 @@ class ModuleUser_EntityUser extends Entity {
 	public function getLogin() {
 		return $this->_getDataOne('user_login');
 	}
+	public function isGlobalModerator() {
+		if (in_array($this->getId(), Config::Get('moderator'))) {
+			return true;
+		}
+		return false;
+	}
 	/**
 	 * Возвращает пароль (ввиде хеша)
 	 *
