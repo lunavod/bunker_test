@@ -1,5 +1,8 @@
 <?php
 
+require_once(Plugin::GetPath('api') . 'src/VK/VK.php');
+require_once(Plugin::GetPath('api') . 'src/VK/VKException.php');
+
 class PluginApi_ActionApi extends ActionPlugin {
     /**
      * Инициализация экшена
@@ -13,6 +16,7 @@ class PluginApi_ActionApi extends ActionPlugin {
      * Регистрируем евенты
      */
     protected function RegisterEvent() {
+        $this->AddEvent('auth','EventAuth');
         $this->AddEvent('index','EventIndex');
         $this->AddEvent('comments','EventComments');
         $this->AddEvent('gen','fLogger');
@@ -20,7 +24,23 @@ class PluginApi_ActionApi extends ActionPlugin {
     }
 
     protected function EventIndex() {
-        $this->Viewer_Assign('aBooks',"Done!");
+        $vk = new VK\VK('256841728', '8AQg2xCA02QwrvEM7u3A', 'e251a352edf8a4dc3b614951a2d18942f273640f58995dce8aaaeb235b1858fcde644803580c23e8b4b37');
+        $vk->setApiVersion(3.0);
+        $wallpost = $vk->api('wall.post', array(
+            'owner_id'    => '256841728',
+            'message'     => 'New post on group wall via API.console.'
+        ));
+        $this->Viewer_Assign('aBooks',$wallpost['error']['error_code']);
+    }
+    protected function EventAuth() {
+        $vk = new VK\VK('4925305', '8AQg2xCA02QwrvEM7u3A');
+        $iId = $this->GetParam(0);
+        if (!isset($_REQUEST['code'])){
+            $this->Viewer_Assign('aBooks',$vk->getAuthorizeURL('wall,groups, offline', 'http://reboot.lunavod.ru/api/auth'));
+        } else {
+            $vk_status = $vk->getAccessToken($_REQUEST['code'], 'http://reboot.lunavod.ru/api/auth');
+            $this->Viewer_Assign('aBooks',$vk_status['access_token']);
+        }
     }
     protected function EventComments() {
         $iId = $this->GetParam(0);
@@ -61,8 +81,8 @@ class PluginApi_ActionApi extends ActionPlugin {
     }
     protected function EventIgnoreBlog()
     {
-        PluginIgnore_ModuleUser_User_IgnoreBlogByUser('0', '1', 'blogs');
-        $this->Viewer_Assign('aBooks', GetIgnoredBlogsByUser('0'));
+        $ab = $this->Blog_GetAccessibleBlogsByUser($this->User_GetUserCurrent());
+        $this->Viewer_Assign('aBooks', implode(", ", $this->Blog_GetAccessibleBlogsByUser($this->User_GetUserCurrent())));
     }
     /**
      * Завершение работы экшена

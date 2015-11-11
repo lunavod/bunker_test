@@ -146,6 +146,10 @@ class ActionUserfeed extends Action {
 					$this->Message_AddError($this->Lang_Get('system_error'),$this->Lang_Get('error'));
 					return;
 				}
+				if(!in_array($this->Blog_GetBlogById(getRequestStr('id'))->getId(), $this->Blog_GetAccessibleBlogsByUser($this->User_GetUserCurrent())) and $this->Blog_GetBlogById(getRequestStr('id'))->getType()=="close"){
+					$this->Message_AddNotice("У вас нет разрешения подписываться на этот блог", "Ошибка");
+					return;
+				}
 				break;
 			default:
 				$this->Message_AddError($this->Lang_Get('system_error'),$this->Lang_Get('error'));
@@ -155,7 +159,7 @@ class ActionUserfeed extends Action {
 		 * Подписываем
 		 */
 		$this->Userfeed_subscribeUser($this->oUserCurrent->getId(), $iType, getRequestStr('id'));
-		$this->Message_AddNotice($this->Lang_Get('userfeed_subscribes_updated'), $this->Lang_Get('attention'));
+		$this->Message_AddNotice($this->Lang_Get('userfeed_subscribes_updated'), "Внимание");
 	}
 	/**
 	 * Подписка на пользвователя по логину
