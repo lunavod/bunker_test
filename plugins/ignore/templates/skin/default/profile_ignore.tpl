@@ -8,7 +8,6 @@
         <a href="#" onclick="ignoreUser({$oUserProfile->getId()}, 'comments',this); return false;">{if $bIgnoredComments}{$aLang.plugin.ignore.disignore_user_comments}{else}{$aLang.plugin.ignore.ignore_user_comments}{/if}</a><br/>
     {/if}
     <a href="#" onclick="ignoreTalkUser('{$oUserProfile->getLogin()}', {$oUserProfile->getId()},this); return false;">{if $bIgnoredTalks}{$aLang.plugin.ignore.disignore_user_talks}{else}{$aLang.plugin.ignore.ignore_user_talks}{/if}</a><br/>
-    <a href="#" onclick="ignoreBlog('{$oUserProfile->getLogin()}', {$oUserProfile->getId()},this); return false;">Test</a><br/>
 
 {/if}
 
@@ -17,19 +16,6 @@
     {literal}
     function forbidIgnoreUser(idUser, a) {
         ls.ajax(aRouter['ajax']+'forbid-ignore', {idUser: idUser}, function(result){
-            if (!result) {
-                ls.msg.error('Error','Please try again later');
-            }
-            if (result.bStateError) {
-                ls.msg.error(result.sMsgTitle,result.sMsg);
-            } else {
-                jQuery(a).html(result.sText);
-                ls.msg.notice(result.sMsgTitle,result.sMsg);
-            }
-        });
-    }
-    function ignoreBlog(idUser, a) {
-        ls.ajax(aRouter['ajax']+'ignore-blog', function(result){
             if (!result) {
                 ls.msg.error('Error','Please try again later');
             }
