@@ -47,9 +47,6 @@ class PluginEditcomment_ModuleACL extends PluginEditcomment_Inherit_ModuleACL
         $aUsers=Config::Get('plugin.editcomment.comment_editors');
         if (is_array($aUsers) && in_array($oUser->getId(),$aUsers))
             return true;
-	if (in_array($oUser->getId(), Config::Get('moderator'))) {
-	    return true;
-	}
         if ($oComment->getTargetType() != 'talk') {
             if($oComment->getTarget()->getBlog()->getType() != 'personal') {
                 $oBlog = $oComment->getTarget()->getBlog()->Blog_GetBlogUserByBlogIdAndUserId($oComment->getTarget()->getBlog()->getId(), $oUser->getId());
@@ -63,7 +60,7 @@ class PluginEditcomment_ModuleACL extends PluginEditcomment_Inherit_ModuleACL
         if ($oUser->getUserIsAdministrator())
             return true;
 
-	if ($oUserCurrent->isGlobalModerator() and $oTopic->getBlog()->getType() == "open") {
+	if ($oUser->isGlobalModerator() and $oTopic->getBlog()->getType() == "open") {
 	    return true;
 	}
         if ($oUser->getUserId() != $oComment->getUserId() && !$oUser->isAdministrator())

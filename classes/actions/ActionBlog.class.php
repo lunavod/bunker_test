@@ -551,7 +551,7 @@ class ActionBlog extends Action {
 		/**
 		 * Проверяем доступные типы блога для создания
 		 */
-		if (!in_array(getRequestStr('blog_type'),array('open','close'))) {
+		if (!in_array(getRequestStr('blog_type'),array('open','close','invite'))) {
 			$this->Message_AddError($this->Lang_Get('blog_create_type_error'),$this->Lang_Get('error'));
 			$bOk=false;
 		}
@@ -831,7 +831,7 @@ class ActionBlog extends Action {
 		/**
 		 * Определяем права на отображение закрытого блога
 		 */
-		if($oBlog->getType()=='close'
+		if(($oBlog->getType()=='close' or $oBlog->getType()=='invite')
 			and (!$this->oUserCurrent
 				or !in_array(
 					$oBlog->getId(),
@@ -1692,7 +1692,7 @@ class ActionBlog extends Action {
 		/**
 		 * Проверяем тип блога
 		 */
-		if (!in_array($oBlog->getType(),array('open','close'))) {
+		if (!in_array($oBlog->getType(),array('open','close','invite'))) {
 			$this->Message_AddErrorSingle($this->Lang_Get('blog_join_error_invite'),$this->Lang_Get('error'));
 			return;
 		}
@@ -1709,7 +1709,8 @@ class ActionBlog extends Action {
 				if($oBlogUser) {
 					$oBlogUser->setUserRole(ModuleBlog::BLOG_USER_ROLE_USER);
 					$bResult = $this->Blog_UpdateRelationBlogUser($oBlogUser);
-				} elseif($oBlog->getType()=='open') {
+				//} elseif($oBlog->getType()=='open' or $oBlog->getType()=='invite') {
+				} elseif ($oBlog->getType()!='close') {
 					$oBlogUserNew=Engine::GetEntity('Blog_BlogUser');
 					$oBlogUserNew->setBlogId($oBlog->getId());
 					$oBlogUserNew->setUserId($this->oUserCurrent->getId());

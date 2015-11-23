@@ -96,7 +96,7 @@ class ModuleRating extends Module {
 	public function VoteUser(ModuleUser_EntityUser $oUser, ModuleUser_EntityUser $oUserTarget, $iValue) {
 		$iRatingNew=$oUserTarget->getRating()+$iValue;
 		$oUserTarget->setRating($iRatingNew);
-		return $iValu;
+		return $iValue;
 	}
 }
 ?>

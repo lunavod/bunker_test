@@ -476,3 +476,136 @@ Array
     [context] => /var/www/html/engine/modules/database/Database.class.php line 72
 )
 ]
+[2015-11-23 11:27:18][8776][1411][ERROR][SQL Error: Duplicate entry '13-user-1' for key 'PRIMARY' at /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43<br>
+Array
+(
+    [code] => 1062
+    [message] => Duplicate entry '13-user-1' for key 'PRIMARY'
+    [query] => INSERT INTO prefix_vote 
+			(target_id,
+			target_type,
+			user_voter_id,
+			vote_direction,
+			vote_value,			
+			vote_date,
+			vote_ip
+			)
+			VALUES(13, 'user', 1, 1, 0, '2015-11-23 11:27:18', '95.26.239.103')
+		
+    [context] => /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43
+)
+]
+[2015-11-23 11:27:19][8776][3753][ERROR][SQL Error: Duplicate entry '13-user-1' for key 'PRIMARY' at /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43<br>
+Array
+(
+    [code] => 1062
+    [message] => Duplicate entry '13-user-1' for key 'PRIMARY'
+    [query] => INSERT INTO prefix_vote 
+			(target_id,
+			target_type,
+			user_voter_id,
+			vote_direction,
+			vote_value,			
+			vote_date,
+			vote_ip
+			)
+			VALUES(13, 'user', 1, 1, 0, '2015-11-23 11:27:19', '95.26.239.103')
+		
+    [context] => /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43
+)
+]
+[2015-11-23 11:27:20][8776][3371][ERROR][SQL Error: Duplicate entry '13-user-1' for key 'PRIMARY' at /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43<br>
+Array
+(
+    [code] => 1062
+    [message] => Duplicate entry '13-user-1' for key 'PRIMARY'
+    [query] => INSERT INTO prefix_vote 
+			(target_id,
+			target_type,
+			user_voter_id,
+			vote_direction,
+			vote_value,			
+			vote_date,
+			vote_ip
+			)
+			VALUES(13, 'user', 1, 1, 0, '2015-11-23 11:27:20', '95.26.239.103')
+		
+    [context] => /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43
+)
+]
+[2015-11-23 11:27:20][8776][1005][ERROR][SQL Error: Duplicate entry '13-user-1' for key 'PRIMARY' at /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43<br>
+Array
+(
+    [code] => 1062
+    [message] => Duplicate entry '13-user-1' for key 'PRIMARY'
+    [query] => INSERT INTO prefix_vote 
+			(target_id,
+			target_type,
+			user_voter_id,
+			vote_direction,
+			vote_value,			
+			vote_date,
+			vote_ip
+			)
+			VALUES(13, 'user', 1, -1, 0, '2015-11-23 11:27:20', '95.26.239.103')
+		
+    [context] => /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43
+)
+]
+[2015-11-23 11:27:25][8785][1735][ERROR][SQL Error: Duplicate entry '13-user-1' for key 'PRIMARY' at /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43<br>
+Array
+(
+    [code] => 1062
+    [message] => Duplicate entry '13-user-1' for key 'PRIMARY'
+    [query] => INSERT INTO prefix_vote 
+			(target_id,
+			target_type,
+			user_voter_id,
+			vote_direction,
+			vote_value,			
+			vote_date,
+			vote_ip
+			)
+			VALUES(13, 'user', 1, 1, 0, '2015-11-23 11:27:25', '95.26.239.103')
+		
+    [context] => /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43
+)
+]
+[2015-11-23 11:27:25][8785][5426][ERROR][SQL Error: Duplicate entry '13-user-1' for key 'PRIMARY' at /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43<br>
+Array
+(
+    [code] => 1062
+    [message] => Duplicate entry '13-user-1' for key 'PRIMARY'
+    [query] => INSERT INTO prefix_vote 
+			(target_id,
+			target_type,
+			user_voter_id,
+			vote_direction,
+			vote_value,			
+			vote_date,
+			vote_ip
+			)
+			VALUES(13, 'user', 1, 1, 0, '2015-11-23 11:27:25', '95.26.239.103')
+		
+    [context] => /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43
+)
+]
+[2015-11-23 11:27:26][8785][2926][ERROR][SQL Error: Duplicate entry '13-user-1' for key 'PRIMARY' at /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43<br>
+Array
+(
+    [code] => 1062
+    [message] => Duplicate entry '13-user-1' for key 'PRIMARY'
+    [query] => INSERT INTO prefix_vote 
+			(target_id,
+			target_type,
+			user_voter_id,
+			vote_direction,
+			vote_value,			
+			vote_date,
+			vote_ip
+			)
+			VALUES(13, 'user', 1, 1, 0, '2015-11-23 11:27:26', '95.26.239.103')
+		
+    [context] => /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43
+)
+]
