@@ -150,6 +150,10 @@
 			{if !$noSidebar && $sidebarPosition == 'left'}
 				{include file='sidebar.tpl'}
 			{/if}
+
+			{if !$noSidebar && $sidebarPosition != 'left'}
+				{include file='sidebar.tpl'}
+			{/if} <!-- Кривота! Виновник Сильвман -->
 		
 			<div id="content" role="main" 
 				class="{if $noSidebar}content-full-width{/if} 

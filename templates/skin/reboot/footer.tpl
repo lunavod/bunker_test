@@ -1,19 +1,14 @@
 			{hook run='content_end'}
-			<footer id="footer">
-
-				Пони. Пони захватывают мир.
-
-
-			</footer>
 		</div> <!-- /content -->
 
-		
-		{if !$noSidebar && $sidebarPosition != 'left'}
-			{include file='sidebar.tpl'}
-		{/if}
 	</div> <!-- /wrapper -->
 
-	
+
+	<footer id="footer">
+
+	Пони. Пони захватывают мир.
+
+	</footer>
 
 </div> <!-- /container -->
 
