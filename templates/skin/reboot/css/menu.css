@@ -72,3 +72,4 @@
 .hidden-menu-ticker:checked ~ .hidden-menu { box-shadow: 0 0 10px rgba(0,0,0,0.5); }
 .logo { margin-left: -12px;  margin-top: 15px; transition: left .2s; }
 .woona {height: 100%; position: fixed; z-index: 9999999999999999; margin-left: 300px; display: none;}
+.userbar_info {bottom: 0px;position: absolute;width: 100%;}

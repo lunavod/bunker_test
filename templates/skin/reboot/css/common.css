@@ -193,3 +193,7 @@
 	position: relative;
 	zoom: 1;
 }
+.actions-edit {
+    color: #4CAF50 !important;
+}
+

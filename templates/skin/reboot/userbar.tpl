@@ -8,7 +8,8 @@
     </a>
 </label>
 
-<ul class="nav nav-userbar hidden-menu">
+<div class="nav nav-userbar hidden-menu">
+<ul>
     <a href="/">
     </a>
     {if $oUserCurrent}
@@ -24,15 +25,25 @@
     <li><a href="{router page='settings'}profile/">{$aLang.user_settings}<i class="fa fa-cogs"></i></a></li>
     {hook run='userbar_item'}
     <li><a href="#" onclick="wide(); return false;" class="widemode" id="wide">Широкий режим<img style="margin-top: -5px;width: 30px;float: right;margin-right: -5px;" src="{cfg name="path.static.skin"}/images/wide_mode.png"></img></a></li>
-    <li style="bottom: 0px;"><a href="{router page='login'}exit/?security_ls_key={$LIVESTREET_SECURITY_KEY}">{$aLang.exit}<i class="fa fa-times-circle-o"></i></a></li>
+    </ul>
+    <ul class="userbar_info">
+    <li><a href="{router page='login'}exit/?security_ls_key={$LIVESTREET_SECURITY_KEY}">{$aLang.exit}<i class="fa fa-times-circle-o"></i></a></li>
+    </ul>
     {else}
     {hook run='userbar_item'}
     <li><a href="{router page='login'}" class="js-login-form-show">{$aLang.user_login_submit}<i class="fa fa-user"></i></a></li>
     <li><a href="{router page='registration'}" class="js-registration-form-show">{$aLang.registration_submit}<i class="fa fa-user-plus"></i></a></li>
     <li><a href="#" onclick="wide(); return false;" class="widemode" id="wide">Широкий режим<img style="margin-top: -5px;width: 30px;float: right;margin-right: -5px;" src="{cfg name="path.static.skin"}/images/wide_mode.png"></img></a></li>
+    </ul>
     {/if}
-
-</ul>
+    </ul>
+    <ul class="userbar_info">
+    <li><a href="http://bug.lunavod.ru/">Сообщить об ошибке<i class="fa fa-exclamation-circle"></i></a></li>
+{if $oUserCurrent}
+    <li><a href="{router page='login'}exit/?security_ls_key={$LIVESTREET_SECURITY_KEY}">{$aLang.exit}<i class="fa fa-times-circle-o"></i></a></li>
+{/if}
+    </ul>
+</div>
 </nav>
 <script>
     function wide(){

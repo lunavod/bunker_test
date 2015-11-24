@@ -9,8 +9,11 @@
 .comments { margin-bottom: 30px; }
 
 .comment-wrapper { position: relative; }
-.comment-wrapper .comment-wrapper { padding-left: 10px; margin-left: 10px; border-left: 1px dotted #C3C3C3 }
-
+.comment-wrapper .comment-wrapper {
+    padding-left: 13px;
+    margin-left: 0px;
+    border-left: 1px dotted #C3C3C3;
+}
 .comment-preview { padding: 5px 10px 6px; margin-bottom: 10px; background: #fafafa; border: 1px solid #eee; border-radius: 3px; }
 .comment-preview { font-size: 13px; line-height: 18px; }
 
@@ -75,3 +78,4 @@
 .reply textarea.loader { background: #f7f7f7 url(../images/loader.gif) no-repeat center; }
 
 .reply .mceEditor { display: block; margin-bottom: 10px; }
+
