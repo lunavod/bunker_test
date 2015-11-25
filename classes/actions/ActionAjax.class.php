@@ -464,10 +464,10 @@ class ActionAjax extends Action {
 		/**
 		 * Уже голосовал?
 		 */
-		if ($oUserVote=$this->Vote_GetVote($oUser->getId(),'user',$this->oUserCurrent->getId())) {
-			$this->Message_AddErrorSingle($this->Lang_Get('user_vote_error_already'),$this->Lang_Get('attention'));
-			return;
-		}
+//		if ($oUserVote=$this->Vote_GetVote($oUser->getId(),'user',$this->oUserCurrent->getId())) {
+//			$this->Message_AddErrorSingle($this->Lang_Get('user_vote_error_already'),$this->Lang_Get('attention'));
+//			return;
+//		}
 		/**
 		 * Имеет право на голосование?
 		 */
@@ -486,28 +486,59 @@ class ActionAjax extends Action {
 		/**
 		 * Голосуем
 		 */
-		$oUserVote=Engine::GetEntity('Vote');
-		$oUserVote->setTargetId($oUser->getId());
-		$oUserVote->setTargetType('user');
-		$oUserVote->setVoterId($this->oUserCurrent->getId());
-		$oUserVote->setDirection($iValue);
-		$oUserVote->setDate(date("Y-m-d H:i:s"));
-		$iVal=(float)$this->Rating_VoteUser($this->oUserCurrent,$oUser,$iValue);
-		$oUserVote->setValue($iVal);
-		//$oUser->setRating($oUser->getRating()+$iValue);
-		$oUser->setCountVote($oUser->getCountVote()+1);
-		if ($this->Vote_AddVote($oUserVote) and $this->User_Update($oUser)) {
-			$this->Message_AddNoticeSingle($this->Lang_Get('user_vote_ok'),$this->Lang_Get('attention'));
-			$this->Viewer_AssignAjax('iRating',$oUser->getRating());
-			$this->Viewer_AssignAjax('iSkill',$oUser->getSkill());
-			$this->Viewer_AssignAjax('iCountVote',$oUser->getCountVote());
-			/**
-			 * Добавляем событие в ленту
-			 */
-			$this->Stream_write($oUserVote->getVoterId(), 'vote_user', $oUser->getId());
+		if ($oUserVote=$this->Vote_GetVote($oUser->getId(),'user',$this->oUserCurrent->getId())) {
+			$oOldUserVote=$this->Vote_GetVote($oUser->getId(),'user',$this->oUserCurrent->getId());
+			if ($oOldUserVote->getDirection() == $iValue) {
+				return;
+			}
+			$this->Vote_DeleteVoteByTarget($oUser->getId(), 'user');
+			$oUserVote=Engine::GetEntity('Vote');
+			$oUserVote->setTargetId($oUser->getId());
+                        $oUserVote->setTargetType('user');
+                        $oUserVote->setVoterId($this->oUserCurrent->getId());
+                        $oUserVote->setDirection($iValue);
+                        $oUserVote->setDate(date("Y-m-d H:i:s"));
+                        $iVal=(float)$this->Rating_VoteUser($this->oUserCurrent,$oUser,$iValue+$iValue);
+                        $oUserVote->setValue($iVal);
+                        //$oUser->setRating($oUser->getRating()+$iValue);
+                        $oUser->setCountVote($oUser->getCountVote()+1);
+                        if ($this->Vote_AddVote($oUserVote) and $this->User_Update($oUser)) {
+                                $this->Message_AddNoticeSingle($this->Lang_Get('user_vote_ok'),$this->Lang_Get('attention'));
+                                $this->Viewer_AssignAjax('iRating',$oUser->getRating());
+                                $this->Viewer_AssignAjax('iSkill',$oUser->getSkill());
+                                $this->Viewer_AssignAjax('iCountVote',$oUser->getCountVote());
+                                /**
+                                 * Добавляем событие в ленту
+                                 */
+                                $this->Stream_write($oUserVote->getVoterId(), 'vote_user', $oUser->getId());
+                        } else {
+                                $this->Message_AddErrorSingle($this->Lang_Get('system_error'),$this->Lang_Get('error'));
+                                return;
+                        }
 		} else {
-			$this->Message_AddErrorSingle($this->Lang_Get('system_error'),$this->Lang_Get('error'));
-			return;
+			$oUserVote=Engine::GetEntity('Vote');
+	                $oUserVote->setTargetId($oUser->getId());
+	                $oUserVote->setTargetType('user');
+	                $oUserVote->setVoterId($this->oUserCurrent->getId());
+	                $oUserVote->setDirection($iValue);
+	                $oUserVote->setDate(date("Y-m-d H:i:s"));
+	                $iVal=(float)$this->Rating_VoteUser($this->oUserCurrent,$oUser,$iValue);
+	                $oUserVote->setValue($iVal);
+	                //$oUser->setRating($oUser->getRating()+$iValue);
+	                $oUser->setCountVote($oUser->getCountVote()+1);
+	                if ($this->Vote_AddVote($oUserVote) and $this->User_Update($oUser)) {
+	                        $this->Message_AddNoticeSingle($this->Lang_Get('user_vote_ok'),$this->Lang_Get('attention'));
+	                        $this->Viewer_AssignAjax('iRating',$oUser->getRating());
+	                        $this->Viewer_AssignAjax('iSkill',$oUser->getSkill());
+                	        $this->Viewer_AssignAjax('iCountVote',$oUser->getCountVote());
+                	        /**
+                	         * Добавляем событие в ленту
+                	         */
+                	        $this->Stream_write($oUserVote->getVoterId(), 'vote_user', $oUser->getId());
+                	} else {
+                	        $this->Message_AddErrorSingle($this->Lang_Get('system_error'),$this->Lang_Get('error'));
+                	        return;
+                	}
 		}
 	}
 	/**
