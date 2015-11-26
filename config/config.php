@@ -569,5 +569,6 @@ $config['jevix']=require(dirname(__FILE__).'/jevix.php');
 
 $config['moderator'] = array(13);
 $config['autosubscribe'] = array(17);
+$config['site_version'] = '0.9';
 return $config;
 ?>
