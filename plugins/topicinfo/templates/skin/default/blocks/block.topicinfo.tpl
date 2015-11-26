@@ -68,7 +68,6 @@
             </ul>
           {/if}
         </div>
-      </div>
+      </div></div>
     {/if}
-	</div>
     <!-- /Topicinfo plugin -->
