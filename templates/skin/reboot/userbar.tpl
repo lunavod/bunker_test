@@ -33,7 +33,7 @@
     {hook run='userbar_item'}
     <li><a href="{router page='login'}" class="js-login-form-show">{$aLang.user_login_submit}<i class="fa fa-user"></i></a></li>
     <li><a href="{router page='registration'}" class="js-registration-form-show">{$aLang.registration_submit}<i class="fa fa-user-plus"></i></a></li>
-    <li><a href="#" onclick="wide(); return false;" class="widemode" id="wide">Широкий режим<img style="margin-top: -5px;width: 30px;float: right;margin-right: -5px;" src="{cfg name="path.static.skin"}/images/wide_mode.png"></img></a></li>
+    <li><a href="#" onclick="wide(); return false;" class="widemode" id="wide">&nbsp;</a></li>
     </ul>
     {/if}
     </ul>
@@ -52,9 +52,9 @@
         element.style.right = "30px";
         element.style.margin = "0px";
         gifs.style.display = "none";
-        var el = document.getElementById("wide")
-        el.innerHTML = 'Стандартный режим<img style="margin-top: -5px;width: 30px;float: right;margin-right: -5px;" src="{cfg name="path.static.skin"}/images/standart_mode.png"></img>'
-        el.onclick=function(){literal}{dewide(); return false;}{/literal}
+        var el = document.getElementById("wide");
+        el.className= "standartmode";
+        el.onclick=function(){dewide(); return false;}
     }
     function dewide(){
         var gifs = document.getElementById('sidebar');
@@ -62,8 +62,8 @@
         element.style.right = "";
         element.style.margin = "";
         gifs.style.display = "";
-        var el = document.getElementById("wide")
-        el.innerHTML = 'Широкий режим<img style="margin-top: -5px;width: 30px;float: right;margin-right: -5px;" src="{cfg name="path.static.skin"}/images/wide_mode.png"></img>'
-        el.onclick=function(){literal}{wide(); return false;}{/literal}
+        var el = document.getElementById("wide");
+        el.className = "widemode";
+        el.onclick=function(){wide(); return false;}
     }
 </script>
