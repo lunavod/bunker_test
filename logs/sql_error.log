@@ -1274,3 +1274,21 @@ Array
     [context] => /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43
 )
 ]
+[2015-11-25 17:29:55][620][3898][ERROR][SQL Error: Duplicate column name 'user_settings_talk_bell' at /var/www/reboot/engine/modules/database/Database.class.php line 160<br>
+Array
+(
+    [code] => 1060
+    [message] => Duplicate column name 'user_settings_talk_bell'
+    [query] => ALTER TABLE `prefix_user` ADD `user_settings_talk_bell` TINYINT( 1 ) NOT NULL DEFAULT '1'
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 160
+)
+]
+[2015-11-25 17:30:19][396][6764][ERROR][SQL Error: Duplicate column name 'user_settings_talk_bell' at /var/www/reboot/engine/modules/database/Database.class.php line 160<br>
+Array
+(
+    [code] => 1060
+    [message] => Duplicate column name 'user_settings_talk_bell'
+    [query] => ALTER TABLE `prefix_user` ADD `user_settings_talk_bell` TINYINT( 1 ) NOT NULL DEFAULT '1'
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 160
+)
+]

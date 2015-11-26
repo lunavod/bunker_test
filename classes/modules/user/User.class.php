@@ -412,7 +412,9 @@ class ModuleUser extends Module {
 			 * Создаем персональный блог
 			 */
 			$this->Blog_CreatePersonalBlog($oUser);
-			$this->Userfeed_subscribeUser($oUser->getId(), ModuleUserfeed::SUBSCRIBE_TYPE_BLOG, Config::Get('autosubscribe'));
+			foreach (Config::Get('autosubscribe') as $BlogForSuscribe) {
+				$this->Userfeed_subscribeUser($oUser->getId(), ModuleUserfeed::SUBSCRIBE_TYPE_BLOG, $BlogForSuscribe);
+			}
 			return $oUser;
 		}
 		return false;

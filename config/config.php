@@ -568,6 +568,6 @@ date_default_timezone_set('Europe/Moscow'); // See http://php.net/manual/en/time
 $config['jevix']=require(dirname(__FILE__).'/jevix.php');
 
 $config['moderator'] = array(13);
-$config['autosubscribe'] = 17;
+$config['autosubscribe'] = array(17);
 return $config;
 ?>
