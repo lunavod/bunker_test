@@ -79,9 +79,9 @@
 
 /* Knopka Wide */
 .nav.nav-userbar li a.widemode {background: transparent url('../images/wide_mode.png') no-repeat scroll 156px 0px;} /* 156px - костыльное значение, скорее всего придется подгонять */
-.nav.nav-userbar li a.widemode:hover {background-color: #7986cb; }
+.nav.nav-userbar li a.widemode:hover {background: #7986cb url('../images/wide_mode.png') no-repeat scroll 156px 0px;; }
 .nav.nav-userbar li a.standartmode {background: transparent url('../images/standart_mode.png') no-repeat scroll 156px 0px;}
-.nav.nav-userbar li a.standartmode:hover {background-color: #7986cb; }
+.nav.nav-userbar li a.standartmode:hover {background: #7986cb url('../images/standart_mode.png') no-repeat scroll 156px 0px;; }
 
 /* Nav Main */
 .nav.nav-main 					{ background: #5C6BC0; margin-left: 50px; height: 50px;}
