@@ -33,7 +33,7 @@
     {hook run='userbar_item'}
     <li><a href="{router page='login'}" class="js-login-form-show">{$aLang.user_login_submit}<i class="fa fa-user"></i></a></li>
     <li><a href="{router page='registration'}" class="js-registration-form-show">{$aLang.registration_submit}<i class="fa fa-user-plus"></i></a></li>
-    <li><a href="#" onclick="wide(); return false;" class="widemode" id="wide">&nbsp;</a></li>
+    <li><a href="#" onclick="wide(); return false;" class="widemode" id="wide">Широкий режим;</a></li>
     </ul>
     {/if}
     </ul>
@@ -45,6 +45,7 @@
     </ul>
 </div>
 </nav>
+{literal}
 <script>
     function wide(){
         var gifs = document.getElementById('sidebar');
@@ -54,6 +55,7 @@
         gifs.style.display = "none";
         var el = document.getElementById("wide");
         el.className= "standartmode";
+        el.innerHTML = 'Стандартный режим'
         el.onclick=function(){dewide(); return false;}
     }
     function dewide(){
@@ -64,6 +66,8 @@
         gifs.style.display = "";
         var el = document.getElementById("wide");
         el.className = "widemode";
+        el.innerHTML = 'Широкий режим'
         el.onclick=function(){wide(); return false;}
     }
 </script>
+{/literal}
