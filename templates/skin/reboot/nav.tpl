@@ -10,7 +10,6 @@
 		<li {if $sMenuHeadItemSelect=='stream'}class="active"{/if}><a href="{router page='stream'}">{$aLang.stream_menu}</a></li>
 		<li><a href="http://freepony.ru/">{$aLang.freepony}</a></li>
 
-		{hook run='main_menu_item'}
 		<li class="quote" style="float: left;">
 		<a href="#" style="padding-top: 3px; padding-bottom" 0px;>
 <img src="{cfg name="path.static.skin"}/images/woona.gif">

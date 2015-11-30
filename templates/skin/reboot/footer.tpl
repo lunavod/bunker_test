@@ -6,9 +6,17 @@
 
 	<footer id="footer">
 
-	Пони. Пони захватывают мир.
+{literal}
 
-	</footer>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
+
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 2, width: "auto", height: "200"}, 105592235);
+</script>
+{/literal}
+</footer>
 
 </div> <!-- /container -->
 
@@ -16,7 +24,6 @@
 <script src="{cfg name="path.static.skin"}/js/clock.js">
 {hook run='body_end'}
 <script>
-
 var allNew = document.querySelectorAll('.spoiler-title');
 console.log(allNew)
 idx=0

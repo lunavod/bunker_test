@@ -38,6 +38,7 @@
     {/if}
     </ul>
     <ul class="userbar_info">
+    <li><a href="/page/about">О версии {Config::Get('site_version')}<i class="fa fa-info-circle"></i></a></li>
     <li><a href="http://bug.lunavod.ru/">Сообщить об ошибке<i class="fa fa-exclamation-circle"></i></a></li>
 {if $oUserCurrent}
     <li><a href="{router page='login'}exit/?security_ls_key={$LIVESTREET_SECURITY_KEY}">{$aLang.exit}<i class="fa fa-times-circle-o"></i></a></li>
