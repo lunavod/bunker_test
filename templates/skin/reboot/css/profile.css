@@ -9,7 +9,7 @@
 .profile .vote-label	{ text-transform: uppercase; text-align: right; font-size: 11px; color: #aaa; }
 .profile .count 		{ font-size: 34px; line-height: 1em; font-weight: bold; text-align: right; }
 
-.profile .vote 									{ position: absolute; top: 0; right: 140px; }
+.profile .vote 									{ position: absolute; top: 0; right: 200px; }
 .profile .vote .vote-count 						{ padding-left: 25px; display: block; }
 .profile .vote .vote-up 						{ color: green; position: absolute; top: 22px; left: 0; font-size: 14px; line-height: 14px; }
 .profile .vote .vote-down 						{ color: red; position: absolute; top: 35px; left: 0; font-size: 14px; line-height: 14px;}
@@ -19,7 +19,7 @@
 .profile .vote.voted .vote-down 				{ display: inline-block; }
 .profile .vote.vote-count-positive .vote-count 	{ color: #5055B2; }
 
-.profile .strength 					{ position: absolute; top: 0; right: 0; }
+.profile .strength 					{ position: absolute; top: 0; right: 80px; }
 
 .profile .user-login 				{ width: 270px; font-size: 27px; line-height: 26px; font-weight: bold; margin-bottom: 5px; }
 .profile .user-login.no-user-name 	{ position: relative; top: 9px; }
@@ -29,3 +29,8 @@
 
 .profile-info-about { padding: 13px 20px 20px; background: #F1F9F1; border-radius: 5px; margin-bottom: 30px; color: #000; }
 .profile-info-about h3 { font-size: 18px; margin-bottom: 5px; }
+
+.profile .role {
+    right: 0px;
+    position: absolute;
+}

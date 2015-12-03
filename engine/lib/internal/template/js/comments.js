@@ -170,6 +170,8 @@ ls.comments = (function ($) {
 					this.scrollToComment(selfIdComment);
 				}
 				this.checkFolding();
+				this.aCommentNew = [];
+				this.calcNewComments();
 				ls.hook.run('ls_comments_load_after',[idTarget, typeTarget, selfIdComment, bNotFlushNew, result]);
 			}
 		}.bind(this));

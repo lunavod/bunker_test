@@ -1,3 +1,3 @@
-{include file='header.tpl'}
-{$aBooks}
-{include file='footer.tpl'}
+{literal}
+{"succes": 1}
+{/literal}

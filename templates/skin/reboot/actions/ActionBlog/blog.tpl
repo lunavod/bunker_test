@@ -58,7 +58,12 @@
 		<ul class="actions">
 			<li><a href="{router page='rss'}blog/{$oBlog->getUrl()}/" class="rss">RSS</a></li>
 			{if $oUserCurrent and $oUserCurrent->getId()!=$oBlog->getOwnerId()}
-				<li><a href="#" onclick="ls.blog.toggleJoin(this,{$oBlog->getId()}); return false;" class="link-dotted">{if $oBlog->getUserIsJoin()}{$aLang.blog_leave}{else}{$aLang.blog_join}{/if}</a></li>
+<li><a href="#" onclick="ls.blog.toggleJoin(this,{$oBlog->getId()}); return false;" class="link-dotted">{if $oBlog->getUserIsJoin()}{$aLang.blog_leave}{else}{$aLang.blog_join}{/if}</a></li>
+			{/if}
+			{if $oUserCurrent and $oUserCurrent->getId()!=$oBlog->getOwnerId() and $oBlog->getType()=="close"}
+			{if !$oBlog->getUserIsJoin()}
+			<li><a href="#" onclick="askInvite({$oBlog->getId()}, [{$oBlog->getOwnerId()}{foreach from=$aBlogAdministrators item=oBlogUser}{assign var="oUser" value=$oBlogUser->getUser()}, {$oUser->getId()}{/foreach}])">Попросить инвайт</a></li>
+			{/if}
 			{/if}
 			{if $oUserCurrent and ($oUserCurrent->getId()==$oBlog->getOwnerId() or $oUserCurrent->isAdministrator() or $oBlog->getUserIsAdministrator() )}
 				<li>
@@ -88,8 +93,9 @@
 				{foreach from=$aBlogAdministrators item=oBlogUser}
 					{assign var="oUser" value=$oBlogUser->getUser()}  									
 					<a href="{$oUser->getUserWebPath()}" class="user"><i class="icon-user"></i>{$oUser->getLogin()}</a>
-				{/foreach}	
-			{/if}<br />		
+				{/foreach}
+			{/if}
+			<br />
 
 			
 			<strong>{$aLang.blog_user_moderators} ({$iCountBlogModerators}):</strong>
@@ -133,6 +139,18 @@
 {else}
 	{include file='topic_list.tpl'}
 {/if}
-
-
+{literal}
+<script>
+function askInvite(blog, to){
+	$.post(DIR_WEB_ROOT + '/api/', {"blog": blog, "to": to},
+        function(data){
+            if (data) {
+                ls.msg.notice("Вы отправили просьбу об инвайте", "");
+            } else {
+                ls.msg.error("Упс!", "Что-то пошло не так...");
+            }
+        }, "json");
+}
+{/literal}
+</script>
 {include file='footer.tpl'}

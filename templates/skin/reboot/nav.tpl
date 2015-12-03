@@ -25,8 +25,10 @@
 </a>
 </li>
 <li style="float: left;">
-		<a href="{cfg name='path.root.web'}/episodes"> <p id="nextepisode">Время, оставшееся до новой серии</p>
-</a>
+<form action="http://reboot.lunavod.ru/search/topics/" class="search search-nav">
+		<input type="text" placeholder="Поиск" maxlength="255" name="q" class="input-text">
+		<input type="submit" value="" title="Найти" class="input-submit icon icon-search">
+	</form>
 		</li>
 	</ul>
 	{hook run='main_menu'}
