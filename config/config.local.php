@@ -30,7 +30,7 @@ $config['db']['params']['type']   = 'mysql';
 $config['db']['params']['dbname'] = 'bunker';
 $config['db']['table']['prefix'] = 'prefix_';
 
-$config['path']['root']['web'] = 'http://reboot.lunavod.ru';
+$config['path']['root']['web'] = 'https://reboot.lunavod.ru';
 $config['path']['root']['server'] = '/var/www/reboot/';
 $config['path']['offset_request_url'] = '0';
 $config['db']['tables']['engine'] = 'InnoDB';

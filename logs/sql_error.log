@@ -1292,3 +1292,229 @@ Array
     [context] => /var/www/reboot/engine/modules/database/Database.class.php line 160
 )
 ]
+[2015-12-04 17:27:12][18313][3154][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 17:27:18][9406][3469][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 17:28:21][14476][7066][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 17:28:24][14476][8348][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 17:51:28][9406][7132][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 17:55:39][18313][6453][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 18:54:20][19453][8220][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 18:54:21][19453][4843][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 18:54:30][19452][7898][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 18:54:30][19452][6946][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 18:54:36][19455][5068][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 18:54:36][19455][2895][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 18:55:47][19459][4484][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 18:55:47][19459][8849][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 18:55:47][19459][9579][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-04 18:55:48][19459][2980][ERROR][SQL Error: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111) at /var/www/reboot/engine/modules/database/Database.class.php line 72<br>
+Array
+(
+    [code] => 2002
+    [message] => Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (111)
+    [query] => mysql_connect()
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 72
+)
+]
+[2015-12-05 11:23:07][26612][5341][ERROR][SQL Error: Duplicate column name 'user_settings_talk_bell' at /var/www/reboot/engine/modules/database/Database.class.php line 160<br>
+Array
+(
+    [code] => 1060
+    [message] => Duplicate column name 'user_settings_talk_bell'
+    [query] => ALTER TABLE `prefix_user` ADD `user_settings_talk_bell` TINYINT( 1 ) NOT NULL DEFAULT '1'
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 160
+)
+]
+[2015-12-05 11:23:23][26651][6897][ERROR][SQL Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1' at line 8 at /var/www/reboot/engine/modules/database/Database.class.php line 160<br>
+Array
+(
+    [code] => 1064
+    [message] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1' at line 8
+    [query] => --
+-- SQL, которые надо выполнить движку при активации плагина админом. Вызывается на исполнение ВРУЧНУЮ в /plugins/PluginAbcplugin.class.php в методе Activate()
+-- Например:
+
+CREATE TABLE IF NOT EXISTS `prefix_theme` (
+  `user_id` int(11) unsigned DEFAULT NULL,
+  `theme_id` int(11) unsigned DEFAULT 1,
+ ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 160
+)
+]
+[2015-12-05 11:23:29][26661][3914][ERROR][SQL Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1' at line 8 at /var/www/reboot/engine/modules/database/Database.class.php line 160<br>
+Array
+(
+    [code] => 1064
+    [message] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1' at line 8
+    [query] => --
+-- SQL, которые надо выполнить движку при активации плагина админом. Вызывается на исполнение ВРУЧНУЮ в /plugins/PluginAbcplugin.class.php в методе Activate()
+-- Например:
+
+CREATE TABLE IF NOT EXISTS `prefix_theme` (
+  `user_id` int(11) unsigned DEFAULT NULL,
+  `theme_id` int(11) unsigned DEFAULT 1,
+ ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 160
+)
+]
+[2015-12-05 11:23:30][26661][5779][ERROR][SQL Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1' at line 8 at /var/www/reboot/engine/modules/database/Database.class.php line 160<br>
+Array
+(
+    [code] => 1064
+    [message] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1' at line 8
+    [query] => --
+-- SQL, которые надо выполнить движку при активации плагина админом. Вызывается на исполнение ВРУЧНУЮ в /plugins/PluginAbcplugin.class.php в методе Activate()
+-- Например:
+
+CREATE TABLE IF NOT EXISTS `prefix_theme` (
+  `user_id` int(11) unsigned DEFAULT NULL,
+  `theme_id` int(11) unsigned DEFAULT 1,
+ ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 160
+)
+]
+[2015-12-05 11:49:09][26800][8568][ERROR][SQL Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1' at line 8 at /var/www/reboot/engine/modules/database/Database.class.php line 160<br>
+Array
+(
+    [code] => 1064
+    [message] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1' at line 8
+    [query] => --
+-- SQL, которые надо выполнить движку при активации плагина админом. Вызывается на исполнение ВРУЧНУЮ в /plugins/PluginAbcplugin.class.php в методе Activate()
+-- Например:
+
+CREATE TABLE IF NOT EXISTS `prefix_theme` (
+  `user_id` int(11) unsigned DEFAULT NULL,
+  `theme_id` int(11) unsigned DEFAULT 1,
+ ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 160
+)
+]
+[2015-12-05 11:49:09][26798][8903][ERROR][SQL Error: Duplicate column name 'user_settings_talk_bell' at /var/www/reboot/engine/modules/database/Database.class.php line 160<br>
+Array
+(
+    [code] => 1060
+    [message] => Duplicate column name 'user_settings_talk_bell'
+    [query] => ALTER TABLE `prefix_user` ADD `user_settings_talk_bell` TINYINT( 1 ) NOT NULL DEFAULT '1'
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 160
+)
+]

@@ -25,7 +25,7 @@
 </a>
 </li>
 <li style="float: left;">
-<form action="http://reboot.lunavod.ru/search/topics/" class="search search-nav">
+<form action="https://reboot.lunavod.ru/search/topics/" class="search search-nav">
 		<input type="text" placeholder="Поиск" maxlength="255" name="q" class="input-text">
 		<input type="submit" value="" title="Найти" class="input-submit icon icon-search">
 	</form>

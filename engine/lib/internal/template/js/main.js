@@ -66,8 +66,6 @@ ls.msg = (function ($) {
             else if (Notification.permission === "granted") {
                 // Если все в порядке, то создадим уведомление
                 var notification1 = new Notification(title,{
-                    
-                    'lang': 'ru-RU',
                     'body': body,
                 });
             }
@@ -83,8 +81,6 @@ ls.msg = (function ($) {
                     // Если разрешение получено, то создадим уведомление
                     if (permission === "granted") {
                         var notification1 = new Notification(title,{
-                            
-                            'lang': 'ru-RU',
                             'body': body,
                         });
                     }
