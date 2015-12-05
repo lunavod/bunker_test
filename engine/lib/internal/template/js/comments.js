@@ -273,6 +273,7 @@ ls.comments = (function ($) {
 						
 		if (this.iCurrentViewComment) {
 			$('#comment_id_'+this.iCurrentViewComment).removeClass(this.options.classes.comment_current);
+			$('#comment_id_'+this.iCurrentViewComment).removeClass(this.options.classes.comment_new);
 		}				
 		$('#comment_id_'+idComment).addClass(this.options.classes.comment_current);
 		this.iCurrentViewComment=idComment;		
