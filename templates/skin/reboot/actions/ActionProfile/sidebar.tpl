@@ -107,6 +107,8 @@
 		{if $oUserCurrent and $oUserCurrent->getId() == $oUserProfile->getId()}
 			<li {if $sAction=='talk'}class="active"{/if}><a href="{router page='talk'}">{$aLang.talk_menu_inbox}{if $iUserCurrentCountTalkNew} ({$iUserCurrentCountTalkNew}){/if}</a></li>
 			<li {if $sAction=='settings'}class="active"{/if}><a href="{router page='settings'}">{$aLang.settings_menu}</a></li>
+			{hook run='athead'}
+			{hook run='atmenu'}
 		{/if}
 		{hook run='profile_sidebar_menu_item_last' oUserProfile=$oUserProfile}
 	</ul>

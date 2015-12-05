@@ -23,6 +23,8 @@
     <li><a href="{$oUserCurrent->getUserWebPath()}favourites/topics/">{$aLang.user_menu_profile_favourites}<i class="fa fa-star-half-o"></i></a></li>
     <li><a href="{router page='talk'}" {if $iUserCurrentCountTalkNew}class="new-messages"{/if} id="new_messages" title="{if $iUserCurrentCountTalkNew}{$aLang.user_privat_messages_new}{/if}">{$aLang.user_privat_messages}{if $iUserCurrentCountTalkNew} ({$iUserCurrentCountTalkNew}){/if}<i class="fa fa-envelope-o"></i></a></li>
     <li><a href="{router page='settings'}profile/">{$aLang.user_settings}<i class="fa fa-cogs"></i></a></li>
+{hook run='athead'}
+                        {hook run='atmenu'}
     {hook run='userbar_item'}
     <li><a href="#" onclick="wide(); return false;" class="widemode" id="wide">Широкий режим</a></li>
     </ul>

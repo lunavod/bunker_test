@@ -60,7 +60,7 @@ class PluginEditcomment_ModuleACL extends PluginEditcomment_Inherit_ModuleACL
         if ($oUser->getUserIsAdministrator())
             return true;
 
-	if ($oUser->isGlobalModerator() and $oTopic->getBlog()->getType() == "open") {
+	if ($oUser->isGlobalModerator() and $oComment->getTarget()->getBlog()->getType() == "open") {
 	    return true;
 	}
         if ($oUser->getUserId() != $oComment->getUserId() && !$oUser->isAdministrator())

@@ -174,7 +174,7 @@ $config['acl']['vote']['comment']['rating']               = -3;  // порог �
 $config['acl']['vote']['blog']['rating']                  = -5;  // порог рейтинга при котором юзер может голосовать за блог
 $config['acl']['vote']['topic']['rating']                 = -7;  // порог рейтинга при котором юзер может голосовать за топик
 $config['acl']['vote']['user']['rating']                  = -1;  // порог рейтинга при котором юзер может голосовать за пользователя
-$config['acl']['vote']['topic']['limit_time']             = 60*60*24*20; // ограничение времени голосования за топик
+$config['acl']['vote']['topic']['limit_time']             = 60*60*60*60*24*20; // ограничение времени голосования за топик
 $config['acl']['vote']['comment']['limit_time']           = 60*60*24*5;  // ограничение времени голосования за комментарий
 /**
  * Настройки модулей
@@ -418,7 +418,7 @@ $config['block']['rule_index_blog'] = array(
 			'index', 'blog' => array('{topics}','{topic}','{blog}')
 		),
 	'blocks'  => array(
-			'right' => array('blocks/block.bquote.tpl'=>array('priority'=>50), 'stream'=>array('priority'=>100),'tags'=>array('priority'=>60),'blogs'=>array('params'=>array(),'priority'=>1))
+			'right' => array('blocks/block.bquote.tpl'=>array('priority'=>50), 'stream'=>array('priority'=>100),'tags'=>array('priority'=>60))
 		),
 	'clear' => false,
 );
@@ -448,7 +448,7 @@ $config['block']['rule_tag'] = array(
 	'blocks'  => array( 'right' => array('tags','stream') ),
 );
 $config['block']['rule_blogs'] = array(
-	'action'  => array( 'blogs' ),
+	'action'  => array( ),
 	'blocks'  => array( 'right' => array('stream') ),
 );
 
@@ -456,8 +456,8 @@ $config['block']['userfeedBlogs'] = array(
 	'action'  => array('feed'),
 	'blocks'  => array(
                     'right' => array(
-                        'userfeedBlogs'=> array('priority'=>600), 'blocks/block.bquote.tpl'=>array('priority'=>50), 'stream'=>array('priority'=>100),'tags'=>array('priority'=>60),'blogs'=>array('params'=>array(),'priority'=>1)
-                    )
+                        'userfeedBlogs'=> array('priority'=>600), 'blocks/block.bquote.tpl'=>array('priority'=>50), 'stream'=>array('priority'=>100),'tags'=>array('priority'=>60),
+                   )
                 )
 );
 $config['block']['userfeedUsers'] = array(
@@ -493,7 +493,7 @@ $config['head']['default']['js']  = array(
 	"___path.root.engine_lib___/external/jquery/jcrop/jquery.Jcrop.js",
 	"___path.root.engine_lib___/external/jquery/poshytip/jquery.poshytip.js",
 	"___path.root.engine_lib___/external/jquery/jquery.placeholder.min.js",
-	"___path.root.engine_lib___/external/jquery/jquery.charcount.js",
+	"___path.root.engine_lib___/external/jquery/jquery.charcount.js", 
 	"___path.root.engine_lib___/external/prettify/prettify.js",
 	"___path.root.engine_lib___/internal/template/js/main.js",
 	"___path.root.engine_lib___/internal/template/js/favourite.js",
@@ -517,8 +517,14 @@ $config['head']['default']['js']  = array(
 	"___path.root.engine_lib___/internal/template/js/settings.js",
 	"___path.root.engine_lib___/internal/template/js/topic.js",
 	"___path.root.engine_lib___/internal/template/js/hook.js",
-	"http://yandex.st/share/share.js" => array('merge'=>false),
-);
+	/*"___path.root.engine_lib___/internal/template/wjs/zepto.min.js",
+	"___path.root.engine_lib___/external/jquery/jquery.jqmodal.js",
+	"___path.root.engine_lib___/external/jquery/markitup/jquery.markitup.js",
+	"___path.root.engine_lib___/external/jquery/jquery.notifier.js",
+	"___path.root.engine_lib___/internal/template/wjs/main.js",*/
+	"http://yandex.st/share/share.js" => array('merge'=>false), 
+
+); 
 $config['head']['default']['css'] = array(
 	"___path.static.skin___/css/reset.css",
 	"___path.root.engine_lib___/external/jquery/markitup/skins/simple/style.css",
@@ -553,7 +559,7 @@ $config['compress']['css']['template']            = "highest_compression";
 /**
  * Параметры компрессии js-файлов
  */
-$config['compress']['js']['merge']  = true;    // указывает на необходимость слияния файлов по указанным блокам.
+$config['compress']['js']['merge']  = false;    // указывает на необходимость слияния файлов по указанным блокам.
 $config['compress']['js']['use']    = true;    // указывает на необходимость компрессии файлов. Компрессия используется только в активированном режиме слияния файлов.
 
 /**
@@ -567,8 +573,15 @@ date_default_timezone_set('Europe/Moscow'); // See http://php.net/manual/en/time
  */
 $config['jevix']=require(dirname(__FILE__).'/jevix.php');
 
+//added by Lunavod
+
+//айдишники пользователей - глобальных модераторов
 $config['moderator'] = array(13);
+
+//айдишники блогов, к которым пользователь подписывается при регистрации
 $config['autosubscribe'] = array(17);
-$config['site_version'] = '0.9';
+
+//Собственно, номер версии сайта
+$config['site_version'] = '1.9';
 return $config;
 ?>
