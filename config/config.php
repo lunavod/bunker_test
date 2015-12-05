@@ -58,7 +58,7 @@ $config['pagination']['pages']['count'] = 4;                  // количес�
  * например, для директории первой вложенности www.site.ru/livestreet/ поставить значение равное 1
  */
 if (isset($_SERVER['HTTP_HOST'])) {
-    $config['path']['root']['web']        = 'http://'.$_SERVER['HTTP_HOST'];     // полный WEB адрес сайта
+    $config['path']['root']['web']        = 'https://'.$_SERVER['HTTP_HOST'];     // полный WEB адрес сайта
 } else {
     // for CLI scripts. or you can append "HTTP_HOST=http://yoursite.url" before script run command
     $config['path']['root']['web']        = null;
@@ -522,7 +522,7 @@ $config['head']['default']['js']  = array(
 	"___path.root.engine_lib___/external/jquery/markitup/jquery.markitup.js",
 	"___path.root.engine_lib___/external/jquery/jquery.notifier.js",
 	"___path.root.engine_lib___/internal/template/wjs/main.js",*/
-	"http://yandex.st/share/share.js" => array('merge'=>false), 
+	"https://yandex.st/share/share.js" => array('merge'=>false), 
 
 ); 
 $config['head']['default']['css'] = array(
@@ -559,7 +559,7 @@ $config['compress']['css']['template']            = "highest_compression";
 /**
  * Параметры компрессии js-файлов
  */
-$config['compress']['js']['merge']  = false;    // указывает на необходимость слияния файлов по указанным блокам.
+$config['compress']['js']['merge']  = true;    // указывает на необходимость слияния файлов по указанным блокам.
 $config['compress']['js']['use']    = true;    // указывает на необходимость компрессии файлов. Компрессия используется только в активированном режиме слияния файлов.
 
 /**

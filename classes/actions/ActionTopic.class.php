@@ -341,7 +341,6 @@ class ActionTopic extends Action {
 			/**
 			 * Добавляем автора топика в подписчики на новые комментарии к этому топику
 			 */
-			$this->Subscribe_AddSubscribeSimple('topic_new_comment',$oTopic->getId(),$this->oUserCurrent->getMail());
 			/**
 			 * Делаем рассылку спама всем, кто состоит в этом блоге
 			 */

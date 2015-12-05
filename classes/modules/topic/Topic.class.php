@@ -848,6 +848,7 @@ class ModuleTopic extends Module {
 		 */
 		if($this->oUserCurrent && $this->oUserCurrent->getId()==$sUserId) {
 			$aFilter['blog_type'][]='close';
+                        $aFilter['blog_type'][]='invite';
 		}
 		return $this->GetTopicsByFilter($aFilter,$iPage,$iPerPage);
 	}
