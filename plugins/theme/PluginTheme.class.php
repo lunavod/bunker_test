@@ -55,10 +55,10 @@ class PluginTheme extends Plugin {
 
     // Активация плагина
     public function Activate() {
-        if (!$this->isTableExists('prefix_theme')) {
-            $this->ExportSQL(dirname(__FILE__).'/install.sql'); // Если нам надо изменить БД, делаем это здесь.
-        }
-        return true;
+     //   if (!$this->isTableExists('prefix_theme')) {
+       //     $this->ExportSQL(dirname(__FILE__).'/install.sql'); // Если нам надо изменить БД, делаем это здесь.
+        //}
+       // return true;
     }
 
     // Деактивация плагина
@@ -72,7 +72,10 @@ class PluginTheme extends Plugin {
 
     // Инициализация плагина
     public function Init() {
-//        $this->Viewer_AppendStyle(Plugin::GetTemplatePath(__CLASS__)."css/dark.css"); // Добавление своего CSS
+	if (getRequest('set-theme',false,'get')) {
+                        setcookie('theme',1,time()+60*60*24*30,Config::Get('sys.cookie.path'),Config::Get('sys.cookie.host'),false);
+		        $this->Viewer_AppendStyle(Plugin::GetTemplatePath(__CLASS__)."css/dark.css"); // Добавление своего CSS
+         }
   //      $this->Viewer_AppendScript(Plugin::GetTemplatePath(__CLASS__)."js/script.js"); // Добавление своего JS
 
         //$this->Viewer_AddMenu('blog',Plugin::GetTemplatePath(__CLASS__).'menu.blog.tpl'); // например, задаем свой вид меню

@@ -6,16 +6,7 @@
 
 	<footer id="footer">
 
-{literal}
 
-<script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
-
-<!-- VK Widget -->
-<div id="vk_groups"></div>
-<script type="text/javascript">
-VK.Widgets.Group("vk_groups", {mode: 2, width: "auto", height: "200"}, 105592235);
-</script>
-{/literal}
 </footer>
 
 </div> <!-- /container -->

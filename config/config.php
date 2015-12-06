@@ -418,7 +418,7 @@ $config['block']['rule_index_blog'] = array(
 			'index', 'blog' => array('{topics}','{topic}','{blog}')
 		),
 	'blocks'  => array(
-			'right' => array('blocks/block.bquote.tpl'=>array('priority'=>50), 'stream'=>array('priority'=>100),'tags'=>array('priority'=>60))
+			'right' => array('blocks/block.ad.tpl'=>array('priority'=>40), 'blocks/block.bquote.tpl'=>array('priority'=>50), 'stream'=>array('priority'=>100),'tags'=>array('priority'=>60))
 		),
 	'clear' => false,
 );
@@ -449,14 +449,14 @@ $config['block']['rule_tag'] = array(
 );
 $config['block']['rule_blogs'] = array(
 	'action'  => array( ),
-	'blocks'  => array( 'right' => array('stream') ),
+	'blocks'  => array( 'right' => array('stream','blocks/block.ad.tpl'=>array('priority'=>40)) ),
 );
 
 $config['block']['userfeedBlogs'] = array(
 	'action'  => array('feed'),
 	'blocks'  => array(
                     'right' => array(
-                        'userfeedBlogs'=> array('priority'=>600), 'blocks/block.bquote.tpl'=>array('priority'=>50), 'stream'=>array('priority'=>100),'tags'=>array('priority'=>60),
+                        'userfeedBlogs'=> array('priority'=>600), 'blocks/block.ad.tpl'=>array('priority'=>40), 'blocks/block.bquote.tpl'=>array('priority'=>50), 'stream'=>array('priority'=>100),'tags'=>array('priority'=>60),
                    )
                 )
 );
