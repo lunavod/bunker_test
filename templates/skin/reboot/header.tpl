@@ -75,10 +75,10 @@
 	
 	{if {cfg name='view.grid.type'} == 'fluid'}
 		<style>
-			#container {
+			/* #container {
 				min-width: {cfg name='view.grid.fluid_min_width'}px;
 				max-width: {cfg name='view.grid.fluid_max_width'}px;
-			}
+			} */
 		</style>
 	{else}
 
@@ -153,7 +153,7 @@
 
 			{if !$noSidebar && $sidebarPosition != 'left'}
 				{include file='sidebar.tpl'}
-			{/if} <!-- Кривота! Виновник Сильвман -->
+			{/if} <!-- Krivo... -->
 		
 			<div id="content" role="main" 
 				class="{if $noSidebar}content-full-width{/if} 

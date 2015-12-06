@@ -2,11 +2,11 @@
 	СЕТКА
 -------------------------------------------- */
 
-#container 	{ margin: 0 auto; margin-bottom: 20px; }
+#container 	{ margin: 0 auto; min-width: 0; margin-bottom: 20px; }
 #header 	{ padding: 50px 0; position: relative; }
 #nav 		{ overflow: hidden; }
-#wrapper 	{ margin-left: 50px; overflow: hidden; zoom: 1; padding: 30px; background: #EEEEEE; border-bottom: 1px solid #eee; -webkit-box-shadow: 0 0 3px rgba(0,0,0,.1); box-shadow: 0 0 3px rgba(0,0,0,.1); }
-#content 	{ left: 0px; background: #EEEEEE; position: relative; margin-right: 380px; }
+#wrapper 	{ margin: 0 auto; max-width: 1280px; overflow: hidden; zoom: 1; padding: 30px 30px 30px 80px; background: #EEEEEE; border-bottom: 1px solid #eee; -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
+#content 	{ left: -30px; background: #EEEEEE; position: relative; margin-right: 380px; }
 #sidebar	{ float: right; width: 335px; }
 #footer 	{ margin-left: 50px; margin-top: 50px; overflow: hidden; zoom: 1; margin-bottom: 20px; padding: 20px 20px 50px; color: #777; }
 
