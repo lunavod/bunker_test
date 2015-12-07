@@ -1050,7 +1050,7 @@ class ModuleUser extends Module {
 		if (!file_exists($sFileTmp)) {
 			return false;
 		}
-		$sPath = $this->Image_GetIdDir($oUser->getId());
+		$sPath = $this->Image_GetIdDir($oUser->getId())."users/".$oUser->getId()."/";
 		$aParams=$this->Image_BuildParams('avatar');
 
 		/**

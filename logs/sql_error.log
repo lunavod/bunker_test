@@ -1518,3 +1518,460 @@ Array
     [context] => /var/www/reboot/engine/modules/database/Database.class.php line 160
 )
 ]
+[2015-12-07 13:38:06][19813][3326][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:38:06][19803][9640][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:38:07][19812][2116][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:38:21][19812][6331][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:38:21][19812][6331][ERROR][SQL Error: Table 'reboot.prefix_user_ignore' doesn't exist at /var/www/reboot/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php line 70<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_user_ignore' doesn't exist
+    [query] => SELECT
+                    user_ignored_id,
+                    ignore_type
+                FROM
+                    prefix_user_ignore
+                WHERE
+                    user_id = 1
+                
+    [context] => /var/www/reboot/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php line 70
+)
+]
+[2015-12-07 13:38:28][19805][1790][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:38:28][19805][1790][ERROR][SQL Error: Table 'reboot.prefix_adminban' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminban' doesn't exist
+    [query] => SELECT
+                u.*,
+                IF(ua.user_id IS NULL,0,1) as user_is_administrator,
+                ab.banline, ab.banunlim, ab.bancomment, ab.banactive,
+                INET_ATON('95.25.13.237') as ipn
+            FROM
+                prefix_user as u
+            LEFT JOIN prefix_user_administrator AS ua ON u.user_id=ua.user_id
+            LEFT JOIN prefix_adminban AS ab ON u.user_id=ab.user_id
+            WHERE
+                u.user_id = '1' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228
+)
+]
+[2015-12-07 13:38:28][19805][1790][ERROR][SQL Error: Table 'reboot.prefix_user_ignore' doesn't exist at /var/www/reboot/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php line 70<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_user_ignore' doesn't exist
+    [query] => SELECT
+                    user_ignored_id,
+                    ignore_type
+                FROM
+                    prefix_user_ignore
+                WHERE
+                    user_id = 1
+                
+    [context] => /var/www/reboot/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php line 70
+)
+]
+[2015-12-07 13:38:41][19843][5389][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:38:41][19843][5389][ERROR][SQL Error: Table 'reboot.prefix_adminban' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminban' doesn't exist
+    [query] => SELECT
+                u.*,
+                IF(ua.user_id IS NULL,0,1) as user_is_administrator,
+                ab.banline, ab.banunlim, ab.bancomment, ab.banactive,
+                INET_ATON('95.25.13.237') as ipn
+            FROM
+                prefix_user as u
+            LEFT JOIN prefix_user_administrator AS ua ON u.user_id=ua.user_id
+            LEFT JOIN prefix_adminban AS ab ON u.user_id=ab.user_id
+            WHERE
+                u.user_id = '1' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228
+)
+]
+[2015-12-07 13:38:41][19843][5389][ERROR][SQL Error: Table 'reboot.prefix_user_ignore' doesn't exist at /var/www/reboot/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php line 70<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_user_ignore' doesn't exist
+    [query] => SELECT
+                    user_ignored_id,
+                    ignore_type
+                FROM
+                    prefix_user_ignore
+                WHERE
+                    user_id = 1
+                
+    [context] => /var/www/reboot/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php line 70
+)
+]
+[2015-12-07 13:38:42][19843][6260][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:38:42][19843][6260][ERROR][SQL Error: Table 'reboot.prefix_adminban' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminban' doesn't exist
+    [query] => SELECT
+                u.*,
+                IF(ua.user_id IS NULL,0,1) as user_is_administrator,
+                ab.banline, ab.banunlim, ab.bancomment, ab.banactive,
+                INET_ATON('95.25.13.237') as ipn
+            FROM
+                prefix_user as u
+            LEFT JOIN prefix_user_administrator AS ua ON u.user_id=ua.user_id
+            LEFT JOIN prefix_adminban AS ab ON u.user_id=ab.user_id
+            WHERE
+                u.user_id = '1' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228
+)
+]
+[2015-12-07 13:38:42][19843][6260][ERROR][SQL Error: Table 'reboot.prefix_adminips' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 380<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminips' doesn't exist
+    [query] => SELECT Count(*)
+            FROM prefix_adminips
+            WHERE (INET_ATON('95.25.13.237') BETWEEN ip1 AND ip2) AND (banactive=1)
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 380
+)
+]
+[2015-12-07 13:39:07][19842][8945][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:07][19842][8945][ERROR][SQL Error: Table 'reboot.prefix_adminban' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminban' doesn't exist
+    [query] => SELECT
+                u.*,
+                IF(ua.user_id IS NULL,0,1) as user_is_administrator,
+                ab.banline, ab.banunlim, ab.bancomment, ab.banactive,
+                INET_ATON('95.25.13.237') as ipn
+            FROM
+                prefix_user as u
+            LEFT JOIN prefix_user_administrator AS ua ON u.user_id=ua.user_id
+            LEFT JOIN prefix_adminban AS ab ON u.user_id=ab.user_id
+            WHERE
+                u.user_id = '1' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228
+)
+]
+[2015-12-07 13:39:07][19842][8945][ERROR][SQL Error: Table 'reboot.prefix_user_ignore' doesn't exist at /var/www/reboot/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php line 70<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_user_ignore' doesn't exist
+    [query] => SELECT
+                    user_ignored_id,
+                    ignore_type
+                FROM
+                    prefix_user_ignore
+                WHERE
+                    user_id = 1
+                
+    [context] => /var/www/reboot/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php line 70
+)
+]
+[2015-12-07 13:39:15][19805][4180][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:15][19805][4180][ERROR][SQL Error: Table 'reboot.prefix_adminban' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminban' doesn't exist
+    [query] => SELECT
+                u.*,
+                IF(ua.user_id IS NULL,0,1) as user_is_administrator,
+                ab.banline, ab.banunlim, ab.bancomment, ab.banactive,
+                INET_ATON('95.25.13.237') as ipn
+            FROM
+                prefix_user as u
+            LEFT JOIN prefix_user_administrator AS ua ON u.user_id=ua.user_id
+            LEFT JOIN prefix_adminban AS ab ON u.user_id=ab.user_id
+            WHERE
+                u.user_id = '1' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228
+)
+]
+[2015-12-07 13:39:15][19805][4180][ERROR][SQL Error: Table 'reboot.prefix_adminban' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminban' doesn't exist
+    [query] => SELECT
+                u.*,
+                IF(ua.user_id IS NULL,0,1) as user_is_administrator,
+                ab.banline, ab.banunlim, ab.bancomment, ab.banactive,
+                INET_ATON('95.25.13.237') as ipn
+            FROM
+                prefix_user as u
+            LEFT JOIN prefix_user_administrator AS ua ON u.user_id=ua.user_id
+            LEFT JOIN prefix_adminban AS ab ON u.user_id=ab.user_id
+            WHERE
+                u.user_id = '1' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228
+)
+]
+[2015-12-07 13:39:15][19805][4180][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_reserved_urls' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:15][19805][4180][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_items_per_page' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:15][19805][4180][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_votes_per_page' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:15][19805][4180][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_edit_footer' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:15][19805][4180][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_vote_value' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:15][19805][4180][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_check_password' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:15][19805][4180][ERROR][SQL Error: Table 'reboot.prefix_user_ignore' doesn't exist at /var/www/reboot/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php line 70<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_user_ignore' doesn't exist
+    [query] => SELECT
+                    user_ignored_id,
+                    ignore_type
+                FROM
+                    prefix_user_ignore
+                WHERE
+                    user_id = 1
+                
+    [context] => /var/www/reboot/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php line 70
+)
+]
+[2015-12-07 13:39:19][19805][1202][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'version' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:19][19805][1202][ERROR][SQL Error: Table 'reboot.prefix_adminban' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminban' doesn't exist
+    [query] => SELECT
+                u.*,
+                IF(ua.user_id IS NULL,0,1) as user_is_administrator,
+                ab.banline, ab.banunlim, ab.bancomment, ab.banactive,
+                INET_ATON('95.25.13.237') as ipn
+            FROM
+                prefix_user as u
+            LEFT JOIN prefix_user_administrator AS ua ON u.user_id=ua.user_id
+            LEFT JOIN prefix_adminban AS ab ON u.user_id=ab.user_id
+            WHERE
+                u.user_id = '1' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228
+)
+]
+[2015-12-07 13:39:19][19805][1202][ERROR][SQL Error: Table 'reboot.prefix_adminban' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminban' doesn't exist
+    [query] => SELECT
+                u.*,
+                IF(ua.user_id IS NULL,0,1) as user_is_administrator,
+                ab.banline, ab.banunlim, ab.bancomment, ab.banactive,
+                INET_ATON('95.25.13.237') as ipn
+            FROM
+                prefix_user as u
+            LEFT JOIN prefix_user_administrator AS ua ON u.user_id=ua.user_id
+            LEFT JOIN prefix_adminban AS ab ON u.user_id=ab.user_id
+            WHERE
+                u.user_id = '1' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 228
+)
+]
+[2015-12-07 13:39:19][19805][1202][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_reserved_urls' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:19][19805][1202][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_items_per_page' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:19][19805][1202][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_votes_per_page' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:19][19805][1202][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_edit_footer' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:19][19805][1202][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_vote_value' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:19][19805][1202][ERROR][SQL Error: Table 'reboot.prefix_adminset' doesn't exist at /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_adminset' doesn't exist
+    [query] => SELECT adminset_val FROM prefix_adminset WHERE adminset_key = 'param_check_password' 
+    [context] => /var/www/reboot/plugins/aceadminpanel/classes/modules/admin/mapper/Admin.mapper.class.php line 33
+)
+]
+[2015-12-07 13:39:20][19805][1202][ERROR][SQL Error: Table 'reboot.prefix_user_ignore' doesn't exist at /var/www/reboot/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php line 70<br>
+Array
+(
+    [code] => 1146
+    [message] => Table 'reboot.prefix_user_ignore' doesn't exist
+    [query] => SELECT
+                    user_ignored_id,
+                    ignore_type
+                FROM
+                    prefix_user_ignore
+                WHERE
+                    user_id = 1
+                
+    [context] => /var/www/reboot/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php line 70
+)
+]

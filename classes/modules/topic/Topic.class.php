@@ -1579,11 +1579,19 @@ class ModuleTopic extends Module {
 		}
 		$sDirUpload=$this->Image_GetIdDir($oUser->getId());
 		$aParams=$this->Image_BuildParams('topic');
-
-		if ($sFileImage=$this->Image_Resize($sFileTmp,$sDirUpload,func_generator(6),Config::Get('view.img_max_width'),Config::Get('view.img_max_height'),Config::Get('view.img_resize_width'),null,true,$aParams)) {
-			@unlink($sFileTmp);
-			return $this->Image_GetWebPath($sFileImage);
-		}
+		$dir = Config::Get('plugin.staticdomain.static_server').'/';
+                $hash = hash_file("crc32", $sFileTmp);
+                $type = substr($aFile['type'], strrpos($aFile['type'], "/")+1);
+                $fullname = $hash . "." . $type;
+                if (!file_exists($dir.$fullname)){
+    		    if ($sFileImage=$this->Image_Resize($sFileTmp,$sDirUpload,$hash,Config::Get('view.img_max_width'),Config::Get('view.img_max_height'),Config::Get('view.img_resize_width'),null,true,$aParams)) {
+		        	@unlink($sFileTmp);
+			        return $this->Image_GetWebPath($sFileImage);
+		    }
+		} else {
+                                @unlink($sFileTmp);
+                                return Config::Get('plugin.staticdomain.static_web') . "/img/" . $fullname;
+                }
 		@unlink($sFileTmp);
 		return false;
 	}
@@ -1639,10 +1647,19 @@ class ModuleTopic extends Module {
 		/**
 		 * Передаем изображение на обработку
 		 */
-		if ($sFileImg=$this->Image_Resize($sFileTmp,$sDirSave,func_generator(),Config::Get('view.img_max_width'),Config::Get('view.img_max_height'),Config::Get('view.img_resize_width'),null,true,$aParams)) {
+                $dir = Config::Get('plugin.staticdomain.static_server').'/';
+                $hash = hash_file("crc32", $sFileTmp);
+                $type = substr($sUrl, strrpos($sUrl, ".")+1);
+                $fullname = $hash . "." . $type;
+                if (!file_exists($dir.$fullname)){
+			if ($sFileImg=$this->Image_Resize($sFileTmp,$sDirSave,$hash,Config::Get('view.img_max_width'),Config::Get('view.img_max_height'),Config::Get('view.img_resize_width'),null,true,$aParams)) {
+				@unlink($sFileTmp);
+				return $this->Image_GetWebPath($sFileImg);
+			}
+		} else {
 			@unlink($sFileTmp);
-			return $this->Image_GetWebPath($sFileImg);
-		}
+			return Config::Get('plugin.staticdomain.static_web') . "/img/" . $fullname;
+                }
 
 		@unlink($sFileTmp);
 		return ModuleImage::UPLOAD_IMAGE_ERROR;

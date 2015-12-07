@@ -820,7 +820,7 @@ class ModuleBlog extends Module {
 			return false;
 		}
 
-		$sPath=$this->Image_GetIdDir($oBlog->getOwnerId());
+		$sPath=$this->Image_GetIdDir($oBlog->getOwnerId())."blogs/".$oBlog->getId()."/";
 		$aParams=$this->Image_BuildParams('avatar');
 
 		$oImage=$this->Image_CreateImageObject($sFileTmp);
