@@ -7,7 +7,7 @@ body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 18px;
 	color: #333;
-	background-color: #EEEEEE url('../images/bg-noise.png');
+	background: #EEEEEE url('../images/bg-noise.png');
 }
 
 
