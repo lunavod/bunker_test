@@ -24,7 +24,7 @@
 </h1>
 </a>
 </li>
-<li style="">
+<li style="left">
 <form action="https://reboot.lunavod.ru/search/topics/" class="search search-nav">
 		<input type="text" placeholder="Поиск" maxlength="255" name="q" class="input-text">
 		<input type="submit" value="" title="Найти" class="input-submit icon icon-search">
