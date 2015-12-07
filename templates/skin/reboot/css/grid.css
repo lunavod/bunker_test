@@ -2,11 +2,23 @@
 	СЕТКА
 -------------------------------------------- */
 
-#container 	{ margin: 0 auto; min-width: 0; margin-bottom: 20px; }
+#container	{ min-width: 0; padding-left: 50px; }
 #header 	{ padding: 50px 0; position: relative; }
 #nav 		{ overflow: hidden; }
-#wrapper 	{ margin: 0 auto; max-width: 1280px; overflow: hidden; zoom: 1; padding: 30px 30px 30px 80px; background: #EEEEEE; border-bottom: 1px solid #eee; -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
-#content 	{ left: -30px; background: #EEEEEE; position: relative; margin-right: 380px; }
+#wrapper {
+	background: #eeeeee none repeat scroll 0 0;
+	border-bottom: 1px solid #eee;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	margin: 0 auto;
+	max-width: 1280px;
+	overflow: hidden;
+	padding: 30px;
+}
+#content {
+	background: #eeeeee none repeat scroll 0 0;
+	margin-right: 380px;
+}
 #sidebar	{ float: right; width: 335px; }
 #footer 	{ margin-left: 50px; margin-top: 50px; overflow: hidden; zoom: 1; margin-bottom: 20px; padding: 20px 20px 50px; color: #777; }
 

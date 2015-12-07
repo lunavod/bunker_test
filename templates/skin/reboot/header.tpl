@@ -97,7 +97,7 @@
   z-index: 101;
 }
 {literal}
-#container{min-width: 1200px;}
+/* #container{min-width: 1200px;} */
 {/literal}
 </style>
 
@@ -140,11 +140,11 @@
 	{else}
 		{include file='window_login.tpl'}
 	{/if}
-	
+
+	{include file='nav.tpl'}
 
 	<div id="container" class="{hook run='container_class'}">
 		{include file='header_top.tpl'}
-		{include file='nav.tpl'}
 
 		<div id="wrapper" class="{hook run='wrapper_class'}">
 			{if !$noSidebar && $sidebarPosition == 'left'}
