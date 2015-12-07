@@ -1580,7 +1580,7 @@ class ModuleTopic extends Module {
 		$sDirUpload=$this->Image_GetIdDir($oUser->getId());
 		$aParams=$this->Image_BuildParams('topic');
 		$dir = Config::Get('plugin.staticdomain.static_server').'/';
-                $hash = hash_file("crc32", $sFileTmp);
+                $hash = hash_file("sha1", $sFileTmp);
                 $type = substr($aFile['type'], strrpos($aFile['type'], "/")+1);
                 $fullname = $hash . "." . $type;
                 if (!file_exists($dir.$fullname)){

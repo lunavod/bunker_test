@@ -41,7 +41,6 @@
 		<meta  HTTP-EQUIV="Refresh" CONTENT="3; URL={cfg name='path.root.web'}/">
 	{/if}
 	
-	
 	<script type="text/javascript">
 		var DIR_WEB_ROOT 			= '{cfg name="path.root.web"}';
 		var DIR_STATIC_SKIN 		= '{cfg name="path.static.skin"}';
@@ -61,7 +60,14 @@
 		{/foreach}
 	</script>
 	
-	
+<script>
+function getCookie(name) {
+  var matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}	
+</script>
 	{$aHtmlHeadFiles.js}
 
 	
@@ -70,6 +76,7 @@
 		ls.lang.load({json var = $aLangJs});
 		ls.registry.set('comment_max_tree',{json var=$oConfig->Get('module.comment.max_tree')});
 		ls.registry.set('block_stream_show_tip',{json var=$oConfig->Get('block.stream.show_tip')});
+
 	</script>
 	
 	
