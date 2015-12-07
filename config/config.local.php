@@ -21,7 +21,7 @@
 
 /**
  * Настройка базы данных
- */
+ 
 $config['db']['params']['host'] = 'localhost';
 $config['db']['params']['port'] = '3306';
 $config['db']['params']['user'] = 'root';
@@ -29,6 +29,15 @@ $config['db']['params']['pass'] = 'epw7h6';
 $config['db']['params']['type']   = 'mysql';
 $config['db']['params']['dbname'] = 'bunker';
 $config['db']['table']['prefix'] = 'prefix_';
+*/
+$config['db']['params']['host'] = 'localhost';
+$config['db']['params']['port'] = '3306';
+$config['db']['params']['user'] = 'root';
+$config['db']['params']['pass'] = 'epw7h6';
+$config['db']['params']['type']   = 'mysql';
+$config['db']['params']['dbname'] = 'reboot';
+$config['db']['table']['prefix'] = 'prefix_';
+
 
 $config['path']['root']['web'] = 'https://reboot.lunavod.ru';
 $config['path']['root']['server'] = '/var/www/reboot/';
