@@ -20,7 +20,16 @@
 	margin-right: 380px;
 }
 #sidebar	{ float: right; width: 335px; }
-#footer 	{ margin-left: 50px; margin-top: 50px; overflow: hidden; zoom: 1; margin-bottom: 20px; padding: 20px 20px 50px; color: #777; }
+
+#footer {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	color: #777;
+	margin: 70px auto 0;
+	max-width: 1280px;
+	overflow: hidden;
+	padding: 20px 30px 50px;
+}
 
 
 #content.content-full-width { width: 100%; margin-right: 0; }

@@ -5,6 +5,7 @@
 
 	<footer id="footer">
 <span onclick=bunkerStyle() style="cursor: pointer; color: black;">Светлый режим/темный режим</span>
+		<img src="images/dark-to-day.png" align="center" onclick=bunkerStyle() style="clear: both;"  />
 </footer>
 
 </div> <!-- /container -->
