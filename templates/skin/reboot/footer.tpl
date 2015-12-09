@@ -4,8 +4,7 @@
 
 
 	<footer id="footer">
-<span onclick=bunkerStyle() style="cursor: pointer; color: black;">Светлый режим/темный режим</span>
-		<img src="images/dark-to-day.png" align="center" onclick=bunkerStyle() style="clear: both;"  />
+		<img src="{cfg name="path.static.skin"}/images/dark-to-day.png" onclick="bunkerStyle()" align="center" title="Светлый режим/темный режим" style="cursor: pointer" />
 </footer>
 
 </div> <!-- /container -->
