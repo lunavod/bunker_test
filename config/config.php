@@ -576,7 +576,7 @@ $config['jevix']=require(dirname(__FILE__).'/jevix.php');
 //added by Lunavod
 
 //айдишники пользователей - глобальных модераторов
-$config['moderator'] = array(13);
+$config['moderator'] = array(1);
 
 //айдишники блогов, к которым пользователь подписывается при регистрации
 $config['autosubscribe'] = array(17);

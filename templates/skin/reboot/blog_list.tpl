@@ -54,7 +54,7 @@
 
 					{if $oUserCurrent}
 						<td class="cell-join">
-							{if $oUserCurrent->getId() != $oBlog->getOwnerId() and $oBlog->getType() == 'open'}
+							{if $oUserCurrent->getId() != $oBlog->getOwnerId() and $oBlog->getType() != 'close'}
 								<a href="#" onclick="ls.blog.toggleJoin(this, {$oBlog->getId()}); return false;" class="link-dotted">
 									{if $oBlog->getUserIsJoin()}
 										{$aLang.blog_leave}

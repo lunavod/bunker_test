@@ -441,6 +441,26 @@ class ModuleBlog_MapperBlog extends Mapper {
 		return $aReturn;
 	}
 	/**
+         * Возвращает полный список полузакрытых блогов
+         *
+         * @return array
+         */
+
+        public function GetHalfcloseBlogs() {
+                $sql = "SELECT b.blog_id
+                                FROM ".Config::Get('db.table.blog')." as b
+                                WHERE b.blog_type='invite'
+                        ;";
+                $aReturn=array();
+                if ($aRows=$this->oDb->select($sql)) {
+                        foreach ($aRows as $aRow) {
+                                $aReturn[]=$aRow['blog_id'];
+                        }
+                }
+                return $aReturn;
+        }
+
+	/**
 	 * Удаление блога из базы данных
 	 *
 	 * @param  int  $iBlogId ID блога

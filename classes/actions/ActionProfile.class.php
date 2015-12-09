@@ -407,6 +407,7 @@ class ActionProfile extends Action {
 		$this->Viewer_Assign('aUserFields',$aUserFields);
 		$this->Viewer_AddHtmlTitle($this->Lang_Get('user_menu_profile').' '.$this->oUserProfile->getLogin());
 		$this->Viewer_AddHtmlTitle($this->Lang_Get('user_menu_profile_whois'));
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 		/**
 		 * Устанавливаем шаблон вывода
 		 */

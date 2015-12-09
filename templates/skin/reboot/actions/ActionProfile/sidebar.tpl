@@ -113,5 +113,53 @@
 		{hook run='profile_sidebar_menu_item_last' oUserProfile=$oUserProfile}
 	</ul>
 </section>
+{if $oUserCurrent->isAdministrator() or $oUserCurrent->isGlobalModerator()}
+<section class="block">
+<header class="block-header"><h3>Бан</h3></header>
+<div class="block-content">
+{if !$oAceUserProfile->IsBannedByLogin()}
+                    <form method="post" action="https://reboot.lunavod.ru/api/ban/" class="well well-small">
+                        <br>
+                        <input name="security_ls_key" value="{$LIVESTREET_SECURITY_KEY}" type="hidden">
 
+                        <input name="ban_login" value="{$oUserProfile->getLogin()}" type="hidden">
+
+                        <label class="radio">
+                            <input name="ban_period" value="days" checked="" type="radio">
+                            Бан на
+                            <input name="ban_days" id="ban_days" class="num1" type="text"> дней
+                        </label>
+
+                        <label class="radio">
+                            <input name="ban_period" value="unlim" type="radio">
+                            Бан бессрочный
+                        </label>
+
+                        <label for="ban_comment">Комментарий</label>
+                        <input name="ban_comment" id="ban_comment" maxlength="255" type="text">
+			<br>
+                        <input name="adm_user_ref" value="https://reboot.lunavod.ru/admin/users/" type="hidden">
+                        <input name="adm_user_action" value="adm_ban_user" type="hidden">
+                        <button type="submit" name="adm_action_submit" class="btn btn-primary">Забанить</button>
+                    </form>
+                </div>
+</section>
+{else}
+<div class="alert alert-block">
+    {$oLang->adm_ban_upto}
+    : {if $oUserProfile->getBanLine()}{$oUserProfile->getBanLine()}{else}{$oLang->adm_ban_unlim}{/if}
+    <br/>
+    <strong>{$oUserProfile->getBanComment()}</strong>
+</div>
+<form method="post" action="https://reboot.lunavod.ru/api/ban/" class="well well-small">
+                        <input name="security_ls_key" value="{$LIVESTREET_SECURITY_KEY}" type="hidden">
+
+                        <input name="ban_login" value="{$oUserProfile->getLogin()}" type="hidden">
+<input name="clear" type="hidden" value="true">
+<button type="submit" name="adm_action_submit" class="btn btn-primary">Разбанить</button>
+</form>
+</div>
+</section>
+{/if}
+{/if}
 {hook run='profile_sidebar_end' oUserProfile=$oUserProfile}

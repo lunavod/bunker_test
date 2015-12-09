@@ -720,7 +720,7 @@ class ModuleBlog extends Module {
 		}
 		$sUserId=$oUser ? $oUser->getId() : 'quest';
 		if (false === ($aCloseBlogs = $this->Cache_Get("blog_inaccessible_user_{$sUserId}"))) {
-			$aCloseBlogs = $this->oMapperBlog->GetCloseBlogs();
+			$aCloseBlogs = array_merge($this->oMapperBlog->GetHalfcloseBlogs(), $this->oMapperBlog->GetCloseBlogs());
 
 			if($oUser) {
 				/**
