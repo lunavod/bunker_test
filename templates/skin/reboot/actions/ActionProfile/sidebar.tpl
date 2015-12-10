@@ -113,6 +113,7 @@
 		{hook run='profile_sidebar_menu_item_last' oUserProfile=$oUserProfile}
 	</ul>
 </section>
+{if $oUserCurrent}
 {if $oUserCurrent->isAdministrator() or $oUserCurrent->isGlobalModerator()}
 <section class="block">
 <header class="block-header"><h3>Бан</h3></header>
@@ -160,6 +161,7 @@
 </form>
 </div>
 </section>
+{/if}
 {/if}
 {/if}
 {hook run='profile_sidebar_end' oUserProfile=$oUserProfile}

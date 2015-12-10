@@ -119,6 +119,7 @@ class ActionProfile extends Action {
 		$aEvents = $this->Stream_ReadByUserId($this->oUserProfile->getId());
 		$this->Viewer_Assign('bDisableGetMoreButton', $this->Stream_GetCountByUserId($this->oUserProfile->getId()) < Config::Get('module.stream.count_default'));
 		$this->Viewer_Assign('aStreamEvents', $aEvents);
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 		if (count($aEvents)) {
 			$oEvenLast=end($aEvents);
 			$this->Viewer_Assign('iStreamLastId', $oEvenLast->getId());
@@ -150,6 +151,7 @@ class ActionProfile extends Action {
 		 */
 		$this->Viewer_Assign('aPaging',$aPaging);
 		$this->Viewer_Assign('aFriends',$aFriends);
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 		$this->Viewer_AddHtmlTitle($this->Lang_Get('user_menu_profile_friends').' '.$this->oUserProfile->getLogin());
 
 		$this->SetTemplateAction('friends');
@@ -194,6 +196,7 @@ class ActionProfile extends Action {
 		/**
 		 * Устанавливаем шаблон вывода
 		 */
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 		$this->SetTemplateAction('created_topics');
 	}
 	/**
@@ -222,6 +225,7 @@ class ActionProfile extends Action {
 		 */
 		$this->Viewer_Assign('aPaging',$aPaging);
 		$this->Viewer_Assign('aComments',$aComments);
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 		$this->Viewer_AddHtmlTitle($this->Lang_Get('user_menu_publication').' '.$this->oUserProfile->getLogin());
 		$this->Viewer_AddHtmlTitle($this->Lang_Get('user_menu_publication_comment'));
 		/**
@@ -264,6 +268,7 @@ class ActionProfile extends Action {
 		 */
 		$this->Viewer_Assign('aPaging',$aPaging);
 		$this->Viewer_Assign('aTopics',$aTopics);
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 		$this->Viewer_AddHtmlTitle($this->Lang_Get('user_menu_profile').' '.$this->oUserProfile->getLogin());
 		$this->Viewer_AddHtmlTitle($this->Lang_Get('user_menu_profile_favourites'));
 		/**
@@ -309,6 +314,7 @@ class ActionProfile extends Action {
 		$this->Viewer_Assign('aPaging',$aPaging);
 		$this->Viewer_Assign('aTopics',$aTopics);
 		$this->Viewer_Assign('sFavouriteTag',htmlspecialchars($sTag));
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 		$this->Viewer_AddHtmlTitle($this->Lang_Get('user_menu_profile').' '.$this->oUserProfile->getLogin());
 		$this->Viewer_AddHtmlTitle($this->Lang_Get('user_menu_profile_favourites'));
 		/**
@@ -343,6 +349,7 @@ class ActionProfile extends Action {
 		 */
 		$this->Viewer_Assign('aPaging',$aPaging);
 		$this->Viewer_Assign('aComments',$aComments);
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 		$this->Viewer_AddHtmlTitle($this->Lang_Get('user_menu_profile').' '.$this->oUserProfile->getLogin());
 		$this->Viewer_AddHtmlTitle($this->Lang_Get('user_menu_profile_favourites_comments'));
 		/**
@@ -381,6 +388,7 @@ class ActionProfile extends Action {
 		/**
 		 * Получаем список юзеров блога
 		 */
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 		$aBlogUsers=$this->Blog_GetBlogUsersByUserId($this->oUserProfile->getId(),ModuleBlog::BLOG_USER_ROLE_USER);
 		$aBlogModerators=$this->Blog_GetBlogUsersByUserId($this->oUserProfile->getId(),ModuleBlog::BLOG_USER_ROLE_MODERATOR);
 		$aBlogAdministrators=$this->Blog_GetBlogUsersByUserId($this->oUserProfile->getId(),ModuleBlog::BLOG_USER_ROLE_ADMINISTRATOR);
@@ -426,6 +434,7 @@ class ActionProfile extends Action {
 		$aWall=$this->Wall_GetWall(array('wall_user_id'=>$this->oUserProfile->getId(),'pid'=>null),array('id'=>'desc'),1,Config::Get('module.wall.per_page'));
 		$this->Viewer_Assign('aWall',$aWall['collection']);
 		$this->Viewer_Assign('iCountWall',$aWall['count']);
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 		/**
 		 * Устанавливаем шаблон вывода
 		 */
@@ -1230,6 +1239,7 @@ class ActionProfile extends Action {
 
 		$this->Viewer_Assign('sText',$this->Lang_Get('settings_profile_mail_change_to_notice'));
 		$this->SetTemplateAction('changemail_confirm');
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 	}
 	/**
 	 * Обработка подтверждения нового емайла при смене старого
@@ -1250,6 +1260,7 @@ class ActionProfile extends Action {
 		$oUser=$this->User_GetUserById($oChangemail->getUserId());
 		$oUser->setMail($oChangemail->getMailTo());
 		$this->User_Update($oUser);
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 
 		$this->Viewer_Assign('sText',$this->Lang_Get('settings_profile_mail_change_ok',array('mail'=>htmlspecialchars($oChangemail->getMailTo()))));
 		$this->SetTemplateAction('changemail_confirm');

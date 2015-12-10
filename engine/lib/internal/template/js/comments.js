@@ -297,9 +297,9 @@ ls.comments = (function ($) {
 
 	// Сворачивание комментариев
 	this.checkFolding = function() {
-		if(!this.options.folding){
-			return false;
-		}
+		//if(!this.options.folding){
+		//	return false;
+		//}
 		$(".folding").each(function(index, element){
 			if ($(element).parent(".comment").next(".comment-wrapper").length == 0) {
 				$(element).hide();

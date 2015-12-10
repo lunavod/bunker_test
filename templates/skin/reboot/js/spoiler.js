@@ -30,6 +30,7 @@ function spoiler_click(event){
 window.addEventListener("DOMContentLoaded", function(){
     document.body.addEventListener("click", spoiler_click);
 });
+
 var allNew = document.querySelectorAll('.spoiler-title');
 console.log(allNew)
 idx=0

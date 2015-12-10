@@ -559,7 +559,7 @@ $config['compress']['css']['template']            = "highest_compression";
 /**
  * Параметры компрессии js-файлов
  */
-$config['compress']['js']['merge']  = true;    // указывает на необходимость слияния файлов по указанным блокам.
+$config['compress']['js']['merge']  = false;    // указывает на необходимость слияния файлов по указанным блокам.
 $config['compress']['js']['use']    = true;    // указывает на необходимость компрессии файлов. Компрессия используется только в активированном режиме слияния файлов.
 
 /**
@@ -576,10 +576,10 @@ $config['jevix']=require(dirname(__FILE__).'/jevix.php');
 //added by Lunavod
 
 //айдишники пользователей - глобальных модераторов
-$config['moderator'] = array(1);
+$config['moderator'] = array(1, 4);
 
 //айдишники блогов, к которым пользователь подписывается при регистрации
-$config['autosubscribe'] = array(17);
+$config['autosubscribe'] = array(2);
 
 //Собственно, номер версии сайта
 $config['site_version'] = '1.9';

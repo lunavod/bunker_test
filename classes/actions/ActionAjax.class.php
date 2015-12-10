@@ -231,6 +231,10 @@ class ActionAjax extends Action {
 			$this->Message_AddErrorSingle($this->Lang_Get('comment_vote_error_acl'),$this->Lang_Get('attention'));
 			return;
 		}
+		if ($this->oUserCurrent->getSkill()<0.1){
+			$this->Message_AddErrorSingle('У вас слишком мало силы для голосования',$this->Lang_Get('attention'));
+			return;
+		}
 		/**
 		 * Как именно голосует пользователь
 		 */
@@ -248,6 +252,7 @@ class ActionAjax extends Action {
 		$oTopicCommentVote->setVoterId($this->oUserCurrent->getId());
 		$oTopicCommentVote->setDirection($iValue);
 		$oTopicCommentVote->setDate(date("Y-m-d H:i:s"));
+
 		$iVal=(float)$this->Rating_VoteComment($this->oUserCurrent,$oComment,$iValue);
 		$oTopicCommentVote->setValue($iVal);
 
@@ -319,6 +324,10 @@ class ActionAjax extends Action {
 			$this->Message_AddErrorSingle($this->Lang_Get('topic_vote_error_acl'),$this->Lang_Get('attention'));
 			return;
 		}
+		if ($this->oUserCurrent->getSkill()<0.1){
+			$this->Message_AddErrorSingle('У вас слишком мало силы для голосования',$this->Lang_Get('attention'));
+			return;
+		}
 		/**
 		 * Голосуем
 		 */
@@ -388,6 +397,10 @@ class ActionAjax extends Action {
 		 */
 		if ($oBlogVote=$this->Vote_GetVote($oBlog->getId(),'blog',$this->oUserCurrent->getId())) {
 			$this->Message_AddErrorSingle($this->Lang_Get('blog_vote_error_already'),$this->Lang_Get('attention'));
+			return;
+		}
+		if ($this->oUserCurrent->getSkill()<0.1){
+			$this->Message_AddErrorSingle('У вас слишком мало силы для голосования',$this->Lang_Get('attention'));
 			return;
 		}
 		/**
@@ -481,6 +494,10 @@ class ActionAjax extends Action {
 		$iValue=getRequestStr('value',null,'post');
 		if (!in_array($iValue,array('1','-1'))) {
 			$this->Message_AddErrorSingle($this->Lang_Get('system_error'),$this->Lang_Get('attention'));
+			return;
+		}
+		if (!$oUserVote=$this->Vote_GetVote($oUser->getId(),'user',$this->oUserCurrent->getId()) and $this->oUserCurrent->getSkill()<0.1){
+			$this->Message_AddErrorSingle('У вас слишком мало силы для голосования',$this->Lang_Get('attention'));
 			return;
 		}
 		/**

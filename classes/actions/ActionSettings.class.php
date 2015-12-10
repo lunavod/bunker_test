@@ -441,6 +441,7 @@ class ActionSettings extends Action {
 
 		$this->Viewer_Assign('iCountInviteAvailable',$this->User_GetCountInviteAvailable($this->oUserCurrent));
 		$this->Viewer_Assign('iCountInviteUsed',$this->User_GetCountInviteUsed($this->oUserCurrent->getId()));
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 	}
 	/**
 	 * Форма смены пароля, емайла
@@ -533,6 +534,7 @@ class ActionSettings extends Action {
 		/**
 		 * Устанавливаем title страницы
 		 */
+		//$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 		$this->Viewer_AddHtmlTitle($this->Lang_Get('settings_menu_profile'));
 		$this->Viewer_Assign('aUserFields',$this->User_getUserFields(''));
 		$this->Viewer_Assign('aUserFieldsContact',$this->User_getUserFields(array('contact','social')));
@@ -701,6 +703,7 @@ class ActionSettings extends Action {
 	 *
 	 */
 	public function EventShutdown() {
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserCurrent->getLogin()));
 		$iCountTopicFavourite=$this->Topic_GetCountTopicsFavouriteByUserId($this->oUserCurrent->getId());
 		$iCountTopicUser=$this->Topic_GetCountTopicsPersonalByUser($this->oUserCurrent->getId(),1);
 		$iCountCommentUser=$this->Comment_GetCountCommentsByUserId($this->oUserCurrent->getId(),'topic');

@@ -14,6 +14,9 @@
 
 {hook run='body_end'}
 <script>
+{literal}
+$('.folding').click(function(x){if(x.target.className=="folding"){ls.comments.collapseComment(x.target)}else{ls.comments.expandComment(x.target)}})
+{/literal}
 function bunkerStyle() {
         var date = new Date;
         date.setDate(date.getDate() + 100);
@@ -62,8 +65,15 @@ var spoil = function() {
 		allNew[idx].className="spoiler-title spoiler-close" 
 	}
 }
-if(getCookie("SiteStyle") == "Dark") {
-        document.write("<link rel='stylesheet' type='text/css' href='https:/reboot.lunavod.ru/plugins/theme/templates/skin/default/css/dark.css' />")
+{literal}
+$('.btn-menu').click(function(){panel()})
+{/literal}
+pc = 0;
+var panel = function(){
+	pc++;
+	if (pc == 16) {
+		woona()
+	}
 }
 </script>
 </body>

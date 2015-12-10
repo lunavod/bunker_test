@@ -1167,6 +1167,7 @@ class ActionTalk extends Action {
 		if (!$this->oUserCurrent)	 {
 			return ;
 		}
+		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserCurrent->getLogin()));
 		$iCountTalkFavourite=$this->Talk_GetCountTalksFavouriteByUserId($this->oUserCurrent->getId());
 		$this->Viewer_Assign('iCountTalkFavourite',$iCountTalkFavourite);
 
