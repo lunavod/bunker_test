@@ -195,5 +195,5 @@ h2.header-table { margin-bottom: 0; border-bottom: 1px solid #eee; padding-botto
 .spoiler-title{
 	cursor: pointer;
 	color: #6da3bd;
-	border-bottom: 1px dashed #6da3bd;
+	display: block;
 }

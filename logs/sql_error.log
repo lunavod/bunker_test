@@ -1975,3 +1975,12 @@ Array
     [context] => /var/www/reboot/plugins/ignore/classes/modules/user/mapper/User.mapper.class.php line 70
 )
 ]
+[2015-12-11 18:32:55][15010][2614][ERROR][SQL Error: Duplicate column name 'user_settings_talk_bell' at /var/www/reboot/engine/modules/database/Database.class.php line 160<br>
+Array
+(
+    [code] => 1060
+    [message] => Duplicate column name 'user_settings_talk_bell'
+    [query] => ALTER TABLE `prefix_user` ADD `user_settings_talk_bell` TINYINT( 1 ) NOT NULL DEFAULT '1'
+    [context] => /var/www/reboot/engine/modules/database/Database.class.php line 160
+)
+]

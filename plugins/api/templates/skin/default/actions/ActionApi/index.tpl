@@ -1,1 +1,3 @@
-{include file="header.tpl"}
+{literal}
+{"succes": 1}
+{/literal}

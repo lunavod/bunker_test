@@ -496,7 +496,7 @@ class ActionAjax extends Action {
 			$this->Message_AddErrorSingle($this->Lang_Get('system_error'),$this->Lang_Get('attention'));
 			return;
 		}
-		if (!$oUserVote=$this->Vote_GetVote($oUser->getId(),'user',$this->oUserCurrent->getId()) and $this->oUserCurrent->getSkill()<0.1){
+		if ($this->oUserCurrent->getSkill()<0.1){
 			$this->Message_AddErrorSingle('У вас слишком мало силы для голосования',$this->Lang_Get('attention'));
 			return;
 		}
@@ -506,6 +506,7 @@ class ActionAjax extends Action {
 		if ($oUserVote=$this->Vote_GetVote($oUser->getId(),'user',$this->oUserCurrent->getId())) {
 			$oOldUserVote=$this->Vote_GetVote($oUser->getId(),'user',$this->oUserCurrent->getId());
 			if ($oOldUserVote->getDirection() == $iValue) {
+				$this->Message_AddErrorSingle($this->Lang_Get('system_error'),$this->Lang_Get('error'));
 				return;
 			}
 			$this->Vote_DeleteVoteByTarget($oUser->getId(), 'user');
@@ -515,7 +516,7 @@ class ActionAjax extends Action {
                         $oUserVote->setVoterId($this->oUserCurrent->getId());
                         $oUserVote->setDirection($iValue);
                         $oUserVote->setDate(date("Y-m-d H:i:s"));
-                        $iVal=(float)$this->Rating_VoteUser($this->oUserCurrent,$oUser,$iValue+$iValue);
+                        $iVal=(float)$this->Rating_VoteUser($this->oUserCurrent,$oUser,$iValue+$iValue, true);
                         $oUserVote->setValue($iVal);
                         //$oUser->setRating($oUser->getRating()+$iValue);
                         $oUser->setCountVote($oUser->getCountVote()+1);

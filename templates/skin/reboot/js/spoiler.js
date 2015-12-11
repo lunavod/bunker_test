@@ -15,12 +15,12 @@ function spoiler_click(event){
     if(!parent || parent.lastElementChild == target)return true;
     var b = parent.querySelector(".spoiler-body");
     if(!b) return;
-    if(b.style.display != "block") {
-        b.style.display = "block";
-        b.parentElement.getElementsByClassName("spoiler-title")[0].className = "spoiler-title spoiler-open"
+    if(b.style.display != "inline") {
+        jQuery(b).show(300);
+        b.parentElement.getElementsByClassName("spoiler-title")[0].className = "spoiler-title spoiler-open";
     } else {
-        b.style.display = "none";
-        b.parentElement.getElementsByClassName("spoiler-title")[0].className = "spoiler-title spoiler-close"
+        jQuery(b).hide(300);
+        b.parentElement.getElementsByClassName("spoiler-title")[0].className = "spoiler-title spoiler-close";
 
     }
     event.preventDefault ? event.preventDefault() : (event.returnValue=false);

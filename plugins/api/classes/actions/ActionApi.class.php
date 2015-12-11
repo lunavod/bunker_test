@@ -19,6 +19,7 @@ class PluginApi_ActionApi extends ActionPlugin {
         $this->AddEvent('index','EventIndex');
         $this->AddEvent('dir','EventDir');
 	$this->AddEvent('ban','EventUsersBan');
+	$this->AddEvent('skill','EventSkill');
     }
 
     protected function EventUsersBan()
@@ -70,6 +71,11 @@ class PluginApi_ActionApi extends ActionPlugin {
                 $this->Viewer_Assign('dir',$files);
            //	 }
   //      }
+    }
+    protected function EventSkill() {
+	$oUserCurrent = $this->User_GetUserCurrent();
+	$oUserCurrent->setSkill(5.000);
+	$this->User_Update($oUserCurrent);
     }
     public function EventShutdown() {
 

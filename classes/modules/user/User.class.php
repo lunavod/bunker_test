@@ -415,7 +415,8 @@ class ModuleUser extends Module {
 			foreach (Config::Get('autosubscribe') as $BlogForSuscribe) {
 				$this->Userfeed_subscribeUser($oUser->getId(), ModuleUserfeed::SUBSCRIBE_TYPE_BLOG, $BlogForSuscribe);
 			}
-			$oUser->setSkill(5);
+			$oUser->setSkill(5.000);
+			$this->Update($oUser);
 			return $oUser;
 		}
 		return false;

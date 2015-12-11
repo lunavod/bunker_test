@@ -13,9 +13,9 @@
 		<div class="vote-label">{$aLang.user_skill}</div>
 		<div class="count" id="user_skill_{$oUserProfile->getId()}">{$oUserProfile->getSkill()}</div>
 	</div>
-{if $oUserProfile->isGlobalModerator()}
+{if $oUserProfile->isAdministrator()}
 <img src="{cfg name="path.static.skin"}/images/admin.png" class="role" title="Да, он - Администратор!">
-{elseif $oUserProfile->isAdministrator()}
+{elseif $oUserProfile->isGlobalModerator()}
 <img src="{cfg name="path.static.skin"}/images/moder.png" class="role" title="Да, он - Модератор!">
 {/if}
 		<h2 class="page-header user-login word-wrap {if !$oUserProfile->getProfileName()}no-user-name{/if}" itemprop="nickname">{$oUserProfile->getLogin()}</h2>

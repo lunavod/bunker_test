@@ -441,7 +441,7 @@ class ActionSettings extends Action {
 
 		$this->Viewer_Assign('iCountInviteAvailable',$this->User_GetCountInviteAvailable($this->oUserCurrent));
 		$this->Viewer_Assign('iCountInviteUsed',$this->User_GetCountInviteUsed($this->oUserCurrent->getId()));
-		$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
+	//	$this->Viewer_Assign('oAceUserProfile', $this->PluginAceadminpanel_Admin_GetUserByLogin($this->oUserProfile->getLogin()));
 	}
 	/**
 	 * Форма смены пароля, емайла

@@ -102,16 +102,18 @@ class ModuleRating extends Module {
 	 * @param int $iValue
 	 * @return float
 	 */
-	public function VoteUser(ModuleUser_EntityUser $oUser, ModuleUser_EntityUser $oUserTarget, $iValue) {
+	public function VoteUser(ModuleUser_EntityUser $oUser, ModuleUser_EntityUser $oUserTarget, $iValue, $voted=false) {
 		$iRatingNew=$oUserTarget->getRating()+$iValue;
 		$oUserCurrent = $this->User_GetUserCurrent();
 		$oUserTarget->setRating($iRatingNew);
-		if ($iValue>0){
-		    $oUserTarget->setSkill($oUserTarget->getSkill()+10.0);
-		} else {
-			$oUserTarget->setSkill($oUserTarget->getSkill()-10.0);
-		}
-		$oUserCurrent->setSkill($oUserCurrent->getSkill()-0.1);
+		if (!$voted){
+		    if ($iValue>0){
+		        $oUserTarget->setSkill($oUserTarget->getSkill()+10.0);
+		    } else {
+			    $oUserTarget->setSkill($oUserTarget->getSkill()-10.0);
+		    }
+	    }
+	    $oUserCurrent->setSkill($oUserCurrent->getSkill()-0.1);
 		$this->User_Update($oUserCurrent);
 		$this->User_Update($oUserTarget);
 		return $iValue;
