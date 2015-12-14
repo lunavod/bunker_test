@@ -435,3 +435,52 @@ a.link-dashed {
 .poll-create {
     background: #212121 none repeat scroll 0 0;
 }
+
+.text blockquote {
+    background: #2a2a2a none repeat scroll 0 0;
+    border-left: 5px solid #222;
+    clear: both;
+    color: #eee;
+    margin: 0;
+    padding: 15px 20px;
+}
+
+
+.comment .comment-content.text blockquote {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #1a1a1a none repeat scroll 0 0;
+    border-color: #555;
+    border-image: none;
+    border-style: dashed dashed dashed solid;
+    border-width: 1px 1px 1px 3px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+}
+
+
+.comment.comment-new {
+    background: #555 none repeat scroll 0 0;
+}
+
+
+.button.button-primary.active {
+    background: #424242 none repeat scroll 0 0;
+}
+
+.block.block-type-profile .upload-photo {
+    background: #1a1a1a none repeat scroll 0 0;
+}
+
+
+fieldset legend {
+    color: #fff;
+}
+
+
+.form-profile .avatar-change {
+    background: #1a1a1a none repeat scroll 0 0;
+}
+
