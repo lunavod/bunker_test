@@ -120,7 +120,7 @@
 		
 		<dl class="form-item">
 			<dt><label for="profile_about">{$aLang.settings_profile_about}:</label></dt>
-			<dd><textarea name="profile_about" id="profile_about" class="input-text input-width-300" rows="5">{$oUserCurrent->getProfileAbout()|escape:'html'}</textarea></dd>
+			<dd><textarea name="profile_about" id="form_comment_text" class="input-text input-width-300" rows="5">{$oUserCurrent->getProfileAbout()|escape:'html'}</textarea></dd>
 		</dl>
 
 		{assign var="aUserFieldValues" value=$oUserCurrent->getUserFieldValues(false,'')}

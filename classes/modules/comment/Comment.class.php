@@ -484,6 +484,10 @@ class ModuleComment extends Module {
 			//чистим зависимые кеши
 			$this->Cache_Clean(Zend_Cache::CLEANING_MODE_MATCHING_TAG,array("comment_new_{$oComment->getTargetType()}","comment_new_user_{$oComment->getUserId()}_{$oComment->getTargetType()}","comment_new_{$oComment->getTargetType()}_{$oComment->getTargetId()}"));
 			$oComment->setId($sId);
+			if (strstr($oComment->getText(), "@moderator")) {
+				$oTarget = $this->Topic_GetTopicById($oComment->getTargetId());
+				$this->Talk_SendTalk("Вызов модератора в пост " . $oTarget->getTitle(), "Я прошу модераторов посмотреть пост <a href='" . $oTarget->getUrl() . "'>" . $oTarget->getTitle() . "</a> и комментарии к нему на соответствие правилам.", $oComment->getUserId(), Config::Get("moderator"));
+			}
 			return $oComment;
 		}
 		return false;
