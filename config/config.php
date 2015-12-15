@@ -477,8 +477,7 @@ $config['block']['rule_blog_info'] = array(
 
 
 $config['head']['default']['js']  = array(
-	"___path.root.engine_lib___/external/html5shiv.js" => array('browser'=>'lt IE 9'),
-	"___path.root.engine_lib___/external/jquery/jquery.js",
+	/*"___path.root.engine_lib___/external/html5shiv.js" => array('browser'=>'lt IE 9'),
 	"___path.root.engine_lib___/external/jquery/jquery-ui.js",
 	"___path.root.engine_lib___/external/jquery/jquery.notifier.js",
 	"___path.root.engine_lib___/external/jquery/jquery.jqmodal.js",
@@ -517,11 +516,13 @@ $config['head']['default']['js']  = array(
 	"___path.root.engine_lib___/internal/template/js/settings.js",
 	"___path.root.engine_lib___/internal/template/js/topic.js",
 	"___path.root.engine_lib___/internal/template/js/hook.js",
-	/*"___path.root.engine_lib___/internal/template/wjs/zepto.min.js",
+	"___path.root.engine_lib___/internal/template/wjs/zepto.min.js",
 	"___path.root.engine_lib___/external/jquery/jquery.jqmodal.js",
 	"___path.root.engine_lib___/external/jquery/markitup/jquery.markitup.js",
 	"___path.root.engine_lib___/external/jquery/jquery.notifier.js",
-	"___path.root.engine_lib___/internal/template/wjs/main.js",*/
+	"___path.root.engine_lib___/external/jquery/jquery.notifier.js",
+	"___path.root.engine_lib___/external/jquery/jquery.notifier.js",*/
+	"___path.root.engine_lib___/external/jquery/jquery.js",
 	"https://yandex.st/share/share.js" => array('merge'=>false), 
 
 ); 
