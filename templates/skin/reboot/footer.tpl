@@ -4,8 +4,13 @@
 
 
 	<footer id="footer">
-		<img src="{cfg name="path.static.skin"}/images/dark-to-day.png" onclick="bunkerStyle()" align="center" title="Светлый режим/темный режим" style="cursor: pointer" />
-</footer>
+		<div style="text-align: center; font-size: 16pt;">
+			<span style="display: block; clear: both;">Live\Dead</span>
+			<div style="height: 80px; margin: 10px auto 0px; width: 80px;">
+				<img src="{cfg name="path.static.skin"}/images/dark-to-day.png" onclick="bunkerStyle()" title="Светлый режим/темный режим" style="cursor: pointer; margin: 0px auto; width: 80px; height: 80px;">
+			</div>
+		</div>
+	</footer>
 
 </div> <!-- /container -->
 
