@@ -154,6 +154,7 @@ function getCookie(name) {
 		{include file='header_top.tpl'}
 
 		<div id="wrapper" class="{hook run='wrapper_class'}">
+				<div style="height: 200px; background: transparent url('{cfg name="path.static.skin"}/images/test_header.png') repeat scroll 0px 0px; margin: -30px -30px 50px;"> </div>
 			{if !$noSidebar && $sidebarPosition == 'left'}
 				{include file='sidebar.tpl'}
 			{/if}
@@ -166,7 +167,7 @@ function getCookie(name) {
 				class="{if $noSidebar}content-full-width{/if} 
 					   {if $sidebarPosition == 'left'}content-right{/if}"
 				{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
-				<div style="height: 200px; background: transparent url("{cfg name="path.static.skin"}/images/test_header.png") repeat scroll 0px 0px; margin: -30px -30px 50px;"> </div>
+
 				{include file='nav_content.tpl'}
 				{include file='system_message.tpl'}
 	
