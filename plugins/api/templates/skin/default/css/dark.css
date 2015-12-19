@@ -41,7 +41,7 @@ body {
     border-top: none;
 }
 a {
-    color: #009688;
+    color: #1E5296;
     text-decoration: none;
     -moz-transition: color 0.8s 0.1s ease;
     -o-transition: color 0.8s 0.1s ease;
@@ -168,11 +168,11 @@ h2.header-table {
 }
 
 .nav.nav-userbar li a {
-    color: #009688;
+    color: #1E5296;
 }
 
 .btn-menu span {
-    background-color: #009688;
+    background-color: #1E5296;
 }
 
 
@@ -204,7 +204,7 @@ h2.header-table {
 }
 
 .nav.nav-pills li.active a {
-    background: #009688 none repeat scroll 0 0;
+    background: #1E5296 none repeat scroll 0 0;
     color: #fff;
 }
 
@@ -217,13 +217,13 @@ h2.header-table {
 .input-text {
     background: #101010;
     border: 1px solid #515151;
-    color: #009688;
+    color: #1E5296;
 }
 
 .item-list li .avatar {
     opacity: 0.5;
 }
-/* #167B35 #009688 #FF9900 #009688 */
+/* #167B35 #1E5296 #FF9900 #1E5296 #1E5296 */
 
 .nav.nav-main li.active a {
     background: #303030 none repeat scroll 0 0;
@@ -247,11 +247,11 @@ h2.header-table {
 }
 
 .infobox {
-    background: #009688 none repeat scroll 0 0;
+    background: #1E5296 none repeat scroll 0 0;
 }
 
 .infobox .tip-arrow {
-    border-color: #009688;
+    border-color: #1E5296;
 }
 
 
@@ -260,7 +260,7 @@ h2.header-table {
 }
 
 a.link-dotted {
-    border-bottom: 1px dotted #009688;
+    border-bottom: 1px dotted #1E5296;
 }
 
 a.link-dotted:hover {
@@ -269,12 +269,12 @@ a.link-dotted:hover {
 
 
 .profile .vote.vote-count-positive .vote-count {
-    color: #009688;
+    color: #1E5296;
 }
 
 .input-text:focus {
-    border-color: #009688;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07) inset, 0 0 3px #009688;
+    border-color: #1E5296;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07) inset, 0 0 3px #1E5296;
 }
 
 .input-text {
@@ -419,13 +419,13 @@ select {
 }
 
 a.link-dashed {
-    border-bottom: 1px dashed #009688;
+    border-bottom: 1px dashed #1E5296;
 }
 
 
 .help .help-item h4 a {
     border-bottom: 1px dotted #727a90;
-    color: #009688;
+    color: #1E5296;
 }
 
 .help::before {
@@ -485,3 +485,17 @@ fieldset legend {
 }
 
 #footer { background-color: #303030; }
+
+.topic.topic-type-talk .topic-header {
+    background: #212121 none repeat scroll 0 0;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #333;
+}
+
+.topic .topic-content.text {
+    color: #e0e0e0;
+}
+.topic.topic-type-talk .topic-content {
+    background: #303030 none repeat scroll 0 0;
+    border-top: 1px solid #000;
+}
