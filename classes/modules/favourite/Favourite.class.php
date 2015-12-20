@@ -304,11 +304,16 @@ class ModuleFavourite extends Module {
 		if (!$oFavourite->getTags()) {
 			$oFavourite->setTags('');
 		}
+		$oUser = $this->ModuleUser_GetUserById($oFavourite->getUserId());
 		$this->SetFavouriteTags($oFavourite);
 		//чистим зависимые кеши
 		$this->Cache_Clean(Zend_Cache::CLEANING_MODE_MATCHING_TAG,array("favourite_{$oFavourite->getTargetType()}_change_user_{$oFavourite->getUserId()}"));
 		$this->Cache_Delete("favourite_{$oFavourite->getTargetType()}_{$oFavourite->getTargetId()}_{$oFavourite->getUserId()}");
-		return $this->oMapper->AddFavourite($oFavourite);
+		if ($this->ModuleACL_CanAddFavourite($oFavourite, $oUser)){
+		    return $this->oMapper->AddFavourite($oFavourite);
+	    } else {
+	        return false;
+	    }
 	}
 	/**
 	 * Обновляет запись об избранном

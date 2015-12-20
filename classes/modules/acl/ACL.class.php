@@ -43,6 +43,25 @@ class ModuleACL extends Module {
 	public function Init() {
 
 	}
+	public function CanAddFavourite(ModuleFavourite_EntityFavourite $oFavourite, ModuleUser_EntityUser $oUser){
+		if ($oFavourite->getTargetType() == "talk"){
+			$oTalk = $this->ModuleTalk_GetTalkById($oFavourite->getTargetId());
+			if ($oUser->getId() && $oTalk->getTalkUser()){
+				    return true;
+			}
+		} elseif ($oFavourite->getTargetType() == "topic") {
+			$oTopic = $this->ModuleTopic_GetTopicById($oFavourite->getTargetId());
+			if(in_array($oTopic->getBlogId(), $this->ModuleBlog_GetAccessibleBlogsByUser($oUser))){
+			    return true;
+		    }
+		} elseif ($oFavourite->getTargetType() == "comment") {
+			$oComment = $this->ModuleComment_GetCommentById($oFavourite->getTargetId());
+			if (in_array($oComment->getTarget()->getBlogId(), $this->ModuleBlog_GetAccessibleBlogsByUser($oUser))){
+			    return true;
+		    }
+		}
+		return false;
+	}
 	/**
 	 * Проверяет может ли пользователь создавать блоги
 	 *

@@ -24,7 +24,6 @@
 	<meta name="keywords" content="{$sHtmlKeywords}">
 
 	{$aHtmlHeadFiles.css}
-
 	<link href="{cfg name='path.static.skin'}/images/favicon.ico?v1" rel="shortcut icon" />
 	<link rel="search" type="application/opensearchdescription+xml" href="{router page='search'}opensearch/" title="{cfg name='view.name'}" />
 
@@ -106,7 +105,7 @@ function getCookie(name) {
 /* #container{min-width: 1200px;} */
 {/literal}
 </style>
-	<script data-main="https://reboot.lunavod.ru/engine/lib/internal/template/wjs/main" src="https://reboot.lunavod.ru/engine/lib/external/require.js"></script>
+	
 
 </head>
 
@@ -166,7 +165,7 @@ function getCookie(name) {
 				class="{if $noSidebar}content-full-width{/if} 
 					   {if $sidebarPosition == 'left'}content-right{/if}"
 				{if $sMenuItemSelect=='profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
-				<div style="height: 200px; background: transparent url("{cfg name="path.static.skin"}/images/test_header.png") repeat scroll 0px 0px; margin: -30px -30px 50px;"> </div>
+
 				{include file='nav_content.tpl'}
 				{include file='system_message.tpl'}
 	

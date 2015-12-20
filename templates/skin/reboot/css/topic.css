@@ -2,6 +2,18 @@
 	ТОПИК
 -------------------------------------------- */
 
+.smile {
+    background: transparent url("https://reboot.lunavod.ru/images.php") repeat scroll 0% 0%;
+    width: 70px;
+    height: 70px;
+    margin-bottom: -70px;
+    right: 0px;
+    float: right;
+    opacity: 0.2;
+    margin-top: -20px;
+    margin-right: -20px;
+}
+
 .topic { border: 1px solid #E0E0E0; overflow: hidden; zoom: 1; margin-bottom: 50px; background: white; padding: 20px; border-radius: 5px;}
 .topic:last-child { margin-bottom: 0; }
 

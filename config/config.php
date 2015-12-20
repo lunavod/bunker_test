@@ -477,7 +477,8 @@ $config['block']['rule_blog_info'] = array(
 
 
 $config['head']['default']['js']  = array(
-	/*"___path.root.engine_lib___/external/html5shiv.js" => array('browser'=>'lt IE 9'),
+	"___path.root.engine_lib___/external/html5shiv.js" => array('browser'=>'lt IE 9'),
+	"___path.root.engine_lib___/external/jquery/jquery.js",
 	"___path.root.engine_lib___/external/jquery/jquery-ui.js",
 	"___path.root.engine_lib___/external/jquery/jquery.notifier.js",
 	"___path.root.engine_lib___/external/jquery/jquery.jqmodal.js",
@@ -521,8 +522,7 @@ $config['head']['default']['js']  = array(
 	"___path.root.engine_lib___/external/jquery/markitup/jquery.markitup.js",
 	"___path.root.engine_lib___/external/jquery/jquery.notifier.js",
 	"___path.root.engine_lib___/external/jquery/jquery.notifier.js",
-	"___path.root.engine_lib___/external/jquery/jquery.notifier.js",*/
-	"___path.root.engine_lib___/external/jquery/jquery.js",
+	"___path.root.engine_lib___/external/jquery/jquery.notifier.js",
 	"https://yandex.st/share/share.js" => array('merge'=>false), 
 
 ); 
