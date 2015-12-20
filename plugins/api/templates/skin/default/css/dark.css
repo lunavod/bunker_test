@@ -41,15 +41,19 @@ body {
     border-top: none;
 }
 a {
-    color: #1E5296;
+    color: #5681FF;
     text-decoration: none;
     -moz-transition: color 0.8s 0.1s ease;
     -o-transition: color 0.8s 0.1s ease;
     -webkit-transition: color 0.8s 0.1s ease;
 }
-.text a:visited, .topic .topic-header .topic-title a:visited, .item-list li a:visited {
-    color: #607D8B;
-}
+
+a:hover { color: #6A61FF; }
+
+.text a:visited,
+.topic .topic-header .topic-title a:visited,
+.item-list li a:visited { color: #667CBA; }
+
 .topic .topic-footer .topic-info {
     background: #303030;
 }
@@ -168,28 +172,28 @@ h2.header-table {
 }
 
 .nav.nav-userbar li a {
-    color: #1E5296;
+    color: #6669CD;
 }
 
 .btn-menu span {
-    background-color: #1E5296;
+    background-color: #6669CD;
 }
 
 
 .nav.nav-userbar li a.widemode {
-    background: transparent url("../wide_mode_dark.png") no-repeat scroll 156px 0;
+    background: transparent url("../images/wide_mode_dark.png") no-repeat scroll 156px 0;
 }
 
 .nav.nav-userbar li a.widemode:hover {
-    background: #212121 url("../wide_mode_dark.png") no-repeat scroll 156px 0;
+    background: #212121 url("../images/wide_mode_dark.png") no-repeat scroll 156px 0;
 }
 
 .nav.nav-userbar li a.standartmode {
-    background: transparent url("../standart_mode_dark.png") no-repeat scroll 156px 0;
+    background: transparent url("../images/standart_mode_dark.png") no-repeat scroll 156px 0;
 }
 
 .nav.nav-userbar li a.standartmode:hover {
-    background: #212121 url("../standart_mode_dark.png") no-repeat scroll 156px 0;
+    background: #212121 url("../images/standart_mode_dark.png") no-repeat scroll 156px 0;
 }
 
 
@@ -204,26 +208,26 @@ h2.header-table {
 }
 
 .nav.nav-pills li.active a {
-    background: #1E5296 none repeat scroll 0 0;
+    background: #396cc8; none repeat scroll 0 0;
     color: #fff;
 }
 
 
 .nav.nav-pills li a:hover {
-    background: #616161 none repeat scroll 0 0;
-    color: #000;
+    background: #313131 none repeat scroll 0 0;
+    color: #eee;
 }
 
 .input-text {
     background: #101010;
     border: 1px solid #515151;
-    color: #1E5296;
+    color: #396cc8;;
 }
 
 .item-list li .avatar {
     opacity: 0.5;
 }
-/* #167B35 #1E5296 #FF9900 #1E5296 #1E5296 */
+/* #167B35 #396cc8; #FF9900 #396cc8; #396cc8; */
 
 .nav.nav-main li.active a {
     background: #303030 none repeat scroll 0 0;
@@ -247,11 +251,11 @@ h2.header-table {
 }
 
 .infobox {
-    background: #1E5296 none repeat scroll 0 0;
+    background: #396cc8; none repeat scroll 0 0;
 }
 
 .infobox .tip-arrow {
-    border-color: #1E5296;
+    border-color: #396cc8;;
 }
 
 
@@ -260,7 +264,7 @@ h2.header-table {
 }
 
 a.link-dotted {
-    border-bottom: 1px dotted #1E5296;
+    border-bottom: 1px dotted #396cc8;;
 }
 
 a.link-dotted:hover {
@@ -269,12 +273,12 @@ a.link-dotted:hover {
 
 
 .profile .vote.vote-count-positive .vote-count {
-    color: #1E5296;
+    color: #396cc8;;
 }
 
 .input-text:focus {
-    border-color: #1E5296;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07) inset, 0 0 3px #1E5296;
+    border-color: #396cc8;;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07) inset, 0 0 3px #396cc8;;
 }
 
 .input-text {
@@ -419,13 +423,13 @@ select {
 }
 
 a.link-dashed {
-    border-bottom: 1px dashed #1E5296;
+    border-bottom: 1px dashed #396cc8;;
 }
 
 
 .help .help-item h4 a {
     border-bottom: 1px dotted #727a90;
-    color: #1E5296;
+    color: #396cc8;;
 }
 
 .help::before {
@@ -484,7 +488,7 @@ fieldset legend {
     background: #1a1a1a none repeat scroll 0 0;
 }
 
-#footer { background-color: #303030; }
+#footer { background: #303030; }
 
 .topic.topic-type-talk .topic-header {
     background: #212121 none repeat scroll 0 0;
@@ -498,4 +502,16 @@ fieldset legend {
 .topic.topic-type-talk .topic-content {
     background: #303030 none repeat scroll 0 0;
     border-top: 1px solid #000;
+}
+
+.markItUpEditor {
+    background: #1a1a1a none repeat scroll 0 0;
+    border: 1px solid #424242;
+    box-sizing: border-box;
+    color: #eee;
+    font: 12px/18px "Courier New",Courier,monospace;
+    height: 200px;
+    overflow: auto;
+    padding: 5px;
+    width: 100%;
 }
