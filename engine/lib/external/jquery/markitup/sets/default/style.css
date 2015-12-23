@@ -5,7 +5,7 @@
 .markItUp .editor-h4 a 			{ background-image:url(images/h4.png); }
 .markItUp .editor-h5 a 			{ background-image:url(images/h5.png); }
 .markItUp .editor-h6 a 			{ background-image:url(images/h6.png); }
-.markItUp .editor-bold a 		{ background-image:url(images/bold.png); }
+.markItUp .bold a:before 		{ content: "\f004"; }
 .markItUp .editor-italic a 		{ background-image:url(images/italic.png); }
 .markItUp .editor-stroke a 		{ background-image:url(images/stroke.png); }
 .markItUp .editor-underline a 	{ background-image:url(images/underline.png); }
@@ -26,10 +26,3 @@
 .markItUp .editor-user a 		{ background-image:url(images/user.png); }
 .markItUp .editor-spoiler-gray a	{ background-image: url(images/spoiler-gray.png)} 
 .markItUp .editor-spoiler a	{ background-image: url(images/spoiler.png)} 
-
-.markItUp .editor-sup a	{ background-image: url(images/sup.png)} 
-.markItUp .editor-sub a	{ background-image: url(images/sub.png)} 
-
-.markItUp .editor-left a	{ background-image: url(images/left.png)}
-.markItUp .editor-center a	{ background-image: url(images/center.png)}
-.markItUp .editor-right a	{ background-image: url(images/right.png)}

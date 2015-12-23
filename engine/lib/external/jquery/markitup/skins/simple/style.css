@@ -50,7 +50,16 @@
 	display: inline-block;
 	*display: inline; /* ie <= 7 */
 }
-.markItUpHeader ul li	{ list-style: none; float: left; position: relative; margin-right: 6px; }
+.markItUpHeader ul li	{
+	list-style: none; 
+	float: left; 
+	position: relative; 
+	margin-right: 6px; 
+	height: 16px;
+	font-size: 14px;
+	padding-top: 4px;
+	cursor: pointer;
+}
 .markItUpHeader ul li: hover > ul{ display: block; }
 .markItUpHeader ul .markItUpDropMenu {
 	background: transparent url(images/menu.png) no-repeat 115% 50%;

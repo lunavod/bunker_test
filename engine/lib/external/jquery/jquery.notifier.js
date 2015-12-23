@@ -1,4 +1,4 @@
-$.extend({
+(function($){$.extend({
 	notifier: {
 		options: {
 			core:				"notifier",
@@ -108,4 +108,4 @@ $.extend({
 			return new Date().getTime();
 		}
 	}
-})
+})})(jQuery)

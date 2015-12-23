@@ -35,6 +35,7 @@ ls.comments = (function ($) {
 	this.iCurrentShowFormComment=0;
 	this.iCurrentViewComment=null;
 	this.aCommentNew=[];
+	this.aCommentOld=[];
 
 	// Добавляет комментарий
 	this.add = function(formObj, targetId, targetType) {
@@ -107,8 +108,11 @@ ls.comments = (function ($) {
 
 
 	// Подгружает новые комментарии
-	this.load = function(idTarget, typeTarget, selfIdComment, bNotFlushNew) {		
+	this.load = function(idTarget, typeTarget, selfIdComment, bNotFlushNew) {	
 		var idCommentLast = $("#comment_last_id").val();
+		if(this.aCommentNew != []){
+			this.aCommentOld = this.aCommentNew;
+		}
 
 		// Удаляем подсветку у комментариев
 		if (!bNotFlushNew) { 
@@ -177,6 +181,15 @@ ls.comments = (function ($) {
 		}.bind(this));
 	};
 
+	this.turnBack = function(){
+		this.aCommentNew += this.aCommentOld;
+		this.aCommentNew.forEach(function(item, i){
+			item.addClass(this.options.comment_new)
+		})
+		this.setCountNewComment(this.aCommentNew.length);
+
+	}
+
 
 	// Вставка комментария
 	this.inject = function(idCommentParent, idComment, sHtml) {
@@ -234,6 +247,14 @@ ls.comments = (function ($) {
 		ls.tools.textPreview('form_comment_text', false, 'comment_preview_' + this.iCurrentShowFormComment);
 	};
 
+	this.isCollapsed = function(el){
+		if(el.closest(".collapsed")){
+			return true;
+		}
+		return false;
+	}
+
+
 
 	// Устанавливает число новых комментариев
 	this.setCountNewComment = function(count) {
@@ -248,10 +269,18 @@ ls.comments = (function ($) {
 	// Вычисляет кол-во новых комментариев
 	this.calcNewComments = function() {
 		var aCommentsNew = $('.'+this.options.classes.comment+'.'+this.options.classes.comment_new);
-		this.setCountNewComment(aCommentsNew.length);
 		$.each(aCommentsNew,function(k,v){
-			this.aCommentNew.push(parseInt($(v).attr('id').replace('comment_id_','')));
+			console.log(this.isCollapsed(v));
 		}.bind(this));
+		count = aCommentsNew.length;
+		$.each(aCommentsNew,function(k,v){
+			if (!this.isCollapsed(v)){
+			    this.aCommentNew.push(parseInt($(v).attr('id').replace('comment_id_','')));
+		    } else {
+		    	count--;
+		    }
+		}.bind(this));
+		this.setCountNewComment(count);
 	};
 
 
@@ -306,16 +335,16 @@ ls.comments = (function ($) {
 			} else {
 				$(element).show();
 			}
-		});
+		}).click(function(x){if(x.target.className=="folding fa fa-minus-square"){ls.comments.collapseComment(x.target)}else{ls.comments.expandComment(x.target)}});
 		return false;
 	};
 	
 	this.expandComment = function(folding) {
-		$(folding).removeClass("folded").parent().nextAll(".comment-wrapper").show();
+		$(folding).removeClass("fa-plus-square").addClass("fa-minus-square").parent().nextAll(".comment-wrapper").show().removeClass("collapsed");
 	};
 	
 	this.collapseComment = function(folding) {
-		$(folding).addClass("folded").parent().nextAll(".comment-wrapper").hide();
+		$(folding).removeClass("fa-minus-square").addClass("fa-plus-square").parent().nextAll(".comment-wrapper").hide().addClass("collapsed");
 	};
 
 	this.expandCommentAll = function() {
@@ -330,6 +359,9 @@ ls.comments = (function ($) {
 		}.bind(this));
 	};
 	
+	
+
+
 	this.init = function() {
 		this.initEvent();
 		this.calcNewComments();

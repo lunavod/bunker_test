@@ -76,7 +76,6 @@ class ActionSettings extends Action {
 		$this->AddEventPreg('/^profile$/i','/^remove-foto/i','/^$/i','EventRemoveFoto');
 		$this->AddEventPreg('/^profile$/i','/^cancel-foto/i','/^$/i','EventCancelFoto');
 		$this->AddEvent('profile','EventProfile');
-		$this->AddEvent('invite','EventInvite');
 		$this->AddEvent('tuning','EventTuning');
 		$this->AddEvent('account','EventAccount');
 	}

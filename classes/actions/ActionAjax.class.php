@@ -231,10 +231,6 @@ class ActionAjax extends Action {
 			$this->Message_AddErrorSingle($this->Lang_Get('comment_vote_error_acl'),$this->Lang_Get('attention'));
 			return;
 		}
-		if ($this->oUserCurrent->getSkill()<0.1){
-			$this->Message_AddErrorSingle('У вас слишком мало силы для голосования',$this->Lang_Get('attention'));
-			return;
-		}
 		/**
 		 * Как именно голосует пользователь
 		 */
@@ -324,10 +320,6 @@ class ActionAjax extends Action {
 			$this->Message_AddErrorSingle($this->Lang_Get('topic_vote_error_acl'),$this->Lang_Get('attention'));
 			return;
 		}
-		if ($this->oUserCurrent->getSkill()<0.1){
-			$this->Message_AddErrorSingle('У вас слишком мало силы для голосования',$this->Lang_Get('attention'));
-			return;
-		}
 		/**
 		 * Голосуем
 		 */
@@ -397,10 +389,6 @@ class ActionAjax extends Action {
 		 */
 		if ($oBlogVote=$this->Vote_GetVote($oBlog->getId(),'blog',$this->oUserCurrent->getId())) {
 			$this->Message_AddErrorSingle($this->Lang_Get('blog_vote_error_already'),$this->Lang_Get('attention'));
-			return;
-		}
-		if ($this->oUserCurrent->getSkill()<0.1){
-			$this->Message_AddErrorSingle('У вас слишком мало силы для голосования',$this->Lang_Get('attention'));
 			return;
 		}
 		/**
@@ -496,10 +484,6 @@ class ActionAjax extends Action {
 			$this->Message_AddErrorSingle($this->Lang_Get('system_error'),$this->Lang_Get('attention'));
 			return;
 		}
-		if ($this->oUserCurrent->getSkill()<0.1){
-			$this->Message_AddErrorSingle('У вас слишком мало силы для голосования',$this->Lang_Get('attention'));
-			return;
-		}
 		/**
 		 * Голосуем
 		 */
@@ -519,6 +503,7 @@ class ActionAjax extends Action {
                         $iVal=(float)$this->Rating_VoteUser($this->oUserCurrent,$oUser,$iValue+$iValue, true);
                         $oUserVote->setValue($iVal);
                         //$oUser->setRating($oUser->getRating()+$iValue);
+//                        $oUser->setCountVote($oUser->getCountVote()+1);
                         $oUser->setCountVote($oUser->getCountVote()+1);
                         if ($this->Vote_AddVote($oUserVote) and $this->User_Update($oUser)) {
                                 $this->Message_AddNoticeSingle($this->Lang_Get('user_vote_ok'),$this->Lang_Get('attention'));
@@ -533,6 +518,8 @@ class ActionAjax extends Action {
                                 $this->Message_AddErrorSingle($this->Lang_Get('system_error'),$this->Lang_Get('error'));
                                 return;
                         }
+                        $oUser->setCountVote($oUser->getCountVote()-1);
+                        $this->User_Update($oUser);
 		} else {
 			$oUserVote=Engine::GetEntity('Vote');
 	                $oUserVote->setTargetId($oUser->getId());

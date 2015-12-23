@@ -15,13 +15,11 @@
 </div> <!-- /container -->
 
 {include file='toolbar.tpl'}
-<script src="{cfg name="path.static.skin"}/js/clock.js">
 
 {hook run='body_end'}
 <script>
 {literal}
-$('.folding').click(function(x){if(x.target.className=="folding"){ls.comments.collapseComment(x.target)}else{ls.comments.expandComment(x.target)}})
-{/literal}
+
 function bunkerStyle() {
         var date = new Date;
         date.setDate(date.getDate() + 100);
@@ -56,6 +54,9 @@ var despoil = function() {
 	for(idx=0;idx<allNew.length;idx++){	
 		allNew[idx].className="spoiler-title spoiler-open" 
 	}
+	var el = document.getElementById("spoil");
+    el.innerHTML = 'Закрыть все<i class="fa fa-eye-slash">';
+    el.onclick=function(){spoil(); return false;};
 }
 
 var spoil = function() {
@@ -69,8 +70,10 @@ var spoil = function() {
 	for(idx=0;idx<allNew.length;idx++){	
 		allNew[idx].className="spoiler-title spoiler-close" 
 	}
+	var el = document.getElementById("spoil");
+    el.innerHTML = 'Открыть все<i class="fa fa-eye-slash">';
+    el.onclick=function(){despoil(); return false;};
 }
-{literal}
 $('.btn-menu').click(function(){panel()})
 {/literal}
 pc = 0;

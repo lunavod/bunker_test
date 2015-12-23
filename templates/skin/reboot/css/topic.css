@@ -12,6 +12,7 @@
     opacity: 0.2;
     margin-top: -20px;
     margin-right: -20px;
+    transform: rotate(180deg);
 }
 
 .topic { border: 1px solid #E0E0E0; overflow: hidden; zoom: 1; margin-bottom: 50px; background: white; padding: 20px; border-radius: 5px;}
@@ -23,7 +24,8 @@
 .topic .topic-header .topic-title i 			{ position: relative; top: 7px; cursor: help; }
 .topic .topic-header .topic-url 				{ margin-bottom: 15px; }
 .topic .topic-header .topic-url a 				{ background: #eee; border-radius: 3px; padding: 3px 10px 4px; text-decoration: none; }
-.topic .topic-header .topic-info 				{ margin-bottom: 25px; color: #777; }
+.topic .topic-header .topic-info 				{ margin-bottom: 5px; color: #777; }
+.topic .topic-header .voters                { margin-bottom: 25px; }
 .topic .topic-header .topic-info time 			{ margin-right: 15px; }
 .topic .topic-header .topic-info .topic-blog 	{ margin-right: 15px; }
 .topic .topic-header .topic-info .actions,

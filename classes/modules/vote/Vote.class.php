@@ -135,6 +135,14 @@ class ModuleVote extends Module {
 		$aVote=func_array_sort_by_keys($aVote,$aTargetId);
 		return $aVote;
 	}
+
+	public function GetVoteById($sId,$sTargetType) {
+		if (!$sId) {
+			return array();
+		}
+		$data = $this->oMapper->GetVoteById($sId,$sTargetType);
+		return $data;
+	}
 	/**
 	 * Получить список голосований по списку айдишников, но используя единый кеш
 	 *

@@ -16,7 +16,7 @@
 														">
 	{if !$oComment->getDelete() or $bOneComment or ($oUserCurrent and $oUserCurrent->isAdministrator())}
 		<a name="comment{$oComment->getId()}"></a>
-		<div class="folding" id="folding"></div>
+		<div class="folding fa fa-minus-square" id="folding"></div>
 
 		<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" alt="avatar" class="comment-avatar" /></a>
 

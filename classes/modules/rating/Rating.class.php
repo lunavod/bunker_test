@@ -42,7 +42,6 @@ class ModuleRating extends Module {
 		/**
 		 * Устанавливаем рейтинг комментария
 		 */
-		$oUserCurrent = $this->User_GetUserCurrent();
 		$oComment->setRating($oComment->getRating()+$iValue);
 		/**
 		 * Начисляем силу автору коммента, используя логарифмическое распределение
@@ -52,8 +51,6 @@ class ModuleRating extends Module {
 		 * Сохраняем силу
 		 */
 		$oUserComment=$this->User_GetUserById($oComment->getUserId());
-		$oUserCurrent->setSkill($oUserCurrent->getSkill()-0.1);
-		$this->User_Update($oUserCurrent);
 		$iSkillNew=$oUserComment->getSkill()+$iValue/10;
 		$oUserComment->setSkill($iSkillNew);
 		$this->User_Update($oUserComment);
@@ -69,13 +66,10 @@ class ModuleRating extends Module {
 	 */
 	public function VoteTopic(ModuleUser_EntityUser $oUser, ModuleTopic_EntityTopic $oTopic, $iValue) {
 		$oTopic->setRating($oTopic->getRating()+$iValue);
-		$oUserCurrent = $this->User_GetUserCurrent();
 		$skill=$oUser->getSkill();
 		$oUserTopic=$this->User_GetUserById($oTopic->getUserId());
 		$iSkillNew=$oUserTopic->getSkill()+$iValue;
 		$oUserTopic->setSkill($iSkillNew);
-		$oUserCurrent->setSkill($oUserCurrent->getSkill()-0.1);
-		$this->User_Update($oUserCurrent);
 		$this->User_Update($oUserTopic);
 		return $iValue;
 	}
@@ -89,9 +83,6 @@ class ModuleRating extends Module {
 	 */
 	public function VoteBlog(ModuleUser_EntityUser $oUser, ModuleBlog_EntityBlog $oBlog, $iValue) {
 		$oBlog->setRating($oBlog->getRating()+$iValue);
-		$oUserCurrent = $this->User_GetUserCurrent();
-		$oUserCurrent->setSkill($oUserCurrent->getSkill()-0.1);
-		$this->User_Update($oUserCurrent);
 		return $iValue;
 	}
 	/**
@@ -113,8 +104,6 @@ class ModuleRating extends Module {
 			    $oUserTarget->setSkill($oUserTarget->getSkill()-10.0);
 		    }
 	    }
-	    $oUserCurrent->setSkill($oUserCurrent->getSkill()-0.1);
-		$this->User_Update($oUserCurrent);
 		$this->User_Update($oUserTarget);
 		return $iValue;
 	}

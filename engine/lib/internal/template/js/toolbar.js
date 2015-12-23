@@ -78,23 +78,20 @@ ls.toolbar.topic = (function ($) {
 /**
  * Функционал кнопки "UP"
  */
-ls.toolbar.up = (function ($) {
-
-	this.init = function() {
-		$(window).scroll(function(){
-			if ($(window).scrollTop() > $(window).height() / 2) {
-
-			} else {
-
-			}
-		});
-	};
+ls.toolbar.scroll = (function ($) {
 
 	this.goUp = function() {
 		ls.toolbar.topic.reset();
-		$.scrollTo(0, 500);
+		$.scrollTo(0, 400);
 		return false;
 	};
+
+	this.goDown = function() {
+		ls.toolbar.topic.reset();
+		$.scrollTo("#footer", 400);
+		return false;
+	};
+
 
 	return this;
 }).call(ls.toolbar.up || {},jQuery);

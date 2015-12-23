@@ -197,3 +197,11 @@
     color: #4CAF50 !important;
 }
 
+.subscribe span {
+	font-size: 88%;
+	cursor: pointer;
+}
+
+#ban_days {
+	width: 20px;
+}

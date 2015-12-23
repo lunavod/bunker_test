@@ -747,6 +747,12 @@ class ActionBlog extends Action {
 		/**
 		 * Загружаем переменные в шаблон
 		 */
+		$aRawVote = $this->ModuleVote_GetVoteById($oTopic->getId(), 'topic');
+		$aVote = array();
+		foreach ($aRawVote as $key) {
+			$aVote[$this->ModuleUser_GetUserById($key->getVoterId())->getLogin()] = $key->getDirection();
+		}
+		$this->Viewer_Assign('aVotes',$aVote);
 		$this->Viewer_Assign('oTopic',$oTopic);
 		$this->Viewer_Assign('aComments',$aComments);
 		$this->Viewer_Assign('iMaxIdComment',$iMaxIdComment);

@@ -15,12 +15,8 @@ body {
 /* Ссылки
 ---------------------------------------------------- */
 .folding {
-    width: 13px;
-    height: 13px;
     position: absolute;
-    top: 18px;
     left: -20px;
-    background: transparent url("http://livestreet.ru/templates/skin/synio/images/icons-synio.png") no-repeat scroll 0px -94px;
     cursor: pointer;
 }
 .comment .folding.folded {

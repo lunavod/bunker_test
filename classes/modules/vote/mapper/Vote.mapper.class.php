@@ -76,6 +76,23 @@ class ModuleVote_MapperVote extends Mapper {
 		}
 		return $aVotes;
 	}
+	public function GetVoteById($sId,$sTargetType) {
+		$sql = "SELECT 
+					*							 
+				FROM 
+					".Config::Get('db.table.vote')."
+				WHERE 					
+					target_id = ? 	
+					AND
+					target_type = ? ";
+		$aVotes=array();
+		if ($aRows=$this->oDb->select($sql,$sId,$sTargetType)) {
+			foreach ($aRows as $aRow) {
+				$aVotes[]=Engine::GetEntity('Vote',$aRow);
+			}
+		}
+		return $aVotes;
+	}
 	/**
 	 * Удаляет голосование из базы по списку идентификаторов таргета
 	 *

@@ -39,7 +39,7 @@ $config['db']['params']['dbname'] = 'reboot';
 $config['db']['table']['prefix'] = 'prefix_';
 
 
-$config['path']['root']['web'] = 'https://reboot.lunavod.ru';
+$config['path']['root']['web'] = '//reboot.lunavod.ru';
 $config['path']['root']['server'] = '/var/www/reboot/';
 $config['path']['offset_request_url'] = '0';
 $config['db']['tables']['engine'] = 'InnoDB';

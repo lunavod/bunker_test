@@ -27,6 +27,7 @@
                         {hook run='atmenu'}
     {hook run='userbar_item'}
     <li><a href="#" onclick="wide(); return false;" class="widemode" id="wide">Широкий режим</a></li>
+    <li><a href="#" onclick="despoil(); return false;" class="spoil" id="spoil">Открыть все<i class="fa fa-eye-slash"></i></a></li>
     </ul>
     <ul class="userbar_info">
     <li><a href="{router page='login'}exit/?security_ls_key={$LIVESTREET_SECURITY_KEY}">{$aLang.exit}<i class="fa fa-times-circle-o"></i></a></li>
@@ -36,6 +37,7 @@
     <li><a href="{router page='login'}" class="js-login-form-show">{$aLang.user_login_submit}<i class="fa fa-user"></i></a></li>
     <li><a href="{router page='registration'}" class="js-registration-form-show">{$aLang.registration_submit}<i class="fa fa-user-plus"></i></a></li>
     <li><a href="#" onclick="wide(); return false;" class="widemode" id="wide">Широкий режим</a></li>
+    <li><a href="#" onclick="despoil(); return false;" class="spoil" id="spoil">Открыть все<i class="fa fa-eye-slash"></i></a></li>
     </ul>
     {/if}
     </ul>

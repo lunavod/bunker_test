@@ -95,4 +95,7 @@
 				{/if}
 			</ul>
 		</div>
+		<div class="voters">
+{foreach $aVotes as $vote}<span style="color:{if $vote == 1}green{elseif $vote == 0}gray{elseif $vote == -1}red{/if} ;">{$vote@key}</span> {/foreach}
+</div>
 	</header>
