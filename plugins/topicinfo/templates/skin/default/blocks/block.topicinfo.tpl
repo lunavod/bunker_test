@@ -50,7 +50,7 @@
         <div class="TopicList">
           {assign var="aUsersTopic" value=$LS->Topic_GetTopicsPersonalByUser($oTopicUser->getId(),1,1,$oConfig->GetValue("plugin.topicinfo.Topics_Count"))}
           {if $aUsersTopic}
-            <h2 class="header-table">{$aLang.plugin.topicinfo.User_Topics}</h2>
+            <h2 class="header-table"><a href="{$oTopicUser->getUserWebPath()}created">{$aLang.plugin.topicinfo.User_Topics}</a></h2>
             <ul>
               {foreach from=$aUsersTopic.collection item=oCurTopic}
                 {if $oTopic->getId()!=$oCurTopic->getId()}
