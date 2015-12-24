@@ -196,4 +196,8 @@ h2.header-table { margin-bottom: 0; border-bottom: 1px solid #eee; padding-botto
 
 .switch-theme {
 	cursor: pointer; margin: 0px auto; width: 80px; height: 80px;
+	-moz-transform: scale(-1);
+	-o-transform: scale(-1);
+	-webkit-transform: scale(-1);
+	transform: scale(-1);
 }
