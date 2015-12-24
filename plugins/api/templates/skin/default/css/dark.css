@@ -549,3 +549,29 @@ fieldset legend {
 .topic .poll {
     background: #303030 none repeat scroll 0% 0%;
 }
+
+
+.profile-info-about {
+    background: #424242 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #eee;
+    margin-bottom: 30px;
+    padding: 13px 20px 20px;
+}
+
+.block.block-type-profile-note {
+    background: #4B567C none repeat scroll 0% 0%;
+    border: 1px solid #313851;
+    padding: 15px;
+}
+
+.topic .poll .poll-result {
+    list-style-type: none;
+    background: #212121 none repeat scroll 0% 0%;
+    border: 1px solid #303030;
+}
+
+.topic.topic-type-talk .topic-footer .topic-info {
+    background: #1a1a1a none repeat scroll 0 0;
+    border-radius: 0;
+}
