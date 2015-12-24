@@ -193,3 +193,7 @@ h2.header-table { margin-bottom: 0; border-bottom: 1px solid #eee; padding-botto
 	color: #6da3bd;
 	display: block;
 }
+
+.switch-theme {
+	cursor: pointer; margin: 0px auto; width: 80px; height: 80px;
+}

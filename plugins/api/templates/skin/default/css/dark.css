@@ -525,3 +525,11 @@ fieldset legend {
     text-align: center;
     font-size: 11px;
 }
+
+.switch-theme {
+    cursor: pointer; margin: 0px auto; width: 80px; height: 80px;
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
