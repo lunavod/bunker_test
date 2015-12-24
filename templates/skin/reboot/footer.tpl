@@ -10,18 +10,18 @@
 				<img src="{cfg name="path.static.skin"}/images/dark-to-day.png" onclick="bunkerStyle()" title="Светлый режим/темный режим" style="cursor: pointer; margin: 0px auto; width: 80px; height: 80px;">
 			</div>
 		</div>
-		{include file='toolbar.tpl'}
+		{hook run='body_end'}
 	</footer>
-
 </div> <!-- /container -->
 
 
 
-{hook run='body_end'}
-<script>
-{literal}
+			{include file='toolbar.tpl'}
+			<script>
+				{literal}
 
-function bunkerStyle() {
+
+				function bunkerStyle() {
         var date = new Date;
         date.setDate(date.getDate() + 100);
         if(getCookie("SiteStyle") == "Dark") {
