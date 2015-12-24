@@ -10,11 +10,12 @@
 				<img src="{cfg name="path.static.skin"}/images/dark-to-day.png" onclick="bunkerStyle()" title="Светлый режим/темный режим" style="cursor: pointer; margin: 0px auto; width: 80px; height: 80px;">
 			</div>
 		</div>
+		{include file='toolbar.tpl'}
 	</footer>
 
 </div> <!-- /container -->
 
-{include file='toolbar.tpl'}
+
 
 {hook run='body_end'}
 <script>

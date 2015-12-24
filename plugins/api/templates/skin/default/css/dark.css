@@ -520,3 +520,10 @@ fieldset legend {
     color: #fff;
     font-weight: bold;
 }
+
+
+.stat-performance {
+    background: transparent;
+    border-bottom: 1px solid #1a1a1a;
+    border-top: 1px solid #1a1a1a;
+}
