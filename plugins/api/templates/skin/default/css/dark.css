@@ -545,3 +545,7 @@ fieldset legend {
 .comment.comment-new {
     background: #444 none repeat scroll 0 0;
 }
+
+.topic .poll {
+    background: #303030 none repeat scroll 0% 0%;
+}
