@@ -141,7 +141,7 @@ h2.header-table {
     margin-right: 30px;
 }
 .nav.nav-pills li a:hover {
-    background: #212121;
+    background: #485C81;
 }
 .table th {
     text-align: left;
@@ -214,7 +214,7 @@ h2.header-table {
 
 
 .nav.nav-pills li a:hover {
-    background: #313131 none repeat scroll 0 0;
+    background: #485C81 none repeat scroll 0 0;
     color: #eee;
 }
 
@@ -364,7 +364,7 @@ a.link-dotted:hover {
     background: #424242;
 }
 
-body { background: #212121 url('../images/dark-theme-bg.png'); }
+body { background: #212121 url('../images/betafinal4darkblue.png'); }
 
 
 .markItUpHeader {
@@ -514,4 +514,9 @@ fieldset legend {
     overflow: auto;
     padding: 5px;
     width: 100%;
+}
+
+.user, .ls-user {
+    color: #fff;
+    font-weight: bold;
 }
