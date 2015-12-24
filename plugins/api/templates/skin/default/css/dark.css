@@ -533,3 +533,8 @@ fieldset legend {
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
 }
+
+
+.comment.comment-new {
+    background: #444 none repeat scroll 0 0;
+}
