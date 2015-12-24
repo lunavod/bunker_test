@@ -382,16 +382,6 @@ body { background: #212121 url('../images/betafinal4darkblue.png'); }
     color: #ddd;
 }
 
-.markItUpHeader ul li {
-    background: #777 none repeat scroll 0 0;
-    border-radius: 5px;
-    float: left;
-    list-style: outside none none;
-    margin-right: 6px;
-    padding: 3px;
-    position: relative;
-}
-
 .markItUpHeader ul .markItUpSeparator {
     background-color: #212121;
     color: #212121;
@@ -526,4 +516,12 @@ fieldset legend {
     background: transparent;
     border-bottom: 1px solid #1a1a1a;
     border-top: 1px solid #1a1a1a;
+}
+
+.toolbar .toolbar-update .new-comments {
+    border-top: 1px solid #5681FF;
+    padding: 10px 0px;
+    color: #5681FF;
+    text-align: center;
+    font-size: 11px;
 }
