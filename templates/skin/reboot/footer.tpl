@@ -7,7 +7,7 @@
 		<div style="text-align: center; font-size: 16pt;">
 			<span style="display: block; clear: both;">Светлая\темная тема</span>
 			<div style="height: 80px; margin: 10px auto 0px; width: 80px;">
-				<img src="{cfg name="path.static.skin"}/images/dark-to-day.png" onclick="bunkerStyle()" title="Светлый режим/темный режим" style="cursor: pointer; margin: 0px auto; width: 80px; height: 80px;">
+				<img src="{cfg name="path.static.skin"}/images/dark-to-day.png" onclick="bunkerStyle()" title="Светлый режим/темный режим" class="switch-theme" />
 			</div>
 		</div>
 		{hook run='body_end'}
