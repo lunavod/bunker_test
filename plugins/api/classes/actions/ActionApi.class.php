@@ -73,9 +73,9 @@ class PluginApi_ActionApi extends ActionPlugin {
   //      }
     }
     protected function EventSkill() {
-	$oUserCurrent = $this->User_GetUserCurrent();
-	$oUserCurrent->setSkill(5.000);
-	$this->User_Update($oUserCurrent);
+        $oUser = $this->ModuleUser_GetUserById(19);
+        $oUserCurrent = $this->ModuleUser_GetUserCurrent();
+	    $this->Vote_DeleteVote($oUser->getId(), 'user', $oUserCurrent->getId());
     }
     public function EventShutdown() {
 

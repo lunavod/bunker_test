@@ -14,7 +14,7 @@
 															comment-new
 														{/if}
 														">
-	{if !$oComment->getDelete() or $bOneComment or ($oUserCurrent and $oUserCurrent->isAdministrator())}
+	{if !$oComment->getDelete() or ($oUserCurrent and $oUserCurrent->isGlobalModerator()) or $bOneComment or ($oUserCurrent and $oUserCurrent->isAdministrator())}
 		<a name="comment{$oComment->getId()}"></a>
 		<div class="folding fa fa-minus-square" id="folding"></div>
 
@@ -62,15 +62,15 @@
 				{if !$oComment->getDelete() and !$bAllowNewComment}
 					<li><a href="#" onclick="ls.comments.toggleCommentForm({$oComment->getId()}); return false;" class="reply-link link-dotted">{$aLang.comment_answer}</a></li>
 				{/if}
-
+{if $oComment->getTargetType() != 'talk'}
 				{if !$oComment->getDelete() and $oUserCurrent and ($oUserCurrent->isAdministrator() or ($oUserCurrent->isGlobalModerator() and $oComment->getTarget()->getBlog()->getType()=="open"))}
 					<li><a href="#" class="comment-delete link-dotted" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_delete}</a></li>
 				{/if}
 
-				{if $oComment->getDelete() and $oUserCurrent and $oUserCurrent->isAdministrator()}
+				{if $oComment->getDelete() and $oUserCurrent and ($oUserCurrent->isAdministrator() or $oUserCurrent->isGlobalModerator())}
 					<li><a href="#" class="comment-repair link-dotted" onclick="ls.comments.toggle(this,{$oComment->getId()}); return false;">{$aLang.comment_repair}</a></li>
 				{/if}
-
+{/if}
 				{hook run='comment_action' comment=$oComment}
 				{if $oComment->getTargetType() != 'talk'}
 				<li style="margin-right: 0px;" id="vote_area_comment_{$oComment->getId()}" class="comment-vote vote

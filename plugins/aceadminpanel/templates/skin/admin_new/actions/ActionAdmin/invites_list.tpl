@@ -108,7 +108,7 @@ aceAdmin.sort = function(sort, order) {
         <input type="hidden" name="invite_order" id="invite_order" />
 </div>
     <input type="hidden" name="action" value="delete" />
-    <button class="btn btn-danger" name="btn-delete" style="float: right;">Delete</button>
+    <button class="btn btn-danger" name="btn-delete" style="float: right;">Delete</button>&nbsp;
 {include file='paging.tpl'}
 {else}
     {$oLang->user_empty}

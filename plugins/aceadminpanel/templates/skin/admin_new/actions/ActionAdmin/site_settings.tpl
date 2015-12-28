@@ -1,7 +1,7 @@
 {extends file='index.tpl'}
 
 {block name="content"}
-
+<div id=content>
 <h3>{$oLang->_adm_settings_title}</h3>
 <ul class="nav nav-tabs">
     <li {if $sMenuNavItemSelect=='base'}class="active"{/if}><a
@@ -19,13 +19,15 @@
     <p class="offset1">
         {if $aItem.type=='section'}
             {assign var="sTitle" value="$sConfigKey"}
-            <h4 class="form-actions">{$oLang->Get("`$sTitle`")}</h4>
+            <h4 class="offsetHeader">{$oLang->Get("`$sTitle`")}</h4>
         {else}
             {if $aItem.type=='checkbox'}
-                <label class="checkbox {if ($aItem.value)}checked{/if}">{$oLang->Get("$sConfigKey")}:
-                    <input type="{$aItem.type}" id="{$sConfigKey}" name="{$sConfigKey}" value="1" class="{$aItem.class}"
-                           {if ($aItem.value)}checked{/if} />
-                </label>
+				<div class="modal-2 offset1">
+					<div class="checkbox inline" style="padding: 0;">
+						<input type="{$aItem.type}" id="{$sConfigKey}" name="{$sConfigKey}" value="1" class="{$aItem.class}" {if ($aItem.value)}checked{/if}>
+						<label>{$oLang->Get("$sConfigKey")}</label>
+					</div>
+				</div>
             {elseif $aItem.type=='select'}
                 <label for="{$sConfigKey}">{$oLang->Get("$sConfigKey")}:</label>
                 <select id="{$sConfigKey}" name="{$sConfigKey}" class="{$aItem.class}">
@@ -43,15 +45,7 @@
         </p>
     {/foreach}
 
-    <div class="form-actions fix-on-container">
-        <div class="navbar fix-on-bottom">
-            <div class="navbar-inner">
-                <div class="container">
-                    <input type="submit" name="submit_data_save" value="{$oLang->_adm_save}" class="btn btn-primary pull-right"/>
-                </div>
-            </div>
-        </div>
-    </div>
+    <input type="submit" name="submit_data_save" value="{$oLang->_adm_save}" class="btn btn-primary pull-right"/>&nbsp;
 
 </form>
 
@@ -76,5 +70,5 @@
     });
     */
 </script>
-
+</div>
 {/block}

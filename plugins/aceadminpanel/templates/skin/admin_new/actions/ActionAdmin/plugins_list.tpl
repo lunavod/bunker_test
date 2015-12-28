@@ -1,6 +1,7 @@
 {extends file='index.tpl'}
 
 {block name="content"}
+<div id=content>
 
 {literal}
 <script type="text/javascript">
@@ -49,9 +50,6 @@ function adminPluginSave() {
         <table class="table table-striped table-bordered table-condensed plugins-list">
             <thead>
                 <tr>
-                    <th>
-                        <input type="checkbox" name="" onclick="aceAdmin.selectAllRows(this);" />
-                    </th>
                     <th class="name">{$oLang->plugins_plugin_name}</th>
                     <th class="version">{$oLang->plugins_plugin_version}</th>
                     <th class="author">{$oLang->plugins_plugin_author}</th>
@@ -63,9 +61,6 @@ function adminPluginSave() {
             <tbody id="plugin_list">
             {foreach from=$aPluginList item=oPlugin}
                 <tr id="{$oPlugin->GetId()}_row" class="{if $oPlugin->IsActive()}active{else}inactive{/if} selectable">
-                    <td class="checkbox">
-                        <input type="checkbox" name="plugin_del[{$oPlugin->GetId()}]" class="form_plugins_checkbox" />
-                    </td>
                     <td class="name">
                         <div class="{if $oPlugin->IsActive()}active{else}inactive{/if}"></div>
                         <div class="title">{$oPlugin->GetName()|escape:'html'}</div>
@@ -102,20 +97,6 @@ function adminPluginSave() {
         {/foreach}
             </tbody>
         </table>
-        <!-- <br/> {$oLang->adm_plugin_priority_notice} -->
-        <div class="form-actions fix-on-container">
-            <div class="navbar fix-on-bottom">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <button type="submit" name="submit_plugins_del" class="btn btn-primary pull-right"
-                                onclick="return ($$('.form_plugins_checkbox:checked').length==0)?false:confirm('{$aLang.plugins_delete_confirm}');">
-                            {$aLang.plugins_submit_delete}
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <input type="submit" name="submit_plugins_save" value="{$aLang.adm_save}" onclick="adminPluginSave();" /> -->
     </form>
-
+</div>
 {/block}

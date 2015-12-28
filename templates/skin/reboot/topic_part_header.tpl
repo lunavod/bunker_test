@@ -59,11 +59,7 @@
 					{/if}
 				{/if}
 				<div class="vote-count {if $bVoteInfoShow}js-infobox-vote-topic{/if}" id="vote_total_topic_{$oTopic->getId()}" title="{$aLang.topic_vote_count}: {$oTopic->getCountVote()}">
-					{if $bVoteInfoShow}
 						{if $oTopic->getRating() > 0}+{/if}{$oTopic->getRating()}
-					{else} 
-						<a href="#" onclick="return ls.vote.vote({$oTopic->getId()},this,0,'topic');">?</a> 
-					{/if}
 				</div>
 				{if $oUserCurrent}
                                         {if $oUserCurrent->getId() != $oUser->getId()}

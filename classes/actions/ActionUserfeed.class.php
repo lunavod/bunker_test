@@ -146,7 +146,7 @@ class ActionUserfeed extends Action {
 					$this->Message_AddError($this->Lang_Get('system_error'),$this->Lang_Get('error'));
 					return;
 				}
-				if(!in_array($this->Blog_GetBlogById(getRequestStr('id'))->getId(), $this->Blog_GetAccessibleBlogsByUser($this->User_GetUserCurrent())) and $this->Blog_GetBlogById(getRequestStr('id'))->getType()=="close"){
+				if(!in_array($this->Blog_GetBlogById(getRequestStr('id'))->getId(), $this->Blog_GetAccessibleBlogsByUser($this->User_GetUserCurrent())) and in_array($this->Blog_GetBlogById(getRequestStr('id'))->getType(), array("close", "invite"))){
 					$this->Message_AddNotice("У вас нет разрешения подписываться на этот блог", "Ошибка");
 					return;
 				}

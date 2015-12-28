@@ -43,6 +43,7 @@ class ModuleACL extends Module {
 	public function Init() {
 
 	}
+
 	public function CanAddFavourite(ModuleFavourite_EntityFavourite $oFavourite, ModuleUser_EntityUser $oUser){
 		if ($oFavourite->getTargetType() == "talk"){
 			$oTalk = $this->ModuleTalk_GetTalkById($oFavourite->getTargetId());
@@ -51,12 +52,12 @@ class ModuleACL extends Module {
 			}
 		} elseif ($oFavourite->getTargetType() == "topic") {
 			$oTopic = $this->ModuleTopic_GetTopicById($oFavourite->getTargetId());
-			if(in_array($oTopic->getBlogId(), $this->ModuleBlog_GetAccessibleBlogsByUser($oUser))){
+			if(in_array($oTopic->getBlogId(), $this->ModuleBlog_GetAccessibleBlogsByUser($oUser)) or $oTopic->getBlog()->getType() == "open"){
 			    return true;
 		    }
 		} elseif ($oFavourite->getTargetType() == "comment") {
 			$oComment = $this->ModuleComment_GetCommentById($oFavourite->getTargetId());
-			if (in_array($oComment->getTarget()->getBlogId(), $this->ModuleBlog_GetAccessibleBlogsByUser($oUser))){
+			if (in_array($oComment->getTarget()->getBlogId(), $this->ModuleBlog_GetAccessibleBlogsByUser($oUser)) or $oComment->getTarget()->getBlog()->getType() == "open"){
 			    return true;
 		    }
 		}
@@ -219,10 +220,16 @@ class ModuleACL extends Module {
 	 * @return bool
 	 */
 	public function CanVoteComment(ModuleUser_EntityUser $oUser, ModuleComment_EntityComment $oComment) {
-		if ($oUser->getRating()>=Config::Get('acl.vote.comment.rating')) {
-			return true;
+		//if ($oUser->getRating()<Config::Get('acl.vote.comment.rating')) {
+		//	return false;
+		//}
+		if ($oComment->getTargetType() == 'talk'){
+			return false;
 		}
-		return false;
+		if (!in_array($oComment->getTarget()->getBlogId(), $this->ModuleBlog_GetAccessibleBlogsByUser($oUser)) and $oComment->getTarget()->getBlog()->getType() != "open"){
+			return false;
+		}
+		return true;
 	}
 	/**
 	 * Проверяет может ли пользователь голосовать за конкретный блог
@@ -254,10 +261,13 @@ class ModuleACL extends Module {
 	 * @return bool
 	 */
 	public function CanVoteTopic(ModuleUser_EntityUser $oUser, ModuleTopic_EntityTopic $oTopic) {
-		if ($oUser->getRating()>=Config::Get('acl.vote.topic.rating')) {
-			return true;
+		if ($oUser->getRating()<Config::Get('acl.vote.topic.rating')) {
+			return false;
 		}
-		return false;
+		if (!in_array($oTopic->getBlogId(), $this->ModuleBlog_GetAccessibleBlogsByUser($oUser))){
+			return false;
+		}
+		return true;
 	}
 	/**
 	 * Проверяет может ли пользователь голосовать за конкретного пользователя
@@ -364,7 +374,7 @@ class ModuleACL extends Module {
 		if ($oTopic->getUserId()==$oUser->getId() or $oUser->isAdministrator()) {
 			return true;
 		}
-		if ($oUser->isGlobalModerator() and $oTopic->getBlod()->getType == "open" ) {
+		if ($oUser->isGlobalModerator() and $oTopic->getBlog()->getType() == "open" ) {
                         return true;
                 }
 		/**
@@ -425,7 +435,10 @@ class ModuleACL extends Module {
 	 * @return bool
 	 */
 	public function CanDeleteComment($oUser) {
-		if (!$oUser || !$oUser->isAdministrator() or !$oUser->isGlobalModerator()) {
+		if ($oUser->isGlobalModerator()) {
+			return true;
+		}
+		if (!$oUser || !$oUser->isAdministrator()) {
 			return false;
 		}
 		return true;

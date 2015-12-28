@@ -65,8 +65,6 @@ div.block.Topicinfo div.AvatarHolder div.Status.offline {
 div.block.Topicinfo div.AvatarHolder a img {
     border-radius: 3px 3px 3px 3px;
     display: block;
-    height: 100px;
-    width: 100px;
 }
 
 div.block.Topicinfo div.MoreInfo {

@@ -9,7 +9,7 @@
 
 return array (
   'Block_Title' => 'Об авторе топика',
-  'User_Topics' => 'Топики пользователя:'
+  'User_Topics' => 'Посты пользователя:'
 
 );
 

@@ -1,6 +1,7 @@
 {extends file='index.tpl'}
 
 {block name="content"}
+<div id=content>
 
 <h3>{$aLang.user_field_admin_title}</h3>
 
@@ -63,5 +64,5 @@
         </li>
     {/foreach}
 </ul>
-
+</div>
 {/block}

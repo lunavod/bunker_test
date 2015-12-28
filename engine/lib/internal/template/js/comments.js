@@ -289,6 +289,7 @@ ls.comments = (function ($) {
 		if (this.aCommentNew[0]) {
 			if ($('#comment_id_'+this.aCommentNew[0]).length) {
 				this.scrollToComment(this.aCommentNew[0]);
+				$('#comment_id_'+this.aCommentNew[0]).removeClass(this.options.classes.comment_new);
 			}
 			this.aCommentNew.shift();
 		}

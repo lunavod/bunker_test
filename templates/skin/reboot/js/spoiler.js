@@ -15,8 +15,9 @@ function spoiler_click(event){
     if(!parent || parent.lastElementChild == target)return true;
     var b = parent.querySelector(".spoiler-body");
     if(!b) return;
-    if(b.style.display != "inline") {
+    if(b.style.display != "block") {
         jQuery(b).show(300);
+        b.style.display = "block";
         b.parentElement.getElementsByClassName("spoiler-title")[0].className = "spoiler-title spoiler-open";
     } else {
         jQuery(b).hide(300);

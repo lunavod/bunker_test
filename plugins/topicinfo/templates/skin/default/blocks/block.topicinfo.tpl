@@ -8,13 +8,12 @@
 	<div class="topicinfo_content">
         {assign var="oTopicUser" value=$oTopic->getUser()}
         <div class="AvatarHolder">
-          <a href="{$oTopicUser->getUserWebPath()}" class="avatar"><img src="{$oTopicUser->getProfileAvatarPath(100)}" alt="avatar" itemprop="photo" /></a>
-          <a href="{$oTopicUser->getUserWebPath()}" class="user">{$oTopicUser->getLogin()}</a>
+          <a href="{$oTopicUser->getUserWebPath()}" class="avatar"><img src="{$oTopicUser->getProfileAvatarPath(64)}" alt="avatar" itemprop="photo" /></a>
           <div class="Status {if $oTopicUser->isOnline()}online{else}offline{/if}" title="{if $oTopicUser->isOnline()}{$aLang.user_status_online}{else}{$aLang.user_status_offline}{/if}"></div>
         </div>
         <div class="MoreInfo">
           <h2 class="header-table">
-            {$oTopicUser->getProfileName()|escape:'html'}
+            <a href="{$oTopicUser->getUserWebPath()}" class="user">{$oTopicUser->getLogin()}</a>
           </h2>
           <div class="OneDescription">
             <p title="{$aLang.user_rating}">
@@ -24,27 +23,9 @@
               {$aLang.user_skill}: <b class="s">{$oTopicUser->getSkill()}</b>
             </p>
           </div>
-          {assign var="aUserFieldContactValues" value=$oTopicUser->getUserFieldValues(true,array('contact'))}
-          {if $aUserFieldContactValues}
-            <h2 class="header-table">{$aLang.profile_contacts}</h2>
-            
-            <ul class="profile-contact-list">
-              {foreach from=$aUserFieldContactValues item=oField}
-                <li><i class="icon-contact icon-contact-{$oField->getName()}" title="{$oField->getName()}"></i> {$oField->getValue(true,true)}</li>
-              {/foreach}
-            </ul>
-          {/if}
+          
 
-          {assign var="aUserFieldContactValues" value=$oTopicUser->getUserFieldValues(true,array('social'))}
-          {if $aUserFieldContactValues}
-            <h2 class="header-table">{$aLang.profile_social}</h2>
-            
-            <ul class="profile-contact-list">
-              {foreach from=$aUserFieldContactValues item=oField}
-                <li><i class="icon-contact icon-contact-{$oField->getName()}" title="{$oField->getName()}"></i> {$oField->getValue(true,true)}</li>
-              {/foreach}
-            </ul>
-          {/if}
+          
         </div>
         
         <div class="TopicList">

@@ -188,5 +188,12 @@ class ModuleVote extends Module {
 		$this->Cache_Clean(Zend_Cache::CLEANING_MODE_MATCHING_TAG,array("vote_update_{$sTargetType}"));
 		return $this->oMapper->DeleteVoteByTarget($aTargetId,$sTargetType);
 	}
+	public function DeleteVote($sTargetId, $sTargetType, $sUserId) {
+		/**
+		 * Чистим зависимые кеши
+		 */
+		$this->Cache_Clean(Zend_Cache::CLEANING_MODE_MATCHING_TAG,array("vote_update_{$sTargetType}"));
+		return $this->oMapper->DeleteVote($sTargetId,$sTargetType,$sUserId);
+	}
 }
 ?>

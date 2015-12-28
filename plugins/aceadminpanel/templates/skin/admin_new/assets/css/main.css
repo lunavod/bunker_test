@@ -13,7 +13,7 @@
 }
 
 body {
-    padding-top: 60px;
+    padding-top: 70px;
 }
 h1 { font-size: 30px; line-height: 40px; }
 h2 { font-size: 24px; line-height: 30px; }
@@ -45,7 +45,7 @@ ul, ol {
     list-style: none outside none;
 }
 .navbar.navbar-fixed-top {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    background: #567ca4;
 }
 .well {
     margin-bottom: 18px;
@@ -192,30 +192,30 @@ td.number {
 td.center {
     text-align: center;
 }
-
-.sticky, .sticky-bottom {
-    position: fixed;
+#stat td {
+    background-color: #fff;
+    margin: 10px;
+    padding: 15px;
+    display: inline-block;
+    vertical-align: top;
+    /* height: 100%; */
+    /* width: 16%; */
+    -webkit-box-shadow: 0 1px 2px rgba(6, 33, 63, 0.13);
+    -moz-box-shadow: 0 1px 2px rgba(6, 33, 63, 0.13);
+    box-shadow: 0 1px 2px rgba(6, 33, 63, 0.13);
+}
+#stat td h4 {
+    font-size: 1.5em;
+    color: rgb(100, 177, 103);
 }
 .nav li a:hover {
-    background-color: #DDDDDD;
+    background-color: #f5f7fa;
 }
 .nav-list .nav-header {
-    margin-left: -22px;
+	margin-left: -15px;
+    color: #6487a9;
 }
-.navbar.sticky {
-    top: 40px;
-    width: 100%;
-}
-.navbar.sticky-bottom {
-    bottom: 0;
-    width: 100%;
-    margin-bottom: 0;
-}
-.navbar.sticky-bottom .navbar-inner {
-    -webkit-box-shadow: 0 0px 6px rgba(0, 0, 0, 0.25), inset  0 -1px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 0px 6px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-}
+
 
 
 .pagination {

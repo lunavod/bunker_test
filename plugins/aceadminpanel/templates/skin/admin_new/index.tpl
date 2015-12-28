@@ -87,20 +87,14 @@
 
 <header id="header">
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
+        <div>
             <div class="container">
-                <div class="nav-collapse nav logo">
-                    <a href="{router page=admin}">
-                        <img src="{$sWebPluginSkin}images/logo32x32.png" alt="{$sAdminTitle}"/>
-                    </a>
-                </div>
                 <a class="brand" href="{router page=admin}">
-                {$sAdminTitle}
+					<i class="icon-globe icon-white"></i> Developers Web Panel
                 </a>
 
                 <div class="nav-collapse">
                     <ul class="nav">
-                        <li class="divider-vertical"></li>
                         <li><a href="{cfg name='path.root.web'}" target="_blank">{$oLang->adm_goto_site}</a></li>
                     {hook run='main_menu'}
                     </ul>
@@ -110,7 +104,6 @@
                     <ul class="nav">
                         <li>
                             <a href="{router page='login'}exit/?security_ls_key={$LIVESTREET_SECURITY_KEY}">
-                                <i class="icon-off icon-gray"></i>
                                 {$aLang.exit}
                             </a>
                         </li>
@@ -124,13 +117,22 @@
 <div id="container" class="container {hook run='container_class'}">
 
     <div id="wrapper" class="row">
-        <div class="left-sidebar span2">
+        <div class="left-sidebar span3">
         {block name="left-sidebar"}
         {include file="$sTemplatePath/inc.menu.main.tpl"}
+		    <div class="widget-info well" style="text-align: center;">
+                {if Config::Get('plugin.aceadminpanel.altocms-logo') !== false}
+                <a href="http://altocms.com" target="_blank"><img src="{$sWebPluginSkin}images/altocms-logo.png"></a><br/>
+                <a href="http://altocms.com" target="_blank">www.altocms.com</a>
+                {/if}
+            </div>
+        {block name="sidebar"}
+        {/block}
+
         {/block}
         </div>
 
-        <div id="content" role="main" class="span11">
+        <div role="main" class="span13">
         {include file='inc.system_message.tpl'}
         {hook run='content_begin'}
         {block name="content"}
@@ -150,18 +152,6 @@
         {hook run='content_end'}
         </div>
         <!-- /content -->
-
-        <div class="sidebar span3">
-            <div class="widget-info well" style="text-align: center;">
-                {if Config::Get('plugin.aceadminpanel.altocms-logo') !== false}
-                <a href="http://altocms.com" target="_blank"><img src="{$sWebPluginSkin}images/altocms-logo.png"></a><br/>
-                <a href="http://altocms.com" target="_blank">www.altocms.com</a>
-                {/if}
-            </div>
-        {block name="sidebar"}
-        {/block}
-        </div>
-
     </div>
     <!-- /wrapper -->
 

@@ -48,7 +48,7 @@ var despoil = function() {
 	var allBody = document.querySelectorAll('.spoiler-body');
 	idx=0
 	for(idx=0;idx<allBody.length;idx++){	
-		allBody[idx].style.display="block" 
+		allBody[idx].style.display="inline" 
 	}
 	var allNew = document.querySelectorAll('.spoiler-title');
 	idx=0
@@ -56,7 +56,8 @@ var despoil = function() {
 		allNew[idx].className="spoiler-title spoiler-open" 
 	}
 	var el = document.getElementById("spoil");
-    el.innerHTML = 'Закрыть все<i class="fa fa-eye-slash">';
+    el.innerHTML = 'Закрыть спойлеры<i class="fa fa-eye-slash">';
+    el.parentNode.title = 'Закрыть спойлеры'
     el.onclick=function(){spoil(); return false;};
 }
 
@@ -72,7 +73,8 @@ var spoil = function() {
 		allNew[idx].className="spoiler-title spoiler-close" 
 	}
 	var el = document.getElementById("spoil");
-    el.innerHTML = 'Открыть все<i class="fa fa-eye-slash">';
+    el.innerHTML = 'Открыть спойлеры<i class="fa fa-eye-slash">';
+    el.parentNode.title = 'Открыть спойлеры'
     el.onclick=function(){despoil(); return false;};
 }
 $('.btn-menu').click(function(){panel()})

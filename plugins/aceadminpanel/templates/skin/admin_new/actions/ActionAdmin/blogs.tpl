@@ -1,6 +1,7 @@
 {extends file='index.tpl'}
 
 {block name="content"}
+<div id=content>
 
 <h3>{$oLang->_adm_menu_blogs}</h3>
 <div class="topic">
@@ -19,6 +20,7 @@
 
     {include file="$sTemplatePathAction/table_blogs.tpl"}
     {include file="$sTemplatePath/inc.paging.tpl"}
+</div>
 </div>
 
 {/block}

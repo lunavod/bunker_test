@@ -1,6 +1,8 @@
 {extends file='index.tpl'}
 
 {block name="content"}
+<div id=content>
+
     {if !$submit_cache_save}
 
     <form method="post" action="">
@@ -8,45 +10,38 @@
 
         <h3>{$oLang->_adm_menu_reset_cache}</h3>
 
-        <div class="offset1">
-            <label class="checkbox">
-            <input type="checkbox" id="adm_cache_clear_data" name="adm_cache_clear_data" checked/>
-            {$oLang->_adm_cache_clear_data}</label>
-            <span class="help-block">{$oLang->_adm_cache_clear_data_notice}</span>
-        </div>
+		<div class="modal-2 offset1">
+			<div class="checkbox inline" style="padding: 0;">
+				<input type="checkbox" id="adm_cache_clear_data" name="adm_cache_clear_data" checked>
+				<label>{$oLang->_adm_cache_clear_data}</label>
+			</div>
+		</div>
 
-        <div class="offset1">
-        <label class="checkbox">
-            <input type="checkbox" id="adm_cache_clear_headfiles" name="adm_cache_clear_headfiles" checked/>
-            {$oLang->_adm_cache_clear_headfiles}</label>
-            <span class="help-block">{$oLang->_adm_cache_clear_headfiles_notice}</span>
-        </div>
+		<div class="modal-2 offset1">
+			<div class="checkbox inline" style="padding: 0;">
+				<input type="checkbox" id="adm_cache_clear_headfiles" name="adm_cache_clear_headfiles" checked>
+				<label>{$oLang->_adm_cache_clear_headfiles}</label>
+			</div>
+		</div>
 
-        <div class="offset1">
-        <label class="checkbox">
-            <input type="checkbox" id="adm_cache_clear_smarty" name="adm_cache_clear_smarty" checked/>
-            {$oLang->_adm_cache_clear_smarty}</label>
-            <span class="help-block">{$oLang->_adm_cache_clear_smarty_notice}</span>
-        </div>
+		<div class="modal-2 offset1">
+			<div class="checkbox inline" style="padding: 0;">
+				<input type="checkbox" id="adm_cache_clear_smarty" name="adm_cache_clear_smarty" checked>
+				<label>{$oLang->_adm_cache_clear_smarty}</label>
+			</div>
+		</div>		
 
         <h3>{$oLang->_adm_menu_reset_config}</h3>
 
-        <div class="offset1">
-        <label class="checkbox">
-            <input type="checkbox" id="adm_reset_config_data" name="adm_reset_config_data"/>
-            {$oLang->_adm_reset_config_data}</label>
-            <span class="help-block">{$oLang->_adm_reset_config_data_notice}</span>
-        </div>
+		<div class="modal-2 offset1">
+			<div class="checkbox inline" style="padding: 0;">
+				<input type="checkbox" id="adm_reset_config_data" name="adm_reset_config_data">
+				<label>{$oLang->_adm_reset_config_data}</label>
+			</div>
+			<br>(Осторожно! Сброс всех данных!)
+		</div>		
 
-        <div class="form-actions fix-on-container">
-            <div class="navbar fix-on-bottom">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <input type="submit" name="adm_reset_submit" value="{$oLang->_adm_execute}" class="btn btn-primary pull-right"/>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <input type="submit" name="adm_reset_submit" value="{$oLang->_adm_execute}" class="btn btn-primary pull-right"/>&nbsp;
     </form>
 
     {else}
@@ -56,5 +51,5 @@
     </form>
 
     {/if}
-
+</div>
 {/block}

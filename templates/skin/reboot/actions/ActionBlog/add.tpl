@@ -9,7 +9,7 @@
 	
 <script type="text/javascript">
 	jQuery(document).ready(function($){
-		ls.lang.load({lang_load name="blog_create_type_open_notice,blog_create_type_close_notice"});
+		ls.lang.load({lang_load name="blog_create_type_open_notice,blog_create_type_invite_notice,blog_create_type_close_notice,"});
 		ls.blog.loadInfoType($('#blog_type').val());
 	});
 </script>

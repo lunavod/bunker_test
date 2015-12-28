@@ -139,6 +139,7 @@ class ActionBlog extends Action {
 		$this->AddEvent('ajaxblogjoin', 'AjaxBlogJoin');
 
 		$this->AddEventPreg('/^(\d+)\.html$/i','/^$/i',array('EventShowTopic','topic'));
+		$this->AddEventPreg('/^[\w\-\_]+$/i','/^(\d+)$/i',array('EventShowTopic','topic'));
 		$this->AddEventPreg('/^[\w\-\_]+$/i','/^(\d+)\.html$/i',array('EventShowTopic','topic'));
 
 		$this->AddEventPreg('/^[\w\-\_]+$/i','/^(page([1-9]\d{0,5}))?$/i',array('EventShowBlog','blog'));
@@ -1003,7 +1004,7 @@ class ActionBlog extends Action {
 		 * Проверяем текст комментария
 		 */
 		$sText=$this->Text_Parser(getRequestStr('comment_text'));
-		if (!func_check($sText,'text',2,10000)) {
+		if (!func_check($sText,'text',2,100000)) {
 			$this->Message_AddErrorSingle($this->Lang_Get('topic_comment_add_text_error'),$this->Lang_Get('error'));
 			return;
 		}

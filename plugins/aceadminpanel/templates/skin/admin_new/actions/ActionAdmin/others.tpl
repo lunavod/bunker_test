@@ -1,6 +1,7 @@
 {extends file='index.tpl'}
 
 {block name="content"}
+<div id=content>
 <h3>{$oLang->_adm_menu_additional_item}</h3>
 
 <ul class="nav nav-list">
@@ -14,6 +15,7 @@
 <br/>
 <div class="nav nav-list">
     {hook run='admin_action'}
+</div>
 </div>
 {/block}
 

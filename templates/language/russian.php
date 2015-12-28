@@ -148,6 +148,7 @@ return array(
 	 * Управление блогом
 	 */
 	'blog_admin' => 'Управление блогом',
+	'blog_admin1' => 'Управление блогом',
 	'blog_admin_not_authorization' => 'Для того, чтобы изменить блог, сначала нужно войти под своим аккаунтом.',
 	'blog_admin_profile' => 'Профиль',
 	'blog_admin_users' => 'Пользователи',

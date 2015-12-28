@@ -11,7 +11,14 @@
 		{if $iUserCurrentCountTalkNew}
 			<li class="item-messages slide-trigger" id="item-messages" onclick="ls.tools.slide($('#messages'), $(this), true);"><a href="{router page='talk'}"></a></li>
 		{/if}
+		{if $oUserCurrent}
+<li class="new-comments" id="new_comments_counter" style="display: none;" title="{$aLang.comment_count_new}" onclick="ls.comments.goToNextComment(); return false;"></li>
+		<li class="update-comments" onclick="ls.comments.load({$params.iTargetId},'{$params.sTargetType}'); return false;"><i id="update-comments" class="fa fa-refresh"></i></li>
+		
 
+		<input type="hidden" id="comment_last_id" value="{$params.iMaxIdComment}" />
+		<input type="hidden" id="comment_use_paging" value="{if $aPagingCmt and $aPagingCmt.iCountPage>1}1{/if}" />
+{/if}
 		<li class="item-search slide-trigger" id="item-search" onclick="ls.tools.slide($('#search'), $(this), true);"></li>
 
 		{if $oUserCurrent}

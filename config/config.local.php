@@ -37,7 +37,7 @@ $config['db']['params']['pass'] = 'epw7h6';
 $config['db']['params']['type']   = 'mysql';
 $config['db']['params']['dbname'] = 'reboot';
 $config['db']['table']['prefix'] = 'prefix_';
-
+$config['module']['blog']['encrypt'] = 'afnwbzupsmatrwdpgrva'; // Ключ XXTEA шифрования идентификаторов в ссылках приглашения в блоги
 
 $config['path']['root']['web'] = '//reboot.lunavod.ru';
 $config['path']['root']['server'] = '/var/www/reboot/';

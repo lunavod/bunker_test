@@ -354,9 +354,9 @@ class ModuleTopic_EntityTopic extends Entity {
 	 */
 	public function getUrl() {
 		if ($this->getBlog()->getType()=='personal') {
-			return Router::GetPath('blog').$this->getId().'.html';
+			return Router::GetPath('blog').$this->getId();
 		} else {
-			return Router::GetPath('blog').$this->getBlog()->getUrl().'/'.$this->getId().'.html';
+			return Router::GetPath('blog').$this->getBlog()->getUrl().'/'.$this->getId();
 		}
 	}
 	/**

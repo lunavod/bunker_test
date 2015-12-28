@@ -16,13 +16,12 @@
                     </p>
                 {/foreach}
                 <hr/>
-                <div class="adm_info_input">
-                    <label class="checkbox">
-                        <input type="checkbox" id="adm_report_{$sSectionKey}" name="adm_report_{$sSectionKey}"
-                               checked="checked"/>
-                        {$oLang->_adm_button_checkin}
-                    </label>
-                </div>
+				<div class="modal-2">
+					<div class="checkbox inline">
+						<input type="checkbox" id="adm_report_{$sSectionKey}" name="adm_report_{$sSectionKey}">
+						<label>{$oLang->_adm_button_checkin}</label>
+					</div>
+				</div>
             </div>
         {/foreach}
 
@@ -41,16 +40,10 @@
                     XML
                 </label>
             </div>
+			<input type="submit" id="butAdmReport" value="{$oLang->_adm_button_report}" class="btn btn-primary pull-right"/>
+
         </div>
 
-        <div class="navbar fix-on-bottom">
-            <div class="navbar-inner">
-                <div class="container">
-                    <input type="submit" id="butAdmReport" value="{$oLang->_adm_button_report}"
-                           class="btn btn-primary pull-right"/>
-                </div>
-            </div>
-        </div>
         <input type="hidden" name="security_ls_key" value="{$LIVESTREET_SECURITY_KEY}"/>
     </div>
 </form>

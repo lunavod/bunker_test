@@ -211,13 +211,6 @@ class ActionAjax extends Action {
 			return;
 		}
 		/**
-		 * Пользователь уже голосовал?
-		 */
-		if ($oTopicCommentVote=$this->Vote_GetVote($oComment->getId(),'comment',$this->oUserCurrent->getId())) {
-			$this->Message_AddErrorSingle($this->Lang_Get('comment_vote_error_already'),$this->Lang_Get('attention'));
-			return;
-		}
-		/**
 		 * Время голосования истекло?
 		 */
 		if (strtotime($oComment->getDate())<=time()-Config::Get('acl.vote.comment.limit_time')) {
@@ -228,7 +221,7 @@ class ActionAjax extends Action {
 		 * Пользователь имеет право голоса?
 		 */
 		if (!$this->ACL_CanVoteComment($this->oUserCurrent,$oComment)) {
-			$this->Message_AddErrorSingle($this->Lang_Get('comment_vote_error_acl'),$this->Lang_Get('attention'));
+			$this->Message_AddErrorSingle($this->Lang_Get('comment_vote_error'),$this->Lang_Get('attention'));
 			return;
 		}
 		/**
@@ -242,11 +235,20 @@ class ActionAjax extends Action {
 		/**
 		 * Голосуем
 		 */
+		$iValueOld = $iValue;
+		if ($oTopicCommentVote=$this->Vote_GetVote($oComment->getId(),'comment',$this->oUserCurrent->getId())) {
+			if ($iValue == $oTopicCommentVote->getDirection()){
+				$this->Message_AddErrorSingle($this->Lang_Get('comment_vote_error_value'),$this->Lang_Get('attention'));
+				return;
+			}
+			$this->ModuleVote_DeleteVote($oComment->getId(),'comment',$this->oUserCurrent->getId());
+			$iValue += $iValue;
+		}
 		$oTopicCommentVote=Engine::GetEntity('Vote');
 		$oTopicCommentVote->setTargetId($oComment->getId());
 		$oTopicCommentVote->setTargetType('comment');
 		$oTopicCommentVote->setVoterId($this->oUserCurrent->getId());
-		$oTopicCommentVote->setDirection($iValue);
+		$oTopicCommentVote->setDirection($iValueOld);
 		$oTopicCommentVote->setDate(date("Y-m-d H:i:s"));
 
 		$iVal=(float)$this->Rating_VoteComment($this->oUserCurrent,$oComment,$iValue);
@@ -264,6 +266,7 @@ class ActionAjax extends Action {
 			$this->Message_AddErrorSingle($this->Lang_Get('comment_vote_error'),$this->Lang_Get('error'));
 			return;
 		}
+
 	}
 	/**
 	 * Голосование за топик
@@ -292,13 +295,6 @@ class ActionAjax extends Action {
 			return;
 		}
 		/**
-		 * Пользователь уже голосовал?
-		 */
-		if ($oTopicVote=$this->Vote_GetVote($oTopic->getId(),'topic',$this->oUserCurrent->getId())) {
-			$this->Message_AddErrorSingle($this->Lang_Get('topic_vote_error_already'),$this->Lang_Get('attention'));
-			return;
-		}
-		/**
 		 * Время голосования истекло?
 		 */
 		if (strtotime($oTopic->getDateAdd())<=time()-Config::Get('acl.vote.topic.limit_time')) {
@@ -317,17 +313,26 @@ class ActionAjax extends Action {
 		 * Права на голосование
 		 */
 		if (!$this->ACL_CanVoteTopic($this->oUserCurrent,$oTopic) and $iValue) {
-			$this->Message_AddErrorSingle($this->Lang_Get('topic_vote_error_acl'),$this->Lang_Get('attention'));
+			$this->Message_AddErrorSingle($this->Lang_Get('comment_vote_error'),$this->Lang_Get('attention'));
 			return;
 		}
 		/**
 		 * Голосуем
 		 */
+		$iValueOld = $iValue;
+		if ($oTopicVote=$this->Vote_GetVote($oTopic->getId(),'topic',$this->oUserCurrent->getId())) {
+			if ($iValue == $oTopicVote->getDirection()){
+				return;
+			}
+			$this->ModuleVote_DeleteVote($oTopic->getId(),'topic',$this->oUserCurrent->getId());
+			$iValue += $iValue;
+		}
+
 		$oTopicVote=Engine::GetEntity('Vote');
 		$oTopicVote->setTargetId($oTopic->getId());
 		$oTopicVote->setTargetType('topic');
 		$oTopicVote->setVoterId($this->oUserCurrent->getId());
-		$oTopicVote->setDirection($iValue);
+		$oTopicVote->setDirection($iValueOld);
 		$oTopicVote->setDate(date("Y-m-d H:i:s"));
 		$iVal=0;
 		if ($iValue!=0) {
@@ -384,12 +389,14 @@ class ActionAjax extends Action {
 			$this->Message_AddErrorSingle($this->Lang_Get('blog_vote_error_self'),$this->Lang_Get('attention'));
 			return;
 		}
-		/**
-		 * Уже голосовал?
-		 */
+        $iValueOld = $iValue;
 		if ($oBlogVote=$this->Vote_GetVote($oBlog->getId(),'blog',$this->oUserCurrent->getId())) {
-			$this->Message_AddErrorSingle($this->Lang_Get('blog_vote_error_already'),$this->Lang_Get('attention'));
-			return;
+			if ($iValue == $oBlogVote->getDirection()){
+				return;
+			}
+			$this->ModuleVote_DeleteVote($oBlog->getId(),'blog',$this->oUserCurrent->getId());
+			$iValueOld = $iValue;
+			$iValue += $iValue;
 		}
 		/**
 		 * Имеет право на голосование?
@@ -402,7 +409,7 @@ class ActionAjax extends Action {
 					$oBlogVote->setTargetId($oBlog->getId());
 					$oBlogVote->setTargetType('blog');
 					$oBlogVote->setVoterId($this->oUserCurrent->getId());
-					$oBlogVote->setDirection($iValue);
+					$oBlogVote->setDirection($iValueOld);
 					$oBlogVote->setDate(date("Y-m-d H:i:s"));
 					$iVal=(float)$this->Rating_VoteBlog($this->oUserCurrent,$oBlog,$iValue);
 					$oBlogVote->setValue($iVal);
@@ -484,67 +491,41 @@ class ActionAjax extends Action {
 			$this->Message_AddErrorSingle($this->Lang_Get('system_error'),$this->Lang_Get('attention'));
 			return;
 		}
+		$iValueOld = $iValue;
+		if ($oUserVote=$this->Vote_GetVote($oUser->getId(),'user',$this->oUserCurrent->getId())) {
+			if ($iValue == $oUserVote->getDirection()){
+				return;
+			}
+			$this->ModuleVote_DeleteVote($oUser->getId(),'user',$this->oUserCurrent->getId());
+			$iValue += $iValue;
+		}
 		/**
 		 * Голосуем
 		 */
-		if ($oUserVote=$this->Vote_GetVote($oUser->getId(),'user',$this->oUserCurrent->getId())) {
-			$oOldUserVote=$this->Vote_GetVote($oUser->getId(),'user',$this->oUserCurrent->getId());
-			if ($oOldUserVote->getDirection() == $iValue) {
-				$this->Message_AddErrorSingle($this->Lang_Get('system_error'),$this->Lang_Get('error'));
-				return;
-			}
-			$this->Vote_DeleteVoteByTarget($oUser->getId(), 'user');
-			$oUserVote=Engine::GetEntity('Vote');
-			$oUserVote->setTargetId($oUser->getId());
-                        $oUserVote->setTargetType('user');
-                        $oUserVote->setVoterId($this->oUserCurrent->getId());
-                        $oUserVote->setDirection($iValue);
-                        $oUserVote->setDate(date("Y-m-d H:i:s"));
-                        $iVal=(float)$this->Rating_VoteUser($this->oUserCurrent,$oUser,$iValue+$iValue, true);
-                        $oUserVote->setValue($iVal);
-                        //$oUser->setRating($oUser->getRating()+$iValue);
-//                        $oUser->setCountVote($oUser->getCountVote()+1);
-                        $oUser->setCountVote($oUser->getCountVote()+1);
-                        if ($this->Vote_AddVote($oUserVote) and $this->User_Update($oUser)) {
-                                $this->Message_AddNoticeSingle($this->Lang_Get('user_vote_ok'),$this->Lang_Get('attention'));
-                                $this->Viewer_AssignAjax('iRating',$oUser->getRating());
-                                $this->Viewer_AssignAjax('iSkill',$oUser->getSkill());
-                                $this->Viewer_AssignAjax('iCountVote',$oUser->getCountVote());
-                                /**
-                                 * Добавляем событие в ленту
-                                 */
-                                $this->Stream_write($oUserVote->getVoterId(), 'vote_user', $oUser->getId());
-                        } else {
-                                $this->Message_AddErrorSingle($this->Lang_Get('system_error'),$this->Lang_Get('error'));
-                                return;
-                        }
-                        $oUser->setCountVote($oUser->getCountVote()-1);
-                        $this->User_Update($oUser);
-		} else {
-			$oUserVote=Engine::GetEntity('Vote');
-	                $oUserVote->setTargetId($oUser->getId());
-	                $oUserVote->setTargetType('user');
-	                $oUserVote->setVoterId($this->oUserCurrent->getId());
-	                $oUserVote->setDirection($iValue);
-	                $oUserVote->setDate(date("Y-m-d H:i:s"));
-	                $iVal=(float)$this->Rating_VoteUser($this->oUserCurrent,$oUser,$iValue);
-	                $oUserVote->setValue($iVal);
-	                //$oUser->setRating($oUser->getRating()+$iValue);
-	                $oUser->setCountVote($oUser->getCountVote()+1);
-	                if ($this->Vote_AddVote($oUserVote) and $this->User_Update($oUser)) {
-	                        $this->Message_AddNoticeSingle($this->Lang_Get('user_vote_ok'),$this->Lang_Get('attention'));
-	                        $this->Viewer_AssignAjax('iRating',$oUser->getRating());
-	                        $this->Viewer_AssignAjax('iSkill',$oUser->getSkill());
-                	        $this->Viewer_AssignAjax('iCountVote',$oUser->getCountVote());
-                	        /**
-                	         * Добавляем событие в ленту
-                	         */
-                	        $this->Stream_write($oUserVote->getVoterId(), 'vote_user', $oUser->getId());
-                	} else {
-                	        $this->Message_AddErrorSingle($this->Lang_Get('system_error'),$this->Lang_Get('error'));
-                	        return;
-                	}
-		}
+
+		$oUserVote=Engine::GetEntity('Vote');
+        $oUserVote->setTargetId($oUser->getId());
+	    $oUserVote->setTargetType('user');
+	    $oUserVote->setVoterId($this->oUserCurrent->getId());
+    	$oUserVote->setDirection($iValueOld);
+    	$oUserVote->setDate(date("Y-m-d H:i:s"));
+    	$iVal=(float)$this->Rating_VoteUser($this->oUserCurrent,$oUser,$iValue);
+    	$oUserVote->setValue($iVal);
+    	//$oUser->setRating($oUser->getRating()+$iValue);
+    	$oUser->setCountVote($oUser->getCountVote()+1);
+    	if ($this->Vote_AddVote($oUserVote) and $this->User_Update($oUser)) {
+    	    $this->Message_AddNoticeSingle($this->Lang_Get('user_vote_ok'),$this->Lang_Get('attention'));
+    	    $this->Viewer_AssignAjax('iRating',$oUser->getRating());
+    	    $this->Viewer_AssignAjax('iSkill',$oUser->getSkill());
+    	    $this->Viewer_AssignAjax('iCountVote',$oUser->getCountVote());
+    	    /**
+    	     * Добавляем событие в ленту
+    	     */
+    	    $this->Stream_write($oUserVote->getVoterId(), 'vote_user', $oUser->getId());
+    	} else {
+    	    $this->Message_AddErrorSingle($this->Lang_Get('system_error'),$this->Lang_Get('error'));
+    	    return;
+    	}
 	}
 	/**
 	 * Голосование за вариант ответа в опросе

@@ -1,7 +1,7 @@
 {extends file="./users.tpl"}
 
 {block name="content"}
-
+<div id=content>
 <script type="text/javascript">
     aceAdmin.sort = function (sort, order) {
         var i, el;
@@ -95,4 +95,5 @@
     {else}
         {$oLang->user_empty}
     {/if}
+	</div>
 {/block}

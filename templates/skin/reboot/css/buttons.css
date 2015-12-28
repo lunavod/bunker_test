@@ -54,4 +54,4 @@
 .button.button-primary.active { background: #C5CAE9; }
 
 /* Button Icon (Without text) */
-.button.button-icon 			{ padding: 7px 10px; }
+.button.button-icon 			{ padding: 7px 10px; font-size: 14px;}

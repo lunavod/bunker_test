@@ -15,7 +15,7 @@
 									type="checkbox"
 									{if isset($aUserfeedSubscribedBlogs.$iBlogId)} checked="checked"{/if}
 									onClick="if (jQuery(this).prop('checked')) { ls.userfeed.subscribe('blogs',{$iBlogId}) } else { ls.userfeed.unsubscribe('blogs',{$iBlogId}) } " />
-							<a href="{$oBlog->getUrlFull()}">{if $oBlog->getType()=="close"}<i class="fa fa-lock">&nbsp</i>{/if}{$oBlog->getTitle()|escape:'html'}</a>
+							<a href="{$oBlog->getUrlFull()}">{if $oBlog->getType()=="close"}<i class="fa fa-lock"></i>&nbsp{elseif $oBlog->getType()=="invite"}<i class="fa fa-unlock"></i>&nbsp{/if}{$oBlog->getTitle()|escape:'html'}</a>
 						</li>
 					{/foreach}
 				</ul>

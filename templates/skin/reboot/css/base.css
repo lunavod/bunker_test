@@ -167,31 +167,23 @@ h2.header-table { margin-bottom: 0; border-bottom: 1px solid #eee; padding-botto
 	margin-right: 0px;
 	float: right;
 }
-.spoiler-body {display: none; }
-.spoiler-close:before {
-	float: left;
-	content: " ";
-	width: 16px;
-	height: 16px;
-	margin-top: 2px;
-	display: block;
-	border: 0 solid red;
-	background: url(https://habracdn.net/habr/images/1441796408/spoiler.icon.png) no-repeat left top;
+.spoiler-body {
+	display: none; 
+	padding: 15px;
+	background-color: rgba(233, 234, 244, 0.32);
+	border: 1px solid rgba(92, 107, 192, 0.32);
+	border-radius: 5px;
+	margin: 10px 0px 10px 10px;
 }
-.spoiler-open:before {
-	float: left;
-	content: " ";
-	width: 16px;
-	height: 16px;
-	margin-top: 2px;
-	display: block;
-	border: 0 solid red;
-	background: url(https://habracdn.net/habr/images/1441796408/spoiler.icon.png) no-repeat left bottom;
-}
+
 .spoiler-title{
 	cursor: pointer;
-	color: #6da3bd;
-	display: block;
+	border: 1px solid rgb(218, 218, 218);
+	padding: 5px;
+	border-radius: 3px;
+	background-color: rgb(247, 247, 247);
+	margin: 3px 2px;
+	display: inline-block;
 }
 
 .switch-theme {

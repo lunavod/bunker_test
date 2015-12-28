@@ -542,7 +542,7 @@ fieldset legend {
     background: #444 none repeat scroll 0 0;
 }
 .comment.comment-current {
-    background: #222 !important;
+    background: #313851 !important;
 }
 
 
@@ -574,4 +574,42 @@ fieldset legend {
 .topic.topic-type-talk .topic-footer .topic-info {
     background: #1a1a1a none repeat scroll 0 0;
     border-radius: 0;
+}
+
+.comment-preview {
+    background: #2D303C;
+    border: 1px solid #222;
+}
+
+.item-list li .author {
+    color: #6669CD;
+}
+
+div.block.Topicinfo div.AvatarHolder a.user, div.block.Topicinfo div.AvatarHolder div.Status {
+    background: rgba(40, 40, 40, 0.8) !important;
+}
+
+.comment.comment-deleted {
+    background: #621717;
+}
+
+.pagination ul li span, .pagination ul li a {
+    color: rgb(221, 221, 221);
+    background: rgb(33, 33, 33);
+}
+
+.pagination ul li.active span {
+    color: #bbb;
+    background: #292929;
+}
+
+.pagination ul li a:hover {
+    background: #484848;
+}
+.text pre {
+    background: black;
+}
+.spoiler-title {
+    border: 1px solid #303030;
+    background-color: #151515;
 }

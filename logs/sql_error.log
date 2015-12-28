@@ -1984,3 +1984,75 @@ Array
     [context] => /var/www/reboot/engine/modules/database/Database.class.php line 160
 )
 ]
+[2015-12-25 20:51:00][13801][7431][ERROR][SQL Error: Unknown column 'DBSIMPLE_ERROR_VALUE_NOT_ARRAY' in 'where clause' at /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 111<br>
+Array
+(
+    [code] => 1054
+    [message] => Unknown column 'DBSIMPLE_ERROR_VALUE_NOT_ARRAY' in 'where clause'
+    [query] => 
+			DELETE FROM prefix_vote 
+			WHERE
+				target_id IN(DBSIMPLE_ERROR_VALUE_NOT_ARRAY)
+				AND
+				target_type = 'user'				
+		
+    [context] => /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 111
+)
+]
+[2015-12-28 13:28:55][30224][7242][ERROR][SQL Error: Duplicate entry '295-comment-1' for key 'PRIMARY' at /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43<br>
+Array
+(
+    [code] => 1062
+    [message] => Duplicate entry '295-comment-1' for key 'PRIMARY'
+    [query] => INSERT INTO prefix_vote 
+			(target_id,
+			target_type,
+			user_voter_id,
+			vote_direction,
+			vote_value,			
+			vote_date,
+			vote_ip
+			)
+			VALUES(295, 'comment', 1, -1, -1, '2015-12-28 13:28:55', '37.146.92.209')
+		
+    [context] => /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43
+)
+]
+[2015-12-28 13:29:08][30153][5827][ERROR][SQL Error: Duplicate entry '295-comment-1' for key 'PRIMARY' at /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43<br>
+Array
+(
+    [code] => 1062
+    [message] => Duplicate entry '295-comment-1' for key 'PRIMARY'
+    [query] => INSERT INTO prefix_vote 
+			(target_id,
+			target_type,
+			user_voter_id,
+			vote_direction,
+			vote_value,			
+			vote_date,
+			vote_ip
+			)
+			VALUES(295, 'comment', 1, -1, -1, '2015-12-28 13:29:08', '37.146.92.209')
+		
+    [context] => /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43
+)
+]
+[2015-12-28 13:29:10][30153][3938][ERROR][SQL Error: Duplicate entry '295-comment-1' for key 'PRIMARY' at /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43<br>
+Array
+(
+    [code] => 1062
+    [message] => Duplicate entry '295-comment-1' for key 'PRIMARY'
+    [query] => INSERT INTO prefix_vote 
+			(target_id,
+			target_type,
+			user_voter_id,
+			vote_direction,
+			vote_value,			
+			vote_date,
+			vote_ip
+			)
+			VALUES(295, 'comment', 1, -1, -1, '2015-12-28 13:29:10', '37.146.92.209')
+		
+    [context] => /var/www/reboot/classes/modules/vote/mapper/Vote.mapper.class.php line 43
+)
+]
